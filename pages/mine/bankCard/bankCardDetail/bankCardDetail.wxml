@@ -1,0 +1,46 @@
+
+<view class='public-list'>
+    <view class='item'>
+        <view class='lf'>银行</view>
+        <view class='name'>{{cardInfor.bankAlis}}</view>
+    </view>
+    <view class='item'>
+        <view class='lf'>持卡人</view>
+        <view class='name'>{{cardInfor.cardAccountName}}</view>
+    </view>
+    <view class='item'>
+        <view class='lf'>卡号</view>
+        <view class='name'>{{cardInfor.cardNo}}</view>
+    </view>
+    <view class='item'>
+        <view class='lf'>手机号</view>
+        <view class='name'>{{cardInfor.cardPhone}}</view>
+    </view>
+</view>
+
+<view class='public-btn'>
+    <button type='primary' bindtap='showLayer'>删除</button>
+</view>
+
+
+
+
+<view class='del-layer' wx:if="{{showLayer}}">
+    <view  class='inner'>
+        
+        <view class='box'>
+            <view class='title'>请输入支付密码 </view>
+            <input type='number' bindblur='setPaypassword'  maxlength='6'></input>
+        </view>
+
+        <view class="cropper-buttons">
+            <view class="upload" >
+                <button  type="warn" bindtap='hideLayer'>取消</button>
+            </view>
+            <view class="getCropperImage">
+                <button  type="primary"  bindtap='delCard'>确定</button>
+            </view>    
+        </view>
+
+    </view>
+</view>

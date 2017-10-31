@@ -1,0 +1,64 @@
+
+.notice-index{
+    margin-top: 10px;
+     background-color: #fff;
+}
+.notice-index .list{
+    margin-left: 15px;
+    padding: 15px 15px 15px 0;
+    height: 45px;
+    border-bottom: 1px solid #f4f4f4;
+} 
+.notice-index navigator:last-child .list{
+    border-bottom: 0;
+} 
+.notice-index .list .pic{
+    float: left;
+    height: 45px;
+    width:45px;
+}
+.notice-index .list .text{
+    padding-left: 55px;
+}
+.notice-index .list image{
+    width: 100%;
+    height: 100%;
+    border-radius:50%; 
+}
+.notice-index .list .tt{
+    height: 1em;
+    line-height: 1em;
+    margin-top: 3px;
+}
+.notice-index .list .xx{
+    font-size: 12px;
+    height: 15px;
+    line-height: 15px;
+    margin-top: 12px;
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.notice-index .list .tt text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.notice-index .list .tt .c1{
+    float: left;
+}
+.notice-index .list .tt .c2{
+    float: right;
+}
+
+
+/* 最近联系人 */
+.notice-index .title{
+    padding: 15px 15px 0;
+    font-size: 16px;
+}

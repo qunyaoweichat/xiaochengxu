@@ -1,0 +1,652 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1508828516949'); /* IE9*/
+  src: url('iconfont.eot?t=1508828516949#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAABicAAsAAAAAJYgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAAQwAAAFZXOktzY21hcAAAAYAAAAFzAAAD+Hgbad9nbHlmAAAC9AAAEnkAABr8M4DitWhlYWQAABVwAAAALwAAADYPylB6aGhlYQAAFaAAAAAgAAAAJAhgBLpobXR4AAAVwAAAAB4AAACIiR4AAGxvY2EAABXgAAAARgAAAEZxlmpObWF4cAAAFigAAAAfAAAAIAEzANNuYW1lAAAWSAAAAUUAAAJtPlT+fXBvc3QAABeQAAABCwAAAX3kD7i2eJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2Bk4WCcwMDKwMHUyXSGgYGhH0IzvmYwYuRgYGBiYGVmwAoC0lxTGBwYKl5WMDf8b2CIYW5kAOlnBMkBAOGsDEUAeJzFk8suBEEYhb8e436/DYbB2BFLmYWIiGRmw9rKfiT29DN4BjsPwN6bWAyrUzMvgdPz2xAbIlF/vk53pf+u6nNOAYPAgNk1ZSidk/mO7MyzWX9+gLH+fDnb8XODTb9XIVdJC6qoqpq2tK09tXSqti51pRvd6V6P6ug1NdJFekov3Yde/vbm/lx86Wvq5Nu+tvue3Xfd7/v5yLzXBvtf6oDDb+vIdewq+ir+xzXmqbHKIhvMsE7JOpSt1hDDjDBqTcaZYJIppplljmVWqLLEAnV/YuhXO/6Tkf3f0p/HRHHJbj+erAr5B96iCKw1ygKrjkqB9XdOAjuBKoE9QdXA7qBaYJ/QVmDH0HZg79BeYBdRM6BYpxUU+ddJUJwBnQbF2VA7sO/oMnAC0FXgLKCbwKlAd0FxZnQfOCnoMShUUSdwetBr4ByRGoETRWoHzhbpInDKSE+B80Z6Dpw80kvgDNJ9CJxGeteBc0kvD6i/A5G/qUsAeJyNWAtwHMWZnr97puex89h57Mw+tNKuVrtjyZZsaV+2giRbBmIbizM2YCBgTIAk3Flw4XJnLrGxgHJ4GC6mjMMVkIM4xAkGErhAqKN4KAbzOsil8rgqX0hhJ5gAl6sUXF0RJ97x/T0rCRFylVOt/u7p6f+ffvz/93/dgiQIJ4/Sp2hacIUFwqBwqrBOEIAthG6T5KEY1gbIQkgVpVTgmTQshUW51D1ARyDoZp4/1KhVAiYzC0zohGpxqBEOkBDqtVHyCRjy8wCZXHaDU+5w6G7Q0mHnzmgN2QeprlKHNdofrV405g0VXGWr7jgZx7lVYZKkECJaJkwGviqpGovul6xs6qmuXtIFeibMrj3fKOScS26qXZkvByrA1BS4uYL5rTE7a+NvW9Z3nYycNJR01ij1eLD1zUTa1fOVXwn4B1zQG8jFQoAPFSZDWMFpBJLfBf7QGDSa0KjRa7SsGp3zjpZ1NQAqUqYzkYrwA5Wcq4IWDb+lehmtRYESSgiFN7TMh7ZXkGeEnCCoaKfSLasQm1eBL1VTBb5eIekHTXWzWvRBdFzLeBrI0QcaPoMKKn5ThR2gqFhGv8PSzWjR76LfaRlsV6L/4Xrtb518ij5HlwsFPo+wTCvhIJOpZEIXUOaPQeDj+jeatZA2G/Rp5kbvXaO5nvrF6D1XN55fTAr2++/LChgOkP5DBvzGoX1AbQA7inrFHvOV6FduoO78suiYTILgZfPDb64QlgmC1L0YZFZpumGlgcvWCegBgW9Bs9GFSzqG//jehAFouo3moB+4UidY4PoyIycV+f337QJZ/LyhO/cYKdE0L96vkfAlK/lihSTuP2rLl13G0mlVul71XO0asBzDODRAkspy8cs71cCF/Ctmj5glZi5Fkwf05H9eqahX/iaZeKCbWj/7qa7qaR2ceCqtPlo2X8ap6EwQRBz/EXofFYS6MCp8kns5n0Wl1hjqwnHz5arbtUqp2M1StseXz/cwCgYgtEehWeyEwDZBLsmMDgDq4MvgYxUiGNpmvkerV2vGEdNxzNYUl5tj0dsAaPSSqXb5k3O1p71cbkEu99BHioK6mXvBmjWqYxKBK0ZcdjhcV2jrRrzcqMJ9wDUW5OCPSu6KfL6/otM0L6SEUBgXzm/Pt4QTquOEqs1Gdcjnc4Julod4wl3EtoCVoDscgDEYhRruYmUUMDhw9iZuIAu6cUtRG43wF0HcjptqdlW+v6E9tg3fLxecLoDO6N541oY2rarTmgG7NTUhKnq2VEjbiuhn1GSuD2AgpycuSnigDK0iZNWQAqmMVj+bkLPriY7yE2hvGs0+Uc4VW8uLOdLhmNOmo06r5H4U0X6mZBJO4bRLV3QGiUxSTKSKZ69ccX63bUzaWa2xc+PGnQ0t6xBt+O7Pfvbu4cTsuryB61IQOoTliHafQ9eOV4Dh1ldGcNL8CSdWxHnWaxV08RB9AiefClLYXG00OyEOLl5gnxGolItBUSqxSthWNiHkD3X+lOIPfM2LWKObLVuXW/tl3e60YUk3uaB7Cdhn/qXqtaa0JDlbBHL2SN/q0F3R29u7wvWW9vSNnE2gZZJzV7aWkDv7nFGKmuLqZK+9SnTyNhkshGiCCtAPvm09J+u6/JxlYw1b8QNYh/7XLDDUHzFFXze6gcAiPwh8zycbRjeY2r6pI8RfxBWMskuIW9b4nvUgbi8urZvoXjKzXs/Qg3RcUARb+ILwAq7XrL+HsznARc9iIUY8Lhb3nUqI6IB1jg6VWhPbmg30my5EWGzDegOdqhFgU8CdyEJXwias+7jQvidjm8zQHFqVsQ3rrMy7BD5HGG6E25it1Tjk8E/yL87WZNZW5rqzNY9jVNsOPvJoaqxvNHrj8HKuSGqrPW81c7XagKKCZxnbNFvKWoQplwNcrjBiZSVb22ZYHqjKQE1z2Vx/Vfnz/aXo31PB6Qm3q8tNnB6kXGJmXN3ZqimXmEAImJco2lZHdzMmcf+f/aAAfPzrGzv4+DucqGBcTsifHqnmaX96qH9WYf5awMZ4GKL48eFaBevj4/14R93Bjo7+YceZ3HnyJE+ngo8PuLOVECom7pSKsYSZEz2qQY4DMFGP7rXCDnSYkeh5E/IVCzYBEWELELMzAWciC6lY0c+ifzMrnQasJyAJCPgnp+NcOSgMCyt5vuQY7/nVInc9mfLAxwCl6KRhib8IEBi7wJ2BALdRQTTgTt7NpNkKfTgTtv6bxw0xNIYDX5LUoqxmQSMvVcsV/qKiJWm+ygZL8FZpkFWJ2loDPY1yudEDJ7DSgz9yaZ7jgERVJXpExqylwd98rbsf3IwLpn5PdGsZg7i3ABvccuvBHNfoybWLmTV7g76AOBZyvoFsI+ZgnwCbg9RQYwSxCQE+FSM7pjZsQirwveiW7MpsdKMmKUmtAAM9ryFCLBhYCI75o/LCAo6ZwX9A1XWjlyXMvtGecj/Y1h4nm3X2WPaiECYN1ZvhOteRKUQE/HbIPz6P4tCt0b2Ek6h9GjIlWAVrMaNBAJuIqkX3xlzmjOj7mCe5GSm29RyZxr3vFgZwj04XhHI4CnXcD0wuOJtGM/CrQwgWHG7bKSfeK8zd7TRN59WDIq8jFeXtT95c7qO7J7fcTuntW05bekvCwiREWxGZPGv9FkK2rD9r8vppDnlcnBnnai5+HN3Hq8Dz9vrHejY1J3fTthkoPK4zNQPXzKoTMvnjdvSdFNrlkXYRTwv36Fm6A/coI1SEpTFyzsyJp03uaRwWm9VRKM9NDbOFFDs/PrZTDHomLdB9X/rSPgpnnnrhjhQxLKY7JP3Q37G//3pEybWbN19LyPZN6qYvwqN6xpL0pasM4ujMsIi1kQioiOrrbyiX935GD6hhXL1bxAaudO3mi66VpGtfkKV0Rql8blQ3aco849r22GvidbQilIUJ4cw4S6aQLvAsGVOiKg+FsIQjtmdChdMniWHs4KzaKN+UGYbMGF0MZT6lLmAxrAeD4ibTg75Cq1ZADtBXeNd0XfPdU84COOsU8urIOuKZraU0aTLdJVA/bcPVkzdepYGXSzwoMqZGkZnWDOOyKzftuOCMZQAV14qe7Vq4sIvsQ3Nu3gWybqS1qW0OVljui6ZPwTKkA1dt++RK++pEztMeFVNJbaNk5NJSMT38FzdvfUKdxaEpEnEOD2U7TuB2OUYLyeaprm5LnBfRi6PnOOA+gw5iwErOzkawCl8jMBpTtoPA26IfxG40RsDJOXNnhCm4T0AqAvMddXNrpYGmyNMoYfOsBxEcz3F6I5WxP0Y5tF0n5l8uasUkHI1wvj1DY9GYBUTY/7oovr4/lr6Wymm37NJyKW3XLl7ftYfX91A22wNl67fz3t/C1+eWPby+RxBkzptFAX3YxggdRU/YKGwWpjiOLvyQOiLc1EK5VK8GPNkvjIO3OOMaMWviyNmckTGxkroryLfj+SPfZqU5Wi3NVppt/t3NeEhwyelZzMqqOFc/RXOaXZgJWSk3Vdi8e8rsS09xflxoc1H8lRMrL1iZeEDnsoytJ2IuDjE5P9IGU9jZLr/pmO3eB2JZNh24DzWmbG1KIo7ZBglziaaMT+8uT3vB8hkyzjtxct9Xr/fxf05a8yMz8GFyKImOzCA+zJQ7TGe2N1JkVDhiTitaHHPv0DtpIOiIGL0IjriMc8Bgz9v+0MU15suUhypfqxIRHj4miscebss7XxLFl+5sy2enB82UOa2ZpubPdUBJjs91QRn91Xu8xzR2bXO+R+lLyPkSeFIOhSa/ERBkXwgaQrMi0HmjoogIgzFvblQHMd+4yNYGGT844MEPKR2cPBhFkgTk4EEASYpOHrz/sCgevv8bXN4MXjKZSiWTHtyjEV3v1L7Ji3yCjvOe8zRPPDWr8437D8MkVzrBRbQBlTSSeBaVULWdTzDf/wDzfVroFIrCEuEcHD2mKGTwcnyGwVyCEdngJxwZIQlCOYhfyCE/y3LX8mR0N77cxdnjH8e6UnE+1iEmPzjujwY1W4z+VjxF1BRNFJ9k8IWMO+aTPwAZjR67IHPqpeSiMRDZBiJVFVceZ6kEnrjGhyJhaJyQ8SFYkbCsRPTsqosJuXgVET65GRkeeXs8FYy5meh2adpMKDBM4SvUqfpjZyC8RHd9asmpnXB8CCRYz6QxmY3L7g/NRPStoZUAK4eIiJZN30JzrRNts3B+woyx7SDy+IXCIlykP8qvoxhnMivN9zZOlquBPzQK9KmvNpaJxx56iHvOQ5ecq0qqLU9svOs1UXztLpRwSpMxyv5JthPQcdfw7omH35SkNx/G7tBHk7YkVehrd939Q1F89e61N9XkpCzuk/XkLO97F8fkC0PxfYz1YX7EcTQGgCcLeW5UYTuH+Dxr1nGrKvR7SlKs9P7klvYX//HnHaAhJUs/f9Pdr/LPXX+wc1JJykzZK4ksQcRTiEyuoIoyef0+0p4Q/Ze9iiVq6s5v0fZk6D3bF1OWTIrjBM+18n7FnBlnRJ5Hfop8p8hCfqYBjlEyEh489t9nytFeTYNJzm2iA7BB80ADPMdz4aW16PHoCS3tx3E1hVg6FcdVQej/v+MKl6F9tMIAk12G1dAdQGQ/HL3BGBQPH4YiY9Ebhx9/T5Lee7wts+VyrVzOdlQgC1bDQlmhU7zTPKUTn5rr/vh7bwFXqJVJBsr56NsdlUoHnJcvx5h/o5ih24W8UEJ/OUXYLtws7MXRluJdWhxLlip9NCDKjWpTKoY15GsyvoT5AYS9OJjxqwV+O9gmNzG1KVVMgiwVH6txY8pniPT1AZx40EkxWYR4HJgHfR9Bn92Loj4vlHNLJa8gViAxPEHIxDBlcdl6GIDCbdHCtUCXdsI4XQDV8MTvwypgSRmW0ee1sCfUJcrcUtK3CbFcDZSa79RCW/WNUrYnSyQKqUohIzMx6WpETKZ7C2N9BLTPXLGL0l1XtOU5VxNy9TmxJJeBLdupT/mE+O51VISJ4ag2PAFYwqvDE8cI/HobiBBcRsXWQ5UaIJ2AV9tj+gWTgFEvqekJxD0tiVzVUhcGhGUKaWehqUioJ/osmZZBVD1NtFQvcBRS7zIG/jA3lCt2RStxLOd+vj2iGY598hfodyXBQr/rFEaE1Zx/fHT3pKodoyRwJp0qzlyI1O0ibk6VX45W26HHjxJ+CmaOSjEbuvXE24PjCGuDNB2XraPPr0lkE2ui2xfkT0TP0n1YvJ1fACtMlUlbAMgWianmifyCVv9FSOQ0LmgJ9Vv72nbIpsHxgejCkGGsXZxf8HSUzS9YkIcn3tAMioRvGTU0+NcF+egdwzMAULRz1g6R0uswczaEtcKncYYcs5v8wMadVUYe0kV8juW0fdlb47c9i0klnDsRfgg3fF4cAHwn8PkFR4XFzsmR0UQjDadZIeR9R4++8WnFSat7ZQKUEFHRYL/uvKRiiwKUEpEgYY0u0B1Hh4suUeG873DG9R3d8oxDx0Xx+CHDs7YYHliJ775O6evfTVgw8waeMuxL1Yyj3sk0iYoKpVQGJ3pbVb/KNEpFUcYWQoiT4d2OZX//yCO/z4KdcaAzOvbii9GxTsBX9BCXMP8t5F58EXKxT3ydbqWnYX4fw9XaKlzT5nQ8+vj97QC/wcVfqRuPWkjbU47YxCOe3+PWGzIRQ9ZD637Vjw8w8do0h5pSvZoqpeJ/rFXrSAjxHztgAJcwsOWggfy5idZZrV5KzUV1QC+1A5H43mh3f+9wsmQZa6ulMdenou/YkIJlRUmTijDsw7AX/drzonc8kkufXh7bRMgly8unpXMQDX/7huv/uvxk+co77qiOlcrnHLiMOCnnE3AqnqULzREos01DCqPLLiS3kecskGSz2K+BZiy3FBEsJ317tP1NDUB7E27YnX4guvuVROIVuPx2AKa6E6I44aoMIMIzVPmOyav2YiHJrKxL3x6dyC+bWAOuZWXyJLt0WXFISxhGcildFfO539J/oFaM99WP8jk6n82XUkjnK2F95iBbH4U5agfRA78UxV8+cOCoJB09cMchUTx0x14uYTuSNdiWMM3ENsDqdqwlxaMHDhwVY0nepi9gT0oP7b3jhei27ZzfbTd9c64S+8Bj9Od0LXKlbjyh9sbnvMFZkgRDTR4lsS+EjN/u8+yLBwwVD/NyM+Ck3J6FiZjKf4wlIbatI0vEhJwQ6T8DwE893I1+vWB3peRB2ZP7FTYY9cN566IDX8mtgQ/0JGTdVt7NZl14XU8m9airrwnQ7CP/1duEJJxJH+WMaAlaSnXZXcYiA+PfO3+QAZpKSUPRj2Dj+ujAyGfOgAwqn8ENkZfdbDKTRCOtgbYxeDLmH/8Lu+HL+QAAAHicY2BkYGAA4s7VO//H89t8ZeBmYQCBa6JsKQj6vwlLI3MjkMvBwAQSBQAnLAmNAHicY2BkYGBu+N/AEMMqwcDw/z9LIwNQBAUoAQB+AgUjeJxjYWBgYH7JwMDCQB5mlSBRjzSUZkIVBwCl6gGnAAAAAAAAAHYApADaARQBdAHsAngDEARCBHAE3AUaBUAFrgYMBoYGtgbOBxAHxggKCGgI9Ak+CZIJtgoKCvILZAv8DK4M/g1+AAB4nGNgZGBgUGI4zsDOAAJMQMwFhAwM/8F8BgAf8AIHAHicZY9NTsMwEIVf+gekEqqoYIfkBWIBKP0Rq25YVGr3XXTfpk6bKokjx63UA3AejsAJOALcgDvwSCebNpbH37x5Y08A3OAHHo7fLfeRPVwyO3INF7gXrlN/EG6QX4SbaONVuEX9TdjHM6bCbXRheYPXuGL2hHdhDx18CNdwjU/hOvUv4Qb5W7iJO/wKt9Dx6sI+5l5XuI1HL/bHVi+cXqnlQcWhySKTOb+CmV7vkoWt0uqca1vEJlODoF9JU51pW91T7NdD5yIVWZOqCas6SYzKrdnq0AUb5/JRrxeJHoQm5Vhj/rbGAo5xBYUlDowxQhhkiMro6DtVZvSvsUPCXntWPc3ndFsU1P9zhQEC9M9cU7qy0nk6T4E9XxtSdXQrbsuelDSRXs1JErJCXta2VELqATZlV44RelzRiT8oZ0j/AAlabsgAAAB4nG2OyVLDMBBE3Yl3krDvSyCcOfBFlCxLlrCscVlyKuTrkROOzEXdmpl+E82iY5XR/7XBDHPESJAiQ44CJU6wwBIrnOIM57jAJa5wjRvc4g73eMAjnvCMF6zxijds8B5hl3AleJtwQ04Ukm1pkNqY5KAyTl0nrF9Y8lpqzrwmGztFfe6E99o2Lhl0o3zM2eBzRZ2YlmNJpi6dYANXRjuf9oJ6I3Ip7E4z28xZXccdbUXajMxWuqyZDqGjGilzSn+HmVKy4D449T9Ttw+o8L04Zn6ZibkchByE+3NlxXh7lKlnVjEqwp4c20DIJzXlZSq48K5C3l7pitFehXvicM9nUQXwARhFv4U3aBQA') format('woff'),
+  url('iconfont.ttf?t=1508828516949') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1508828516949#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle;
+}
+
+
+.icon-check:before { content: "\e645"; }
+
+.icon-close:before { content: "\e646"; }
+
+.icon-favorfill:before { content: "\e64b"; }
+
+.icon-favor:before { content: "\e64c"; }
+
+.icon-comment:before { content: "\e667"; }
+
+.icon-notification:before { content: "\e66b"; }
+
+.icon-shop:before { content: "\e676"; }
+
+.icon-settings:before { content: "\e68a"; }
+
+.icon-right:before { content: "\e6a3"; }
+
+.icon-cart:before { content: "\e6af"; }
+
+.icon-homefill:before { content: "\e6bb"; }
+
+.icon-fold:before { content: "\e6de"; }
+
+.icon-searchlist:before { content: "\e6fe"; }
+
+.icon-people:before { content: "\e736"; }
+
+.icon-add:before { content: "\e767"; }
+
+.icon-fenxiang:before { content: "\e629"; }
+
+.icon-move:before { content: "\e768"; }
+
+.icon-guanbi:before { content: "\e614"; }
+
+.icon-daishouhuo:before { content: "\e977"; }
+
+.icon-shijian:before { content: "\e61d"; }
+
+.icon-fahuo-copy:before { content: "\e600"; }
+
+.icon-daipingjia:before { content: "\e8b0"; }
+
+.icon-search_light:before { content: "\e7da"; }
+
+.icon-refresh_light:before { content: "\e7df"; }
+
+.icon-back_light:before { content: "\e7e0"; }
+
+.icon-tanhao:before { content: "\e61a"; }
+
+.icon-daifukuan:before { content: "\e602"; }
+
+.icon-daifahuo:before { content: "\e616"; }
+
+.icon-huanhuo:before { content: "\e634"; }
+
+.icon-pinzhibaozhang:before { content: "\e622"; }
+
+.icon-add1:before { content: "\e601"; }
+
+.icon-biji-copy:before { content: "\e978"; }
+
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.clearfix:after {
+	clear: both;
+}
+
+
+
+.icon-right{
+    color: #888
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+
+
+page{
+    color: #333;
+    min-height: 100%;
+    background: #f5f5f5;
+    font-size: 14px;
+}
+checkbox{
+    transform: scale(0.5)
+}
+
+.tabBar{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    background: #fff;
+    border-top: 1px solid #ddd;
+}
+.tabBar .tabBar-item{
+    position: relative;
+    flex: 1;
+    text-align: center;
+    color: #888;
+    margin: 5px 0;
+    z-index: 10;
+}
+.tabBar .tabBar-item .iconfont{
+    font-size: 20px;
+    
+}
+.tabBar .tabBar-item .text{
+    font-size: 14px;
+}
+.tabBar .tabBar-item .drop-list{
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+.tabBar .tabBar-item .drop-list .item{
+    line-height: 40px;
+    margin: 0 7px;
+    border-bottom: 1px solid #ddd;
+}
+.tabBar .tabBar-item .drop-list .item:last-child{
+    border: none;
+}
+.tabBar .tabBar-item.collector .iconfont{
+    color: #eeb924;
+}
+.tabBar~view{
+    padding-bottom: 50px;
+}
+
+/*  ----------商品列表--------  */
+
+/*默认大图列表  */
+.goods-list{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.goods-list .item{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.goods-list .item-inner{
+    position: relative;
+    background: #fff;
+}
+.goods-list image{
+    width: 100%;
+    height: 300px;
+    display: block;
+}
+.goods-list .desc{
+    padding: 10px;
+}
+.goods-list .title{
+    line-height: 22px;
+}
+.goods-list .content{
+    color: #1aad19;
+}
+.goods-list .desc .content{
+    line-height: 30px;
+}
+.goods-list .desc .content .iconfont{
+    float: right;
+    font-size: 20px;
+}
+
+/*小图列表  */
+.goods-list.small-list{
+    padding: 5px;
+}
+.goods-list.small-list .item{
+    width: 50%;
+    margin-bottom: 0;
+}
+.goods-list.small-list .item-inner{
+    margin: 5px;
+}
+.goods-list.small-list image{
+    height: 170px;
+}
+.goods-list.small-list .desc{
+    padding: 10px 10px 5px;
+}
+.goods-list.small-list .title{
+    height: 44px;
+    overflow: hidden;
+}
+
+/* 一大两小  */
+.goods-list.big-small{
+    padding: 5px;
+}
+.goods-list.big-small .item{
+    width: 50%;
+}
+.goods-list.big-small .item-inner{
+    margin: 5px;
+}
+.goods-list.big-small image{
+    height: 170px;
+}
+.goods-list.big-small .title{
+    height: 44px;
+    overflow: hidden;
+}
+.goods-list.big-small .item:nth-child(3n-2){
+    width: 100%;
+    margin: 0;
+}
+.goods-list.big-small .item:nth-child(3n-2) image{
+    height: 300px;
+}
+
+/*列表形式   */
+.goods-list.inline-list .item-inner{
+    padding: 10px;
+}
+.goods-list.inline-list .pic{
+    float: left;
+}
+.goods-list.inline-list .pic image{
+    width: 100px;
+    height: 100px;
+}
+.goods-list.inline-list .desc{
+    margin-left: 110px;
+    padding: 0;
+    position: relative;
+    height: 100px;
+}
+.goods-list.inline-list .content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* 极简模式 */
+.goods-list.simple-style{
+    padding: 10px 0;
+}
+.goods-list.simple-style .desc{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
+    color: #fff;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+.goods-list.simple-style .desc .title{
+    float: left;
+    width: 60%;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.goods-list.simple-style .desc .content{
+    text-align: right;
+    color: #fff;
+}
+.goods-list.simple-style .desc .content .iconfont{
+    display: none
+}
+
+/* 小图的极简模式 */
+.goods-list.simple-style.small-list .desc{
+    width: auto;
+    padding: 0 10px;
+}
+.goods-list.simple-style.small-list .title{
+    display: none;
+}
+
+/*大小图的极简模式  */
+.goods-list.simple-style.big-small .item:nth-child(3n-1) .desc,.goods-list.simple-style.big-small .item:nth-child(3n) .desc{
+    width: auto;
+    padding: 0 10px;
+}
+.goods-list.simple-style.big-small .item:nth-child(3n-1) .title,.goods-list.simple-style.big-small .item:nth-child(3n) .title{
+    display: none;
+}
+.goods-list.simple-style.inline-list .desc{
+    position: relative;
+    background: none;
+    color: #333;
+    width: auto;
+    
+}
+
+/* 列表的极简模式  */
+.goods-list.simple-style.inline-list .desc{
+    padding: 10px 0 0 0;
+}
+.goods-list.simple-style.inline-list .desc .content{
+    color: #1aad19;
+    text-align: left;
+}
+.goods-list.simple-style.inline-list .desc .title{
+    width: 100%;
+    line-height: 22px;
+    height: 44px;
+}
+.goods-list.simple-style.inline-list .desc .content .iconfont{
+    display: block;
+}
+
+/*   无标题  */
+.goods-list.notitle .title{
+    display: none !important;
+}
+
+/*  无价格  */
+.goods-list.noprice .price{
+    display: none !important;
+}
+.goods-list.noprice .iconfont{
+    float: none !important;
+}
+
+/*  无购物车  */
+.goods-list.nocar .iconfont{
+    display: none !important;
+}
+
+
+/*其他N种组合，由于样式细节调整，导致这块的不可描述，自己看class命名理解吧！！！！  */
+.goods-list.notitle .desc{
+    padding: 5px 10px !important;
+}
+.goods-list.noprice.notitle .desc,.goods-list.noprice.notitle.nocar .desc{
+    padding: 0 !important;
+}
+.goods-list.noprice.notitle .iconfont{
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+
+.goods-list.notitle.nocar .desc{
+    padding: 5px 10px !important
+}
+.goods-list.small-list.notitle.nocar .desc{
+    padding: 0px 10px !important
+}
+.goods-list.inline-list.notitle .title{
+    display: block !important;
+}
+.goods-list.inline-list.noprice .price{
+    display: block !important;
+}
+.goods-list.inline-list.noprice .iconfont{
+    float: right !important;
+}
+
+
+/* tabs切换的头 */
+.main-tabs{
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px  solid  #ddd;
+    background: #fff;
+    
+}
+.main-tabs>view{
+    flex: 1;
+    text-align: center;
+    line-height: 44px; 
+}
+.main-tabs .on{
+    color: #1aad19;
+    border-bottom: 2px solid #1aad19;
+}
+.main-tabs+.list-wrap{
+    padding-top: 54px;
+}
+/*  ----------商品列表--------  */
+/* 公用表单，例如修改密码 */
+.form-list{
+    margin: 15px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd
+}
+.form-list .item{
+    position: relative;
+    display: block;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 10px;
+}
+.form-list .item:last-child{
+    border: none;
+}
+.form-list .item .text{
+    float: left;
+    width: 70px;
+    line-height: 26px;
+}
+.form-list .item .inputs{
+    margin-left: 70px;
+}
+.form-list picker{
+    line-height: 26px;
+}
+
+/* 公用的列表  左内容，中内容，右箭头*/
+/* 例如 ：我的设置首页 */
+.public-list{
+    border-top: 1px solid #f4f4f4;
+    background-color: #fff;
+    overflow: hidden;
+    margin-top: 10px;
+}
+ .public-list .item{
+    background-color: #fff;
+    display: block;
+    line-height: 45px;
+    padding: 0px 12px;
+    border-bottom: 1px solid #f4f4f4;
+    overflow: hidden;
+}
+.public-list .item .lf{
+    float: left;
+    color: #888;
+    font-size: 15px;
+    font-family: Helvetica, Microsoft YaHei, Arial;
+    height: 45px;
+    width: 90px;
+    overflow: hidden;
+}
+.public-list .item .middle{
+    padding-left: 90px;
+    padding-right: 20px;
+    line-height: 45px;
+} 
+.public-list .item .iconfont{
+    float: right;
+    line-height: 45px;
+    text-align:right;
+    font-size: 18px;
+    color: #BABABA;
+    width: 18px;
+}
+
+
+/* 订单列表(包含购物车的)  */
+.shop-item{
+    margin: 14px 0;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+}
+.order-box{
+    background: #fff;
+    padding: 10px 14px;
+    margin-bottom: 14px;
+}
+.order-heard{
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px;
+    border-bottom: 1px solid #d9d9d9;
+    background-color: #f9fcfc;
+}
+.order-heard image{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.order-heard .name{
+    vertical-align: middle;
+}
+.order-heard .status{
+    float: right;
+    color: #1aad19;
+}
+.order-list{
+    padding-left: 16px;
+    background-color: #fff;
+}
+.order-list .item{
+    padding: 14px 14px 14px 0;
+    border-bottom: 1px solid #f4f4f4;
+}
+.order-list .item .pic{
+    float: left;
+    margin-right: 14px;
+}
+.order-list .item .pic image{ 
+    height: 80px;
+    width: 80px; 
+}
+.order-list .item .detail{
+    line-height: 20px;
+}
+.order-list .item .name{
+    height: 40px;
+    font-size: 13px;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.order-list .item .sku{
+    height: 20px;
+    margin: 4px 0;
+    font-size: 12px;
+    color: #666;
+}
+.order-list .item .infor{
+    width: 100%;
+    font-size: 15px;
+    color: #666;
+}
+
+.order-list .item .infor .price{
+    color: #1aad19
+}
+.order-list .item .infor .num{
+    float: right
+}
+
+/*  下单页面下面的fixed框  */
+.bottom-infor{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    z-index: 99
+    
+}
+.bottom-infor .btn{
+    float: right;
+    width: 35%;
+    background: #1aad19;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+.bottom-infor .price{
+    line-height: 44px;
+    margin-left: 14px;
+    font-weight: bold;
+    color: #1aad19;
+}
+
+/* radio 单选  如修改个人资料页*/
+.public-radio .wx-radio-input{
+    width:15px;
+    height:15px;
+}
+.public-radio{
+    margin-right: 10px;
+}
+
+/* 错误提示 如修改个人资料页*/
+.error-msg {
+    padding: 12px;
+    color: #999;
+}
+.error-msg .iconfont{
+    color: #e40424;
+    font-size: 16px;
+    padding-right: 7px;
+}
+/* 暂无数据 */
+.no-data{
+    padding: 30% 0;
+    text-align: center;
+}
+.no-data .pic image{
+    width: 60%;
+}
+.no-data .no-data-text{
+    color: #666;
+    line-height: 30px;
+}
+/* 公用的btn */
+.public-btn{
+    padding: 20px 8px;
+    display: flex
+}
+.public-btn navigator{
+    width: 100%;
+}
+.public-btn button{
+    flex: 1;
+    margin: 0 8px;
+}
+/*  加载全部  */
+.list-all-load{
+    text-align: center;
+    padding: 10px 0;
+}

@@ -1,0 +1,87 @@
+<!-- 消息首页 -->
+<view class='warp'>
+    <view class='notice-index'>
+        <navigator url='./newsList/newsList' hover-class='none'>
+            <view class='list'>
+                <view class='pic'>
+                    <image src='/images/icon_newsct.png'></image>
+                </view>
+                <view class='text'>
+                    <view class='tt'>
+                        <text class='c1'>{{list[0].newsTitle}}</text>
+                        <text class='c2'>{{list[0].newsTime}}</text>
+                    </view>
+                    <text class='xx'>{{list[0].newsContent}}</text>
+                </view>
+            </view>
+        </navigator>
+        <navigator hover-class='none' url='./noticeList/noticeList'>
+            <view class='list'>
+                <view class='pic'>
+                    <image src='/images/icon_notify.png'></image>
+                </view>
+                <view class='text'>
+                    <view class='tt'>
+                        <text class='c1'>{{list[1].newsTitle}}</text>
+                        <text class='c2'>{{list[1].newsTime}}</text>
+                    </view>
+                    <text class='xx'>{{list[1].newsContent}}</text>
+                </view>
+            </view>
+        </navigator>
+        <navigator hover-class='none' url='./logisticsAssistant/logisticsAssistant'>
+            <view class='list'>
+                <view class='pic'>
+                    <image src='/images/icon_logistics.png'></image>
+                </view>
+                <view class='text'>
+                    <view class='tt'>
+                        <text class='c1'>{{list[2].newsTitle}}</text>
+                        <text class='c2'>{{list[2].newsTime}}</text>
+                    </view>
+                    <text class='xx'>{{list[2].newsContent}}</text>
+                </view>
+            </view>
+        </navigator>
+    </view>
+
+
+    <!-- 最近联系人 -->
+    <view class='notice-index'>
+        <view class='title'>
+            最近联系人
+        </view>
+
+        <navigator hover-class='none'>
+            <view class='list'>
+                <view class='pic'>
+                    <image src='../../../images/order1.jpg'></image>
+                </view>
+                <view class='text'>
+                    <view class='tt'>
+                        <text class='c1'>群邀头条</text>
+                        <text class='c2'>2017-9-9</text>
+                    </view>
+                    <text class='xx'>好</text>
+                </view>
+            </view>
+        </navigator>
+        <navigator hover-class='none'>
+            <view class='list'>
+                <view class='pic'>
+                    <image src='../../../images/order1.jpg'></image>
+                </view>
+                <view class='text'>
+                    <view class='tt'>
+                        <text class='c1'>群邀头条</text>
+                        <text class='c2'>2017-9-9</text>
+                    </view>
+                    <text class='xx'>66666666</text>
+                </view>
+            </view>
+        </navigator>
+
+    </view>
+
+
+</view>

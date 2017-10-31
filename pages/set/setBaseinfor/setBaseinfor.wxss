@@ -1,0 +1,6 @@
+.error-msg{
+    padding: 12px 12px 0;
+}
+.public-btn{
+    padding-top: 0;
+}

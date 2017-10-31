@@ -1,0 +1,137 @@
+/* pages/mine/mineIndex/mineIndex.wxss */
+
+/* 页头 */
+.me-heard{
+    position: relative;
+    background-color: #fff;
+    padding: 0 0 0;
+    color: #888;
+    margin-bottom: 10px;
+}
+.me-heard .top1{
+    position: absolute;
+    width: 100%;
+}
+.me-heard .top1 .inner{
+    margin: 0 20px;
+}
+.me-heard .top1 .inner navigator{
+    display: inline;
+}
+.me-heard .top1 .inner text{
+    font-size: 22px;
+    color: #888;
+}
+ .me-heard .top1 .inner:last-child .rg{
+    float: right;
+} 
+.me-heard .cover{
+   padding-top: 20px;
+   padding-bottom: 5px;
+    margin: 0 auto;
+}
+.me-heard .cover .avatar{
+    width:75px;
+    height: 75px;
+    padding: 1%;
+    border: 1px solid #f1f1f1;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+}
+.me-heard .cover .avatar image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.me-heard .cover .ph{
+    text-align: center;
+    padding-top:8px;
+}
+.me-heard .cover .box .iconfont{
+    font-size: 60px;
+}
+.me-heard .me-list{
+    display: flex;
+    background-color: #fff;
+    margin-top: 10px;
+    border-top: 1px solid #f4f4f4;
+    padding: 12px 0
+}
+.me-heard .me-list .inner{
+    flex: 1;
+}
+.me-heard .me-list .inner view{
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+}
+.me-heard .me-list .inner view:last-child{
+    margin-top: 8px;
+}
+.me-heard .me-list .inner .iconfont{
+    font-size: 24px;  
+}
+
+/* 正文列 */
+.info-list{
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.info-list .inner{
+    padding: 0 15px;
+    line-height: 45px;
+    border-bottom: 1px solid #f4f4f4;
+}
+/* .info-list navigator:last-child{
+    border-bottom: 0;
+} */
+.info-list .inner .iconfont{
+    float: right;
+    color: #888;
+}
+
+.info-list .hd{
+    padding-left: 15px;
+    padding-top: 15px;
+}
+.info-list .content-out{
+    display: flex;
+    padding: 10px 0;
+}
+.info-list .content-out .content{
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+}
+.info-list .content-out .content image{
+    height: 40px;
+    width: 40px;
+}
+.info-list .content-out .content view{
+    margin-top: 5px;
+    font-size: 12px;
+    color: #888;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+.info-list .content-out .content view text{
+    color: red;
+}
+
+
+.shopIndex-cover{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.01);
+    z-index: 9;
+}
+.public-btn{
+    margin-bottom: 0;
+}

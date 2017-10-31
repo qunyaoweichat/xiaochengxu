@@ -1,0 +1,19 @@
+<import src="../../public/listTpl.wxml" />
+<!-- 群邀头条 -->
+<view class='notice-news'>
+    <view class='item' wx:for='{{list}}' wx:key='noticeNews'>
+        <navigator url='../newsDetails/newsDetails?headlineId={{item.headlineId}}' hover-class='none'>
+            <text class='title'>{{item.headlineTitle}}</text>
+            <image mode="widthFix" src='{{item.headlineImage}}'></image>
+            <text class='sj'>{{item.headlineResource}}   {{item.headlineTime}}</text>
+        </navigator>
+    </view>
+    <view wx:if='{{list.length==0}}'>
+        <template is="empty" />
+    </view>
+    <view wx:else>
+        <view wx:if='{{loadAll}}'>
+            <template is="loadAll" />
+        </view>
+    </view>
+</view>

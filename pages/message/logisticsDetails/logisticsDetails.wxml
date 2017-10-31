@@ -1,0 +1,33 @@
+<import src="../../public/listTpl.wxml" />
+<view class='logistics-details'>
+
+    <view class='item'>
+        <view class='pic'>
+            <image wx:if='{{detail.imageUrl}}' src='{{detail.imageUrl}}'></image>
+        </view>
+        <view class='list'>
+            <view wx:if='{{detail.deliverystatus==""}}'>订单状态:暂无物流信息</view>
+            <view wx:elif='{{detail.deliverystatus=="1"}}'>订单状态:已揽收</view>
+            <view wx:elif='{{detail.deliverystatus=="2"}}'>订单状态:在途中</view>
+            <view wx:elif='{{detail.deliverystatus=="3"}}'>订单状态:已签收</view>
+            <view wx:elif='{{detail.deliverystatus=="4"}}'>订单状态:问题件</view>
+            <view wx:else>订单状态:无轨迹</view>
+            <view>订单编号：{{detail.number}}</view>
+            <view>信息来源：{{detail.name}}</view>
+        </view>
+    </view>
+
+    <!-- 物流 -->
+    <view class='logistics'>
+        <text class='title'>物流跟踪</text>
+        <view class='gz' wx:for='{{detail.list}}' wx:key='list'>
+            <text class='dz'>{{item.status}}</text>
+            <text class='time'>{{item.time}}</text>
+        </view>
+        <view wx:if='{{detail.list.length==0}}'>
+            <template is="empty" />
+        </view>
+    </view>
+
+
+</view>

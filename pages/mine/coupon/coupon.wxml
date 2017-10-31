@@ -1,0 +1,36 @@
+<import src="../../public/listTpl.wxml" />
+<view class='main-tabs'>
+    <view bindtap='changeType' data-type='{{item.couponType}}' wx:for='{{tabs}}' wx:key='tabs' class='{{couponType==item.couponType?"on":""}}'>
+        {{item.name}}
+    </view>
+</view>
+<view class='list-wrap'>
+    <view class='coupon-list'>
+        <view class='item' wx:for='{{list}}' wx:key='coupon'>
+            <image wx:if='{{couponType!=1}}' src='../../../images/coupon-bg.png'></image>
+            <image wx:else src='../../../images/yhq.png'></image>
+            <view class='content'>
+                <view class='c1'>
+                    <view class='price'>￥
+                        <text>{{item.couponPrice}}</text>
+                    </view>
+                    <view class='desc'>{{item.couponLimit}}</view>
+                </view>
+                <view class='c2'>
+                    <view class='r1'>{{item.couponPrice}}优惠券</view>
+                    <view>有效期至：{{item.couponEndDate}}</view>
+                    <view>使用范围：{{item.couponScope}}</view>
+                    <view>店铺：{{item.couponShopName}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:if='{{list.length==0}}'>
+        <template is="empty" />
+    </view>
+    <view wx:else>
+        <view wx:if='{{loadAll}}'>
+            <template is="loadAll" />
+        </view>
+    </view>
+</view>

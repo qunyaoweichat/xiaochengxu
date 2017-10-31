@@ -1,0 +1,9 @@
+<view class='moneyIndex-hd'>
+    <view class='money'>现金余额（元）</view>
+    <view class='number'>{{balance.remain}}</view>
+</view>
+<view class='moneyIndex-ctrl'>
+    <view> <navigator url='recharge/recharge' hover-class='none'>充值</navigator></view>
+    <view> <navigator url='withdrawal/withdrawal' hover-class='none'>提现</navigator></view>
+    <view> <navigator url='record/record' hover-class='none'>明细</navigator></view>
+</view>

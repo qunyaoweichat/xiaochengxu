@@ -1,0 +1,26 @@
+.moneyIndex-hd{
+    background: #1aad19;
+    text-align: center;
+    padding: 5% 0;
+    color: #fff;
+}
+.moneyIndex-hd .number{
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 5%;
+    font-family: ""
+}
+.moneyIndex-ctrl{
+    display: flex;
+    
+    border-bottom: 1px solid #ddd
+}
+.moneyIndex-ctrl view{
+    flex: 1;
+    border-right: 1px solid #ddd;
+    line-height: 44px;
+    text-align: center;
+    background: #fff;
+    font-size: 15px;
+}

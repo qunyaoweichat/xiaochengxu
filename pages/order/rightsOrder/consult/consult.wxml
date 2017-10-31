@@ -1,0 +1,62 @@
+<!-- 协商记录 -->
+
+<view class='public-btn'>
+    <navigator hover-class='none' url='../leavingMessage/leavingMessage'>
+        <button type="primary">留 言</button>
+    </navigator>
+</view>
+<view class='record-detail'>
+    <view class='head'>
+        <view class='clearfix'>
+            <text class='lf'>订单编号</text>
+            <text class='rg'>{{data.orderId}}</text>
+        </view>
+        <view class='clearfix'>
+            <text class='lf'>维权记录</text>
+            <text class='rg'>{{data.refundId}}</text>
+        </view>
+    </view>
+
+    <view class='order-list'>
+        <view class='item' wx:for="{{data.orderItemList}}" wx:key='order'>
+            <view class='pic'>
+                <image src='{{item.goodsImg}}'></image>
+            </view>
+
+            <view class='detail'>
+                <text class='name'>{{item.goodsName}}</text>
+                <view class='infor clearfix'>
+                    <text class='price'>￥{{item.unitPrice}}</text>
+                    <text class='num'>数量：{{item.quantity}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!-- 默认是右边的对话框 加上consult-lf是左边的对话框 -->
+    <scroll-view scroll-y='true' style="height: 200px;" bindscrolltolower="getMore" >
+        <view class='consult-out'>
+            <view class='consult consult-lf'>
+                <view class='msg-item clearfix'>
+                    <view class='pic'>
+                        <image src='../../../../images/order1.jpg'></image>
+                    </view>
+                    <view class='details'>
+                        <view class='inner'>
+                            <text>发起了维权申请</text>
+                            <text>维权原因：</text>
+                            <text>处理方式：</text>
+                            <text>退款金额:</text>
+                            <text>退款说明:</text>
+                            <text>联系电话:</text>
+                        </view>
+                        <view class='arrow'></view>
+                    </view>
+                </view>
+            </view>
+            <view class='time'>2017-09-22 09:09:40</view>
+        </view>
+
+    </scroll-view>
+
+</view>

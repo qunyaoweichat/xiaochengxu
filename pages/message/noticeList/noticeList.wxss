@@ -1,0 +1,19 @@
+.qytt_item{
+    margin-top: 10px;
+    padding: 16px 15px;
+    background-color: #fff;
+    border-top: 1px solid #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.qytt_item text{
+    display:block;
+}
+.qytt_item .nr{
+    color: #666;
+    line-height: 40px;
+    font-size: 14px;
+}
+.qytt_item .xq{
+    color: #007aff;
+}

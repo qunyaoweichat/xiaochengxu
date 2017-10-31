@@ -1,0 +1,170 @@
+<import src="../public/listTpl.wxml" />
+<block wx:if='{{shopTpl !="shopClose"}}'>
+    <view class='tabBar'>
+        <view class='tabBar-item' bindtap='toggleDrop'>
+            <view class='drop-list' wx:if="{{showDrop}}">
+                <view class='item' bindtap='changeGroup'>全部</view>
+                <view class='item' bindtap='changeGroup' wx:for='{{shopDetail.goodsGroupDataList}}' wx:key='{{groupId}}'>
+                    <navigator url="shopFilter/shopFilter?shopId={{shopId}}&groupId={{item.groupId}}&groupName={{item.groupName}}" hover-class='none'>{{item.groupName}}</navigator>
+                </view>
+            </view>
+            <view>
+                <text class='iconfont icon-searchlist'></text>
+            </view>
+            <view class='text'>商品分组</view>
+        </view>
+
+        <view class='tabBar-item {{isMark==1?"collector":""}}' bindtap='collector'>
+            <view>
+                <text class='iconfont icon-favor'></text>
+            </view>
+            <view class='text'>收藏</view>
+        </view>
+        <view class='tabBar-item'>
+            <navigator url='../webIM/index?shopId={{shopId}}' hover-class="none">
+                <view>
+                    <text class='iconfont icon-comment'></text>
+                </view>
+                <view class='text'>联系商家</view>
+            </navigator>
+        </view>
+        <view class='tabBar-item'>
+            
+            <navigator url="../buy/index?shopid={{shopDetail.shopId}}" hover-class="none" open-type='{{redirect?"redirect":"navigate"}}'>
+                <view>
+                    <text class='iconfont icon-cart'></text>
+                </view>
+                <view class='text'>购物车</view>
+            </navigator>
+        </view>
+    </view>
+    <view class='shopIndex-cover' bindtap='hideDrop' wx:if="{{showDrop}}"></view>
+
+
+    <view class='shop-index'>
+        <view class='shop-hd clearfix'>
+            <view class='c1'>
+                <image src='{{shopDetail.shopLogo}}' wx:if='{{shopDetail.shopLogo}}' mode='aspectFill' lazy-load='true'></image>
+                <text>{{shopDetail.shopName}}</text>
+            </view>
+            <view class='c2'>
+                <navigator url="../mine/index?shopId={{shopDetail.shopId}}" hover-class='none'>我的订单</navigator>
+            </view>
+        </view>
+        <view class='shop-mode'>
+            <view class='banner'>
+                <image src='{{shopHead.contentMap.imgUrl}}' wx:if='{{shopHead.contentMap.imgUrl}}' lazy-load='true'></image>
+            </view>
+            <view class='mode1' wx:if='{{shopTpl=="template1"}}'>
+                <view class='avatar'>
+                    <image src='{{shopDetail.shopLogo}}' wx:if='{{shopDetail.shopLogo}}' lazy-load='true'></image>
+                </view>
+                <view class='list'>
+                    <view class='item'>
+                        <view>{{shopDetail.shopProductCount}}</view>
+                        <view>全部商品</view>
+                    </view>
+                    <view class='item'>
+                        <view>{{shopDetail.shopPromotionCount}}</view>
+                        <view>优惠商品</view>
+                    </view>
+                    <view class='item'>
+                        <view>{{shopDetail.shopNewProductCount}}</view>
+                        <view>新品</view>
+                    </view>
+                </view>
+            </view>
+            <view class='mode2' wx:if='{{shopTpl=="template2"}}'>
+                <view class='inner'>
+                    <view class='select {{isMark==1?"collector":""}}' bindtap='collector'>
+                        <view class='icon'>
+                            <text class='iconfont icon-favor'></text>
+                        </view>
+                        <view> 收藏 </view>
+                    </view>
+                    <view class='avatar'>
+                        <view class='avatar-wrap'>
+                            <image src='{{shopDetail.shopLogo}}' wx:if='{{shopDetail.shopLogo}}'></image>
+                        </view>
+                    </view>
+                    <view class='share'>
+                        <view class='icon'>
+                            <button class='share-btn' open-type='share'>分享</button>
+                            <text class='iconfont icon-fenxiang'></text>
+                        </view>
+                        <view> 分享 </view>
+                    </view>
+                </view>
+            </view>
+
+            <!-- 优惠券 -->
+            <view class='cards-list'>
+                <view class='inner' wx:for='{{couponList}}' wx:for-item='coupon' wx:key='coupon'>
+                    <navigator url='couponActivity/couponActivity?couponActivityId={{coupon.couponActivityId}}' >
+                        <view class='price'>￥{{coupon.maxMoney}}</view>
+                        <view class='text'>{{coupon.useIntroduce}}</view>
+                    </navigator>
+                </view>
+
+            </view>
+
+        </view>
+        <view class='shop-news'>
+            <navigator class="a" url="shopFilter/shopFilter?shopId={{shopId}}" hover-class='none'>
+                <text class='iconfont icon-right'></text>
+                <text class='text'>最新商品</text>
+            </navigator>
+        </view>
+
+        <!--
+        默认大图
+        小图 small-list
+        一大两小 big-small
+        列表模式 inline-list
+
+        极简模式 simple-style 匹配所有的列表
+
+        无标题 notitle
+        无价格 noprice
+        没有购物车 nocar
+        
+      -->
+        <!--根据返回的 模板数据 设置列表样式 及是显示  -->
+        <block wx:if='{{goodsList.length>0}}'>
+            <view class='goods-list {{shopTplConfig.cardStyle==2?"simple-style":""}} {{shopTplConfig.listStyle==1? "small-list" : ""}} {{shopTplConfig.listStyle==2? "big-small" : ""}} {{shopTplConfig.listStyle==3? "inline-list" : ""}}'>
+                <view class='item' wx:for="{{goodsList}}" wx:key="id">
+                    <navigator url="goodsDetail/goodsDetail?id={{item.id}}&redirect={{redirect}}" open-type='{{redirect?"redirect":"navigate"}}'>
+                        <view class='item-inner clearfix'>
+                            <view class='pic'>
+                                <image src='{{item.image}}' wx:if='{{item.image}}' lazy-load='true'></image>
+                            </view>
+                            <view class='desc' wx:if='{{shopTplConfig.isShowPrice == 1 || shopTplConfig.isShowGoodsName==1}}'>
+                                <view class='title' wx:if='{{shopTplConfig.isShowGoodsName==1}}'>{{item.title}}</view>
+                                <view class='content'>
+                                    <text class='iconfont icon-cart' wx:if='{{shopTplConfig.isShowBut==1}}'></text>
+                                    <text class='price' wx:if='{{shopTplConfig.isShowPrice==1}}'>￥{{item.price}}</text>
+                                </view>
+                            </view>
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+        </block>
+        <block wx:if='{{goodsList.length==0}}'>
+            <!-- 暂无数据 -->
+            <template is="empty" />
+        </block>
+    </view>
+</block>
+
+<!-- 店铺关闭 -->
+<block wx:else>
+    <view class='shop-closed'>
+        <view class='pic'>
+            <image mode='widthFix' src='/images/shop-close.png'></image>
+        </view>
+        <view class='title'>群邀积分商城</view>
+        <view class='title'>店铺正在装修，敬请期待!</view>
+        <view class='text'>如需查看历史记录请登录会员主页</view>
+    </view>
+</block>

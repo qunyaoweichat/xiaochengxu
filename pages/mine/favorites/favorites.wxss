@@ -1,0 +1,30 @@
+.favorite-goods{
+    margin: 14px 0;
+}
+.favorite-goods .item{
+    background: #fff;
+    padding: 14px;
+}
+.favorite-goods .pic{
+    float: left;
+    margin-right: 14px;
+}
+.favorite-goods .pic image{
+    width: 80px;
+    height: 80px;
+    vertical-align: middle;
+}
+.favorite-goods .content .name{
+    height: 44px;
+    line-height: 22px;
+    overflow: hidden;
+}
+.favorite-goods .content .infor{
+    margin-top: 8px;
+}
+.favorite-goods .content view{
+    line-height: 30px;
+}
+.favorite-goods .content button{
+    float: right;
+}

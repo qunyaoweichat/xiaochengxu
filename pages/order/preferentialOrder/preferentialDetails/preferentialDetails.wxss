@@ -1,0 +1,43 @@
+.order-heard {
+    height: 70px;
+    background-color: #fff;
+    margin: 10px 0;
+    border-bottom: 0;
+}
+.order-heard image{
+    height: 50px; 
+    width: 50px;
+}
+.order-heard .name{
+    left: 80px;
+    line-height: 40px;
+}
+.order-heard .lianxi{
+    position: absolute;
+   right: 10px;
+   line-height: 70px;
+}
+.public-list .item .lf {
+    color: #000;
+    font-size: 13px;
+    text-align: left;
+}
+/* 优惠付订单详情 */
+.public-list{
+    margin-top: 0;  
+}
+.public-list .item{
+    text-align: right;
+}
+.public-list .item .lf {
+    color: #000;
+    font-size: 13px;
+    text-align: left;
+}
+.public-list .item{
+    font-size: 13px;
+}
+.public-list .item .middle{
+    padding-right: 0;
+    text-align: right;
+}

@@ -1,0 +1,15 @@
+.recharge-tips{
+    color: #666;
+    margin: 0 10px;
+}
+.recharge .form-list .icons{
+    text-align: right;
+    font-weight: bold;
+    color: #1aad19
+}
+.recharge .form-list .icons .iconfont{
+    font-size: 22px;
+}
+.recharge button{
+    margin: 15px 10px;
+}

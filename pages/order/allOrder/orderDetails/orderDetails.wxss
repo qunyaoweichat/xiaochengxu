@@ -1,0 +1,94 @@
+/* pages/order/directOrderList/directOrderList.wxss */
+.order-details{
+    background: #fff;
+    margin-top: 10px;
+    color: #666;
+    font-size: 14px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 13px 15px;
+}
+.order-details .order-infor{
+    font-size: 15px;
+}
+.order-details .text{
+    line-height: 23px;
+}
+
+/* 订单详情 */
+.order-form{
+    color: #666;
+    font-size: 14px;
+    margin-top: 10px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+.order-form .list{
+    line-height: 24px; 
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+.order-form .list .lx{
+    float: right;
+    border: 1px solid #f00;
+    color: #f00;
+    padding: 0 10px;
+    border-radius: 5px;  
+}
+.order-form .list .rg{
+    float: right
+}
+.order-form .list image{
+    height: 54px;
+    width: 54px;
+}
+.order-form .pic-list image{
+    margin-right: 10px;
+}
+.order-form .list .sp{
+    float: right;
+    line-height: 54px;
+}
+.order-form .list .money{
+    line-height: 30px;
+}
+.order-form .list .money .c2{
+    color: red;
+    float: right;
+}
+.order-form .list .js{
+    text-align: right;
+    font-size: 15px;
+}
+.order-form .list .js text{
+    color: red;
+}
+.order-form .list .cdsj{
+    margin-top: 4px;
+    font-size: 12px;
+}
+.order-form .list .cdsj  text{
+    color: #666;
+}
+
+.order-fs .list{
+    display: flex;
+    padding: 12px;
+}
+.order-fs .list text{
+    flex: 1;
+    min-width: 0;
+}
+.order-fs .list text:last-child{
+    flex: 3;
+    padding-left: 10px;
+    min-width: 0;
+    text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+
+.public-btn navigator{
+    width: 100%;
+}

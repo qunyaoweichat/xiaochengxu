@@ -1,0 +1,44 @@
+.order-heard .status{
+    float: right;
+}
+
+.order-list  .total{
+    color: #1aad19;
+    line-height: 40px;
+    font-size: 13px;
+    padding-right: 10px;
+}
+.order-list .num{
+    color: #666;    
+    float: right; 
+}
+.order-list .num .money{
+    color: #000;
+    font-size: 14px;
+}
+.order-list .order-ctrl navigator{
+    display:inline-block;
+}
+.order-list .order-ctrl{
+    margin-left: -16px;
+    padding: 10px;
+    text-align: right;
+    border-top: 1px solid #f4f4f4;
+}
+.order-list .order-ctrl button{
+    width: 90px;
+    height: 34px;
+    line-height: 34px;
+}
+.order-list .order-ctrl .record{
+    color: #666;
+    
+}
+
+.order-list .order-ctrl .revoke{
+    color: #1aad19;
+    margin-left: 10px;
+}
+.order-list .order-ctrl .revoke::after{
+    border: solid 1px #1aad19;
+}

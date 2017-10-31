@@ -1,0 +1,47 @@
+.title{
+    display: block;
+    font-size: 14px;
+    margin: 10px 15px;
+    color: #8f8f94;
+}
+.message{
+    width: 100%;
+    padding:10px 15px;
+    line-height: 25px;
+    background-color: #fff;
+}
+.image-list{
+    background-color: #fff;
+    background-size: cover;
+    padding: 10px 10px;
+    overflow: hidden;
+}
+.image-list .pic{
+    position: relative;
+    float: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 12px;
+    border: solid 1px #e8e8e8;
+}
+.image-list .pic image{
+    width: 100%;
+    height: 100%;
+}
+.image-list .pic .close{
+    position: absolute;
+    right: -6px;
+    top: -6px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 12px;
+    background-color: red;
+    color: #f3f3f3;
+    font-size: 12px;
+    z-index: 1;
+}
+
+

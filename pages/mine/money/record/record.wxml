@@ -1,0 +1,34 @@
+<import src="../../../public/listTpl.wxml" />
+<view class='main-tabs'>
+    <view bindtap='changeType' data-type='{{item.incomeType}}' wx:for='{{tabs}}' wx:key='tabs' class='{{incomeType==item.incomeType?"on":""}}'>
+        {{item.name}}
+    </view>
+</view>
+<view class=' list-wrap'>
+    <view class='record-list'>
+        <view class='item' wx:for="{{list}}" wx:for-item='item' wx:key='item'>
+            <view class='time'>
+                <text>收入{{item.totalIncome}} 支出{{item.totalOutcome}}</text> {{item.month}}</view>
+
+            <view class='content' wx:for="{{item.cashAccountDetailList}}" wx:for-item='record' wx:key='record'>
+                <view class='row'>
+                    <view class='c'>{{record.name}}</view>
+                    <view class='c'>{{record.month}}</view>
+                </view>
+                <view class='row'>
+                    <view class='c'>余额:{{record.remain}}</view>
+                    <view class='c money' style="color:red" wx:if='{{record.incomeType=="In"}}'>+{{record.coinIn}}</view>
+                    <view class='c money' style="color:blue" wx:else>-{{record.coinOut}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:if='{{list.length==0}}'>
+        <template is="empty" />
+    </view>
+    <view wx:else>
+        <view wx:if='{{loadAll}}'>
+            <template is="loadAll" />
+        </view>
+    </view>
+</view>

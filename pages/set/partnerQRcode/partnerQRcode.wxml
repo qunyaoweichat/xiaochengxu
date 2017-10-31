@@ -1,0 +1,12 @@
+<!-- 专属二维码 -->
+<view class='partner-qrcode'>
+    <view class='qrcode'>
+        <view>长按二维码并识别,可保存</view>
+        <image mode='widthFix' src='../../../../images/qr.png'></image>
+    </view>
+    <view class='or'>或</view>
+
+    <view class='share'>
+        <navigator open-type='reLaunch' url='../../shop/index?shopId={{data.shopId}}&partnerCode={{data.partnerCode}}' hover-class='none'>点击此专属链接进入，然后分享给朋友</navigator>
+    </view>
+</view>

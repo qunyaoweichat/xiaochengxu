@@ -1,0 +1,24 @@
+<view class='card-list'>
+    <view class='item clearfix' wx:for="{{cardList}}" wx:key='item'>
+        <navigator url='bankCardDetail/bankCardDetail?id={{item.bankId}}'>
+            <view class='card-logo'>
+                <image src='{{item.bankLogo}}'></image>
+            </view>
+            <view class='card-detail'>
+                <view class='card-name'>{{item.bankAlis}}</view>
+                <view class='card-type' wx:if='{{item.cardType==0}}'>储蓄卡</view>
+                <view class='card-type' wx:if='{{item.cardType==1}}'>储蓄卡</view>
+                <view class='card-num'>
+                    <text wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12]}}" class='dote'></text>
+                    <text class='last'>{{item.cardNo}}</text>
+                </view>
+            </view>
+        </navigator>
+    </view>
+</view>
+<view class='add-card'>
+    <navigator url='addCard/addCard'>
+        <text class='iconfont icon-add'></text>
+        <text class='text'>添加银行卡</text>
+    </navigator>
+</view>

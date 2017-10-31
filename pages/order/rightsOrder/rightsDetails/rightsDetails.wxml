@@ -1,0 +1,79 @@
+<!-- 维权详情 -->
+<view class='refund-details'>
+    <view class='sevday'>买卖双方需要7天内处理，逾期将视为默认同意对方诉求，请尽快处理维权订单</view>
+    <view class='state'>
+        <text class='iconfont icon-comment'></text>维权状态:{{detail.applyStatusStr}}</view>
+
+    <view class='seller'>
+        <navigator url='../../../webIM/index?shopId={{detail.shopBasicInfo.shopId}}'>
+            <text>联系卖家</text>
+        </navigator>
+        卖家：{{detail.shopBasicInfo.shopName}}
+    </view>
+
+    <view class='public-list'>
+        <view class='item'>
+            <view class='lf title'>退款商品</view>
+        </view>
+        <view class='shop item' wx:for='{{detail.orderItemList}}' wx:key='goods'>
+            <view class='pic'>
+                <image src='{{item.goodsImg}}'></image>
+            </view>
+            <view class='text'>
+                <view class='name'>{{item.goodsName}}</view>
+                <view class='num'>数量：{{item.quantity}}</view>
+                <view class='price'>￥{{item.unitPrice}}</view>
+            </view>
+
+        </view>
+        <view class='item'>
+            <view class='lf'>维权信息：</view>
+            <view class='middle'>2017-06-09 23:14:56 </view>
+        </view>
+        <view class='item'>
+            <view class='lf'>备注信息：</view>
+            <view class='middle'>{{detail.remark}}</view>
+        </view>
+        <view class='item'>
+            <view class='lf'>退款金额：</view>
+            <view class='middle'>{{detail.refundMoney}}元</view>
+        </view>
+    </view>
+
+    <!-- 地址 -->
+    <view class='address'>
+        <view class='title'>商家退货地址</view>
+        <view>{{detail.address}}</view>
+        <view>{{detail.contactName}} {{detail.contactMobile}}</view>
+        <view>{{detail.zipCode}}</view>
+    </view>
+    <view class='address-title'>请在包裹内填写您的账号，方便商家识别</view>
+
+    <!-- 订单详情 -->
+
+    <view class='public-list'>
+        <view class='item information'>
+            <view class='title'>原订单信息</view>
+            <view class='order-id'>原订单号：{{detail.orderId}}</view>
+        </view>
+        <view class='item media'>
+            <view class='pic' wx:for='{{detail.originalOrder.orderItemList}}' wx:key='order'>
+                <image src='{{item.goodsImg}}'></image>
+                <view>x{{item.quantity}}</view>
+            </view>
+        </view>
+
+        <view class='item'>由【{{detail.originalOrder.deliveryInfo}}</view>
+        <view class='item'>
+            <view class='lf'>备注信息：</view>
+            <view class='middle'>{{detail.originalOrder.orderRemark}}</view>
+        </view>
+        <view class='item'>
+            <view class='lf'>付款时间: </view>
+            <view class='middle'>{{detail.originalOrder.payTimeStr}}</view>
+        </view>
+        <view class='item Paid'>已付款：
+            <text>{{detail.originalOrder.orderMoney}}元</text>
+        </view>
+    </view>
+</view>

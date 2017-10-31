@@ -1,0 +1,177 @@
+<import src="../../../utils/wxParse/wxParse.wxml" />
+<view class="tabBar">
+    <view class='tabBar-item'>
+        <navigator url="../index?shipId={{product.productShop.shopId}}&redirect=true" open-type='redirect'>
+            <view>
+                <text class='iconfont icon-shop'></text>
+            </view>
+            <view class='text'>店铺</view>
+        </navigator>
+    </view>
+    <view class='tabBar-item' bindtap='contactBuss'>
+        <navigator url='../../webIM/index'>
+            <view>
+                <text class='iconfont icon-comment'></text>
+            </view>
+            <view class='text'>联系</view>
+        </navigator>
+    </view>
+    <view class='tabBar-item {{isMark?"collector":""}}' bindtap='collector'>
+        <view>
+            <text class='iconfont icon-favor'></text>
+        </view>
+        <view class='text'>收藏</view>
+    </view>
+    <view class='tabBar-item btn btn-buy' bindtap='goBuy' >
+        立即购买
+    </view>
+    <view class='tabBar-item btn' bindtap='addCart'>
+        加入购物车
+    </view>
+</view>
+<view class='goods-detail'>
+    <swiper indicator-dots="true" autoplay="true" circular="true" indicator-active-color="#ff8800">
+        <block wx:for="{{product.productGroupImage}}" wx:key='item'>
+            <swiper-item>
+                <image wx:if='{{item.image}}' src="{{item.image}}" class="slide-image" width="100%" />
+            </swiper-item>
+        </block>
+        <view class='buy'>
+            <navigator url='../../buy/index?redirect=true' open-type='{{redirect?"redirect":"navigate"}}'>
+                <image src='../../../../images/icon_gouwu.png'></image>
+            </navigator>
+        </view>
+    </swiper>
+    <view class='item goods-name'>
+        {{product.productTitle}}
+    </view>
+    <view class='item goods-infor'>
+        <text class='num'>销量{{product.productSales}}笔</text>
+        <text wx:if='{{product.productType==1}}'>￥{{product.productPrice}}</text>
+        <text wx:if='{{product.productType==2}}'>{{product.productPrice}}积分</text>
+    </view>
+    <view class='item goods-num' bindtap='numberLayerCtrl'>
+        <text class='iconfont icon-right'></text>
+        <text class='desc'>已选</text>
+        <text class='num'>{{productSelect}} 数量:{{productCount}}</text>
+    </view>
+    <view class='item goods-promise'>
+        <view class='title'>商家承诺</view>
+        <view class='list'>
+            <view wx:for='{{product.productPromotion}}' wx:key='item'>
+                <text class='iconfont icon-huanhuo'></text>
+                <text></text>
+            </view>
+
+        </view>
+    </view>
+    <view class='item goods-component'>
+        <view>
+            <text>商品货号：</text>
+            <text>{{product.productSn}}</text>
+        </view>
+        <view>
+            <text>商品品牌：</text>
+            <text>{{product.productBrand}}</text>
+        </view>
+        <view>
+            <text>商品产地：</text>
+            <text>{{product.productCity}} </text>
+        </view>
+        <view>
+            <text>材质：</text>
+            <text>{{product.productMaterial}}</text>
+        </view>
+    </view>
+    <view class='item goods-comment'>
+        <view class='title'>
+            <view class='fr'>
+                <navigator url='../comment/comment?id={{productId}}'>
+                    <text>{{product.productCommentCount}}人评论</text>
+                    <text class='iconfont icon-right'></text>
+                </navigator>
+            </view>
+            <text class='text'>商品评价</text>
+        </view>
+        <view class='comment-list clearfix' wx:for="{{product.productCommentData}}" wx:key='comment'>
+            <view class='avatar'>
+                <image wx:if='{{item.commentIcon}}' src='{{item.commentIcon}}'></image>
+            </view>
+            <view class='comment-con'>
+                <view class='hd'>
+                    <view class='username'>{{item.commentName}}</view>
+                    <view class='star-num'>
+                        <text class='iconfont icon-favorfill {{star<=item.commentLevel  ? "on":""}}' wx:key='star' wx:for-item='star' wx:for="{{[1,2,3,4,5]}}"></text>
+                    </view>
+
+                </view>
+                <view class='bd'>{{item.commentReplyContent}}</view>
+            </view>
+
+        </view>
+    </view>
+    <view class='item shop-infor'>
+        <navigator url='../index?shopId={{product.productShop.shopId}}&redirect=true' open-type='redirect' hover-class='none'>
+            <view class='shop-avatar'>
+                <image wx:if='{{product.productShop.shopLogo}}' src='{{product.productShop.shopLogo}}'></image>
+            </view>
+            <view class='shop-detail'>
+                <view class='shop-name'>{{product.productShop.shopName}}</view>
+                <view class='list'>
+                    <text>全部宝贝：{{product.productShop.shopProductCount}}</text>
+                    <text>上新：{{product.productShop.shopNewProductCount}}</text>
+                    <text>优惠：{{product.productShop.shopPromotionCount}}</text>
+                </view>
+            </view>
+            <view class='arr'>
+                <text class='iconfont icon-right'></text>
+            </view>
+        </navigator>
+    </view>
+    <view class='goods-tabs'>
+        <view class='tabs-hd'>
+            <view class='{{showDetail? "on":""}}' bindtap='showDetail'>商品详情</view>
+            <view class='{{showDetail? "":"on"}}' bindtap='showRecommend'>推荐店铺</view>
+        </view>
+        <view class='tabs-bd'>
+            <block wx:if='{{showDetail}}'>
+                <view class='detail wxParse'>
+                    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+                </view>
+            </block>
+            <block wx:else>
+                暂时没有推荐的店铺字段后面加上后再弄进来
+            </block>
+        </view>
+    </view>
+</view>
+<block wx:if="{{showSkuLayer}}">
+    <view class='select-goods'>
+        <view class='cover' bindtap='numberLayerCtrl'>
+        </view>
+        <view class='select-goods-inner'>
+            <view class='select-goods-main'>
+                <view class='goods-pic' wx:if='{{product.productSelectList[0].selectData[0].imgUrl}}'>
+                    <image src='{{product.productSelectList[0].selectData[0].imgUrl}}'></image>
+                </view>
+                <view wx:for='{{product.productSelectList}}' wx:for-index='skuIndex' wx:key='sku'>
+                    <view class='title'>{{item.selectType}}</view>
+                    <view class='sku-list'>
+                        <text class='{{selectData.key==productSelectSku[skuIndex]?"on":""}}' wx:for='{{item.selectData}}' wx:for-item='selectData' data-id='{{selectData.key}}' data-index='{{skuIndex}}' wx:key='skuParams' bindtap='skuCtrl'>{{selectData.value}}</text>
+                    </view>
+                </view>
+                <view class='title'>
+                    数量
+                </view>
+                <view class='change-num'>
+                    <text class='iconfont icon-move' bindtap='subtractCount'></text>
+                    <input type='number' value=' {{productCount}}' bindblur='setCount'></input>
+                    <text class='iconfont icon-add' bindtap='addCount'></text>
+                </view>
+            </view>
+            <view class='btn' bindtap='selectGoods'>确认</view>
+            <!-- <button type='primary'>确认</button> -->
+        </view>
+
+    </view>
+</block>

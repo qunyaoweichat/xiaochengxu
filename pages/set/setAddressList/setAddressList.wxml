@@ -1,0 +1,34 @@
+<!--收货地址-->
+<view class='address-list'>
+    <view>{{errMsg}}</view>
+    <view class='address' wx:for='{{addressList}}' wx:key='item' wx:for-index='index' bindtap='setAdress' data-index="{{index}}">
+        <view class='inner'>
+            <image class='frame' src='../../../../images/dizhi.png'></image>
+            <image class='pitch-on' src='../../../../images/duihao.png' wx:if='{{item.isDefault}}'></image>
+            <view class='name'>
+                <text> {{item.name}}</text>
+                <text class='phone'>{{item.phone}}</text>
+                <text class='iconfont icon-biji-copy'  catchtap='goEdt' data-index="{{index}}"></text>
+            </view>
+            <view>
+            {{item.addressArea}} {{item.addressDetails}}
+            </view>
+            
+            <view class='zip'>18700000000</view>
+        </view>
+    </view>
+
+    <!-- 新增加地址 -->
+    <navigator class='addr_cur' hover-class='none' url='./addAddress/addAddress'>
+        
+        <text class='iconfont icon-add1'></text>
+       
+        新加收货地址
+    </navigator>
+
+    
+
+    
+
+</view>
+

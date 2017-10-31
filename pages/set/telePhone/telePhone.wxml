@@ -1,0 +1,29 @@
+<view class='error-msg ' wx:if='{{errMsg}}'>
+    <text class='iconfont icon-tanhao'></text>
+    <text>{{errMsg}}</text>
+</view>
+
+<view class='telePhone'>
+    <form bindsubmit='submit'>
+        <view class='form-list'>
+            <label class='item clearfix'>
+                <view class='text'>手机号</view>
+                <view class='inputs'>
+                    <input placeholder='请输入手机号' type='number' name='mobile' value='{{oldPhone}}' bindblur='setPhone'></input>
+                </view>
+            </label>
+
+            <view class='item clearfix'>
+                <view class='text'>验证码</view>
+                <view class='inputs'>
+                    <input placeholder='请输入验证码' type='number' name='code'></input>
+                </view>
+                <button class='get-code' size='mini' bindtap='getCode' disabled='{{getCodeFlag}}' type='number' >{{getCodeStr}}</button>
+            </view>
+        </view>
+
+        <view class='public-btn'>
+            <button type='primary' form-type='submit'>绑定</button>
+        </view>
+    </form>
+</view>

@@ -1,0 +1,38 @@
+<!-- 优惠付订单 -->
+<view class='preferential-order'>
+
+    <view class='main-tabs'>
+        <view class='on'>全部</view>
+        <view>待付款</view>
+        <view>已完成</view>
+    </view>
+
+
+    <view class='preferential-list'>
+        <navigator hover-class='none' url='../preferentialDetails/preferentialDetails'>
+            <view class='item clearfix'>
+                <view>测试店铺01的收款<text>￥100.00</text></view>
+                <view class='time'>2016-10-09 12:49:02<text>关闭交易</text></view>
+            </view>
+        </navigator>
+
+        <navigator hover-class='none' url='../preferentialDetails/preferentialDetails'>
+            <view class='item clearfix'>
+                <view>测试店铺01的收款<text>￥100.00</text></view>
+                <view class='time'>2016-10-09 12:49:02<text>关闭交易</text></view>
+            </view>
+        </navigator>
+
+        <navigator hover-class='none' url='../preferentialDetails/preferentialDetails'>
+            <view class='item clearfix'>
+                <view>测试店铺01的收款<text>￥100.00</text></view>
+                <view class='time'>2016-10-09 12:49:02<text>关闭交易</text></view>
+            </view>
+        </navigator>
+
+       
+    </view>
+
+
+
+</view>

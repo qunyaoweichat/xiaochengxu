@@ -1,0 +1,55 @@
+<view class='error-msg ' wx:if='{{errMsg}}'>
+    <text class='iconfont icon-tanhao'></text>
+    <text>{{errMsg}}</text>
+</view>
+<view class='addCard-tips'>请绑定持卡人本人的银行卡</view>
+<form bindsubmit='submit'>
+    <view class='form-list'>
+        <label class='item clearfix'>
+            <view class='text'>银行</view>
+            <view class='inputs'>
+                <picker bindchange="bindPickerChange" value='bankIndex' range-key='bankAlis' range='{{bankList}}'>
+                    <view class="picker">{{bankList[bankIndex].bankAlis}}</view>
+                </picker>
+            </view>
+        </label>
+        <label class='item clearfix'>
+            <view class='text'>持卡人</view>
+            <view class='inputs'>
+                <input placeholder='请输入持卡人姓名' type='text' name='cardAccountName'></input>
+            </view>
+        </label>
+        <label class='item clearfix'>
+            <view class='text'>卡号</view>
+            <view class='inputs'>
+                <input placeholder='请输入银行卡号' maxlength='19' type='number' name='cardNo'></input>
+            </view>
+        </label>
+        <label class='item clearfix'>
+            <view class='text'>手机号</view>
+            <view class='inputs'>
+                <input placeholder='请输入银行预留手机号' type='number' name='phone' bindblur='setPhone'></input>
+            </view>
+        </label>
+        <view class='item clearfix'>
+            <view class='text'>验证码</view>
+            <view class='inputs'>
+                <input placeholder='请输入验证码' type='number' name='code'></input>
+            </view>
+            <button class='get-code' size='mini' bindtap='getCode' disabled='{{getCodeFlag}}'>{{getCodeStr}}</button>
+        </view>
+    </view>
+
+    <view class='add-ruler'>
+        <checkbox-group bindchange="agreenEvent">
+            <label>
+                <checkbox name='agreen' bindTap='agreenEvent'></checkbox>
+                <text>请阅读并同意</text>
+            </label>
+        </checkbox-group>
+        <navigator>《服务协议》</navigator>
+    </view>
+    <view class='submit-btn'>
+        <button type='primary' form-type='submit'>确定</button>
+    </view>
+</form>

@@ -1,0 +1,48 @@
+.integral-top{
+    background: #ef514e;
+    background: -moz-linear-gradient(right,  #ff5952 0%, #fa7c6d 100%);
+    background: -webkit-gradient(linear,left center, right center, from(#ff5952), to(#fa7c6d));
+    background: -webkit-linear-gradient(right,  #ff5952 0%,#fa7c6d 100%);
+    background: -o-linear-gradient(right,  #ff5952 0%,#fa7c6d 100%);
+    background: -ms-linear-gradient(right,  #ff5952 0%,#fa7c6d 100%);
+    background: linear-gradient(to right,  #ff5952 0%,#fa7c6d 100%);
+    padding: 10% 0;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+.integral-top .number{
+    font-size: 36px;
+    margin-top: 10px;
+}
+.integral-list{
+    margin: 15px 0;
+    background: #fff;
+    border-top: 1px solid  #ddd;
+    border-bottom: 1px solid  #ddd;
+}
+.integral-list .item{
+    padding: 15px 0;
+    margin: 0 15px;
+    display: flex;
+    line-height: 24px;
+    align-items: center;
+    border-bottom: 1px solid #ddd
+}
+
+
+.integral-list .item>view:first-child{
+    flex: 8;
+}
+.integral-list .item>view:last-child{
+    flex: 1;
+    color: #ef514e;
+    font-size: 20px;
+}
+.integral-list .item .time{
+    font-size: 12px;
+    color: #666
+}
+.integral-list .item:last-child{
+    border: none;
+}

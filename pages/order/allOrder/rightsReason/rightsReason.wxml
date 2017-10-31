@@ -1,0 +1,14 @@
+<!-- 维权理由 -->
+<view class='weiquan-reason-out'>
+
+    <view class='weiquan-reason'>
+        <view wx:for='{{refundReasonList}}' wx:index='index' bindtap='setIndex' data-index='{{index}}'>
+            {{item.msg}}<text class='iconfont icon-check' wx:if='{{selecIndex==index}}'></text>
+        </view>
+    </view>
+
+    <view class='public-btn'>
+        <button type="primary" bindtap='back' >确定</button>
+    </view>
+
+</view>

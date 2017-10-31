@@ -1,0 +1,142 @@
+/* 记录*/
+/* 对话 */
+.consult-out{
+    text-align: center;
+}
+.consult{
+    display: block;
+}
+.consult-lf{
+    display: block;
+}
+.consult .msg-item,
+.consult-lf .msg-item{
+    padding: 15px 10px;
+}
+
+.consult .msg-item .pic{
+    float:right;
+}
+.consult-lf .msg-item .pic{
+    float: left;
+}
+.consult .msg-item .pic image{
+    width: 38px;
+    height: 38px;
+    border: solid 1px #d3d3d3;
+    background: #fff;
+    border-radius: 3px;
+}
+
+.consult .msg-item .details{
+    position: relative;
+    float: right;
+    background-color: #65ae51;
+    color: #fff;
+    border-color: #65ae51;
+    border-radius: 5px;  
+    padding: 8px;
+    vertical-align: top;
+    font-size: 15px;
+    margin: 0px 8px;
+    max-width: 75%;
+    min-width: 35px; 
+    z-index: 1;  
+}
+.consult-lf .msg-item .details{
+    float: left;
+}
+.consult .msg-item .details .inner,
+.consult-lf .msg-item .details .inner{
+    overflow-x: hidden;
+    font-size: 12px;
+}
+.consult .msg-item .details .inner text{
+    display: block;
+    line-height: 23px;
+}
+.consult .msg-item .details .arrow,
+.consult-lf .msg-item .details .arrow{
+    position: absolute;
+    border: solid 1px #d3d3d3;
+    border-right: none;
+    border-top: none;
+    width: 10px;
+    height: 10px;
+    top: 12px;
+    left: auto;
+    right: -5px;
+    transform: rotateZ(225deg);
+    background-color: #65ae51;
+    color: #fff;
+    border-color: #65ae51;
+}
+.consult-lf .msg-item .details .arrow{
+    left: -5px;
+}
+.consult .time,
+.consult-lf .time{
+    text-align: center;
+    padding: 3px 0;
+}
+
+
+/* 输入 */
+.footer-input~view{
+    padding-bottom: 60px;
+}
+.footer-input{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    border-top: solid 1px #bbb;
+    overflow: hidden;
+    /* padding:0 50px; */
+    background-color: #fafafa;
+    width: 100%;
+    z-index: 20;
+}
+
+.footer-input .iconfont{
+    position: absolute;
+    left: 0;
+    font-size: 36px;
+    line-height: 50px;
+    color: #65ae51;
+    width: 50px;
+    text-align: center;
+}
+
+.footer-input .send-out{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 18px;
+    line-height: 50px;
+    color: rgba(0, 135, 250, 1);
+    width: 50px;
+    text-align: center;
+}
+
+.footer-input .input{
+    padding: 0 50px;
+    display: block;
+}
+.footer-input textarea{
+    width: 100%;
+    height: 40px;
+    /* line-height: 1.2; */
+    margin: 5px 0;
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: verdana;
+    border-radius: 5px;
+    border: solid 1px #ddd;
+    overflow: hidden;
+    background: #fff;    
+    resize: none;
+    text-align: start;
+    display: inline-block;
+}

@@ -1,0 +1,84 @@
+<!--pages/order/orderList/orderList.wxml-->
+<import src="../../public/listTpl.wxml" />
+<!-- 页头切换 -->
+<view class='main-tabs'>
+    <view bindtap='changeType' class='{{item.orderType==orderType?"on":""}}' wx:for='{{tabList}}' wx:key='tabs' data-type='{{item.orderType}}'>{{item.name}}</view>
+</view>
+
+<!-- 正文内容 -->
+<view class='list-wrap'>
+    <view class='shop-item' wx:for='{{list}}' wx:key='shop' wx:for-item='shopList'>
+        <view class='order-heard'>
+            <navigator url='../../shop/index?shopId={{shopList.orderShop.shopId}}&redirect=true' hover-class='none' >
+                <text class='status'>{{shopList.orderDescription}}</text>
+                <image wx:if='{{shopList.orderShop.shopLogo}}' src='{{shopList.orderShop.shopLogo}}'></image>
+                <text class='name'>{{shopList.orderShop.shopName}}</text>
+            </navigator>
+        </view>
+        <view class='order-list'>
+            <view class='item' wx:for="{{shopList.orderShop.shopProduct}}" wx:for-item='product' wx:key='goods'>
+                <view class='pic'>
+                    <navigator url='../../shop/goodsDetail/goodsDetail?id={{product.productId}}&redirect=true'>
+                        <image src='{{product.productImage}}'></image>
+                    </navigator>
+                </view>
+                <view class='detail'>
+                    <navigator url='./orderDetails/orderDetails?orderId={{shopList.orderId}}' hover-class='none'>
+                        <view class='name'>{{product.productTitle}}</view>
+                        <view class='sku'>{{product.productSelect}}</view>
+                        <view class='infor'>
+                            <text class='num'>数量：{{product.productCount}}</text>
+                            <text class='price'>￥{{product.productPrice}}</text>
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+
+            <view class='total clearfix'>
+                <!--如果是待付款，这里是倒计时  -->
+                <view class='time' wx:if='{{shopList.orderStatus==1}}'>
+                    <text class='iconfont icon-shijian'></text>付款截至：{{shopList.createTime}}
+                </view>
+                <view class='time' wx:else>
+                    <text class='iconfont icon-shijian'></text>{{shopList.createTime}}
+                </view>
+                <text class='num'>共{{shopList.orderShop.shopProduct.length}}件商品 合计￥{{shopList.orderMoney}}</text>
+            </view>
+            <!-- 待付款  -->
+            <view class='order-ctrl clearfix' wx:if='{{shopList.orderStatus==1}}'>
+                <navigator url='./orderCancel/orderCancel?orderId={{shopList.orderId}}' hover-class='none'>
+                    <button class='btn-gray' size='mini'>取消订单 </button>
+                </navigator>
+                <navigator hover-class='none' url='../../buy/pay/pay?orderId={{shopList.orderId}}' hover-class='none'>
+                    <button class='btn-green' size='mini'>去支付 </button>
+                </navigator>
+            </view>
+            <!--待发货  -->
+            <view class='order-ctrl clearfix' wx:if='{{shopList.orderStatus==2}}'>
+                <navigator url='./orderCancel/orderCancel?orderId={{shopList.orderId}}' hover-class='none'>
+                    <button class='btn-gray' size='mini'>取消订单 </button>
+                </navigator>
+            </view>
+            <!-- 待收货  -->
+            <view class='order-ctrl clearfix' wx:if='{{shopList.orderStatus==3}}'>
+                <button class='btn-green' size='mini' data-orderid='{{shopList.orderId}}' bindtap='takeDelivery'>确定收货 </button>
+            </view>
+            <!--  待评价  -->
+            <view class='order-ctrl clearfix' wx:if='{{shopList.orderStatus==4&&!shopList.isRefund}}'>
+                <navigator hover-class='none' url='./rightsDetail/rightsDetail?orderId={{shopList.orderId}}' hover-class='none'>
+                    <button class='btn-gray' size='mini'>维权售后 </button>
+                </navigator>
+                <button class='btn-green' size='mini' wx:if='{{!shopList.commentState}}' bindtap='goComment' data-orderinfor='{{shopList}}'>评价 </button>
+            </view>
+        </view>
+
+    </view>
+    <view wx:if='{{list.length==0}}'>
+        <template is="empty" />
+    </view>
+    <view wx:else>
+        <view wx:if='{{loadAll}}'>
+            <template is="loadAll" />
+        </view>
+    </view>
+</view>

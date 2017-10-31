@@ -1,0 +1,63 @@
+<!-- 售后维权 -->
+<view class='weiquan-order'>
+
+    <view class='title'>确认收货7天后可发起售后维权,超时请联系客服处理</view>
+    <view class='shop-item'>
+        <view class='order-heard'>
+            <navigator url='../../../webIM/index' hover-class='none' class='lianxi'>
+                <text>联系卖家</text>
+            </navigator>
+            <image wx:if='{{orderDetail.shopBasicInfo.shopLogo}}' src='{{orderDetail.shopBasicInfo.shopLogo}}'></image>
+            <text class='name'>{{orderDetail.shopBasicInfo.shopName}}</text>
+
+        </view>
+
+        <view class='public-list'>
+            <view class='item'>
+                <view class='lf'>订单号</view>
+                <view class='middle'>{{orderDetail.refundOrderInfo.orderId}}</view>
+            </view>
+            <view class='item'>
+                <view class='lf'>下单时间</view>
+                <view class='middle'>{{orderDetail.refundOrderInfo.createTime}}</view>
+            </view>
+            <view class='item'>
+                <view class='lf'>收货时间</view>
+                <view class='middle'>{{orderDetail.refundOrderInfo.deliveryTime}}</view>
+            </view>
+        </view>
+    </view>
+    <!-- 商品 -->
+    <view class='shop-item shop-item-weiquan'>
+        <view class='shop-infor'>
+            <checkbox bindtap='selectAll' checked='{{checkAll}}'></checkbox>
+            <navigator url='../../../shop/index' hover-class='none'>
+                <text class='name'>{{orderDetail.shopBasicInfo.shopName}}</text>
+            </navigator>
+        </view>
+
+        <view class='order-list'>
+            <view class='item' wx:for="{{goodsList}}" wx:key='product' wx-index='index'>
+                <view class='checkbox'>
+                    <checkbox data-index='{{index}}' data-checked='{{item.checked}}' checked='{{item.checked}}' bindtap='goodsSelect'></checkbox>
+                    <!-- <checkbox checked='{{item.checked}}' value='{{item.goodsId}}'></checkbox> -->
+                </view>
+                <view class='pic'>
+                    <navigator url='../../../shop/goodsDetail/goodsDetail'>
+                        <image src='{{item.goodsImg}}'></image>
+                    </navigator>
+                </view>
+                <view class='detail'>
+                    <text class='name'>{{item.goodsName}}</text>
+                    <view class='infor clearfix'>
+                        <text class='num'>数量：{{item.quantity}}</text>
+                        <text class='price'>￥{{item.salesMoney}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='public-btn' bindtap='submit'>
+        <button type="primary" size="90%">申请退货款</button>
+    </view>
+</view>

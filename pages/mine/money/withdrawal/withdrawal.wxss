@@ -1,0 +1,21 @@
+.widthDrawal .list{
+    background: #fff;
+    border-top: 1px  solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+}
+
+.widthDrawal .list .item{
+    margin-left: 10px;
+    line-height: 44px;
+    border-bottom: 1px solid #ddd;
+}
+.widthDrawal .list radio{
+    float: right;
+}
+.widthDrawal .list .item:last-child{
+    border: none;
+}
+.widthDrawal button{
+    margin: 15px 10px;
+}

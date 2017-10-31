@@ -1,0 +1,72 @@
+.card-list .item {
+    margin: 15px;
+}
+
+.card-list .item {
+    background: #ca566b;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.card-list .item .card-logo {
+    float: left;
+    background: #fff;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.card-list .item .card-logo image {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.card-list .card-detail {
+    margin-left: 60px;
+    color: #fff;
+}
+
+.card-list .card-name {
+    font-size: 20px;
+}
+
+.card-list .card-type {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+.card-list .card-num .dote {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    margin-right: 3px;
+    vertical-align: 5px;
+}
+
+.card-list .card-num .dote:nth-child(4n) {
+    margin-right: 12px;
+}
+
+.card-list .card-num .last {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.add-card {
+    text-align: center;
+    margin: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #1aad19;
+    color: #1aad19;
+    font-size: 16px;
+}
+.add-card navigator{
+    padding: 13px 0;
+}
+.add-card .iconfont {
+    margin-right: 5px;
+    font-weight: bold;
+
+}

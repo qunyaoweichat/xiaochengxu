@@ -1,0 +1,38 @@
+/* pages/class/classList.wxss */
+
+.class-wrap {
+    padding: 16px;
+}
+
+.class-wrap .title {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.class-wrap .title image {
+    width: 50px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.class-wrap .list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.list .item {
+    font-size: 14px;
+    width: 20%;
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+.list .item text {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+    margin-right: 1px;
+}

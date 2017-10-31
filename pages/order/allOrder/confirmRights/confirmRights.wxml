@@ -1,0 +1,93 @@
+<!-- 维权详情 -->
+<view class='confirm-order'>
+    <!-- 店铺 -->
+    <view class='shop-item'>
+        <view class='order-heard'>
+            <navigator url='../../../webIM/index' hover-class='none'>
+                <text class='lianxi'>联系卖家</text>
+            </navigator>
+            <image wx:if='{{data.shopBasicInfo.shopLogo}}' src='{{data.shopBasicInfo.shopLogo}}'></image>
+            <text class='name'>{{data.shopBasicInfo.shopName}}</text>
+
+        </view>
+        <!-- 订单 -->
+        <view class='public-list'>
+            <view class='item'>
+                <view class='lf'>订单号</view>
+                {{data.refundOrderInfo.orderId}}
+            </view>
+            <view class='item'>
+                <view class='lf'>下单时间</view>
+                {{data.refundOrderInfo.createTime}}
+            </view>
+            <view class='item'>
+                <view class='lf'>收货时间</view>
+                {{data.refundOrderInfo.deliveryTime}}
+            </view>
+        </view>
+    </view>
+
+    <!-- 商品 -->
+    <view class='shop-item shop-item-weiquan'>
+        <view class='shop-infor'>
+
+            <text class='name'>{{data.shopBasicInfo.shopName}}</text>
+            <text class='num'>共{{data.refundOrderInfo.listOrderItem.length}}件</text>
+
+        </view>
+
+        <view class='order-list'>
+            <view class='item' wx:for="{{data.refundOrderInfo.listOrderItem}}" wx:key='goods'>
+                <view class='pic'>
+                    <image src='{{item.goodsImg}}'></image>
+                </view>
+
+                <view class='detail'>
+                    <text class='name'>{{item.goodsName}}</text>
+                    <view class='infor clearfix'>
+                        <text class='num'>数量：{{item.quantity}}</text>
+                        <text class='price'>￥{{item.salesMoney}}</text>
+                    </view>
+                </view>
+
+            </view>
+        </view>
+    </view>
+
+    <!-- 退货理由 -->
+    <view class='public-list reason'>
+        <view class='item'>
+            <view class='lf'>处理方式</view>
+            <text wx:if='{{data.memberRefundInfo.refundType==0}}'>退款</text>
+            <text wx:if='{{data.memberRefundInfo.refundType==0}}'>换货</text>
+        </view>
+        <view class='item'>
+            <navigator hover-class='none' url='../rightsReason/rightsReason' class='clearfix'>
+                <view class='lf'>维权原因</view>
+                {{reason.msg}}
+                <text class='iconfont icon-right'></text>
+            </navigator>
+        </view>
+        <view class='item'>
+            <view class='lf'>退款金额</view>
+            {{data.memberRefundInfo.refundMoney}}
+        </view>
+        <view class='item'>
+            <view class='lf'>手机号码</view>
+            {{data.memberRefundInfo.mobile}}
+        </view>
+    </view>
+
+    <!-- 地址 -->
+    <view class='address'>
+        <view class='title'>商家退货地址</view>
+        <view>{{data.shopReturnAddress.contactName}} {{data.shopReturnAddress.mobile}}</view>
+        <view class='zip'>{{data.shopReturnAddress.areaInfo}} {{data.shopReturnAddress.address}}</view>
+    </view>
+    <view class='address-title'>请在包裹内填写您的账号或手机,方便商家识别</view>
+
+    <view class='public-btn'>
+        <button type="primary" size="90%" bindtap='submit'>确认提交</button>
+    </view>
+
+</view>

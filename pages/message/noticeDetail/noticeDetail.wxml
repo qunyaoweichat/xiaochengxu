@@ -1,0 +1,11 @@
+<import src="../../../utils/wxParse/wxParse.wxml" />
+<view class='message-details'>
+    <view class='title'>{{title}}</view>
+    <view class='content'>
+        <!--订单  -->
+        <view wx:if='{{type=="order"}}'>订单号：{{content.orderId}}</view>
+        <!-- 物流  -->
+        <view wx:if='{{type=="logistics"}}'>快递单号：{{content.number}}</view>
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+</view>

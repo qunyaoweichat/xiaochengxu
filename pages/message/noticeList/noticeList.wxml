@@ -1,0 +1,23 @@
+<import src="../../public/listTpl.wxml" />
+<!-- 通知消息 -->
+<view class="message-center">
+    <view class='qytt_item' wx:for='{{list}}' wx:key='notice'>
+        <view>
+            <navigator url='../noticeDetail/noticeDetail?messageId={{item.messageId}}'>{{item.msgTitle}}</navigator>
+        </view>
+        <view class='nr'>{{item.shortMsg}}</view>
+        <view class='link'>
+            <navigator url='../noticeDetail/noticeDetail?messageId={{item.messageId}}'>
+                <text class='xq'>查看详情</text>
+            </navigator>
+        </view>
+    </view>
+    <view wx:if='{{list.length==0}}'>
+        <template is="empty" />
+    </view>
+    <view wx:else>
+        <view wx:if='{{loadAll}}'>
+            <template is="loadAll" />
+        </view>
+    </view>
+</view>

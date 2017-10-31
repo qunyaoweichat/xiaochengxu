@@ -1,0 +1,22 @@
+<!-- 留言反馈 -->
+<view class='leaving-message'>
+    <text class='title'>问题和意见</text>
+    <view class='message'>
+        <textarea placeholder="请详细描述你的问题..."></textarea>
+    </view>
+    <text class='title'>图片(选填,提供问题截图)</text>
+    <view class='image-list clearfix'>
+        <view class='pic'>
+            <image src='../../../../images/order1.jpg'></image>
+            <text class='close'>X</text>
+        </view>
+        <view class='pic'></view>
+        <view class='pic'></view>
+        <view class='pic'></view>
+    </view>
+
+    <view class=' public-btn'>
+        <button type="primary" >提 交</button>
+    </view>
+
+</view>

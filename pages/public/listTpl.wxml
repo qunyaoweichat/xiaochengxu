@@ -1,0 +1,14 @@
+<template name='empty'>
+    <view class='no-data'>
+        <view class='pic'>
+            <image mode='widthFix' src='../../../../images/news-not.png'></image>
+        </view>
+        <view class='no-data-text'>暂无数据</view>
+    </view>
+    
+</template >
+<template name='loadAll'>
+    <view class='list-all-load'>
+        到底了~~
+    </view>
+</template >

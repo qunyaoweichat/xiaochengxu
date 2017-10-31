@@ -1,0 +1,61 @@
+.search-page {
+    min-height: 100%;
+    background: #fff;
+    padding-bottom: 1px;
+}
+
+.search-box {
+    padding: 1px;
+}
+
+.search-box label {
+    display: block;
+    border: 1px solid #ddd;
+    margin: 10px;
+    border-radius: 3px;
+}
+
+.search-box label input {
+    padding: 5px 10px;
+}
+
+.search-box icon {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    font-size: 12px;
+    transform: scale(0.8);
+}
+
+.search-item {
+    margin: 0 10px;
+}
+
+.search-item .title {
+    font-size: 16px;
+    margin: 15px 0;
+    padding: 0 10px;
+    line-height: 1;
+    border-left: 2px solid #1aad19;
+    color: #1aad19;
+}
+
+.search-item .hot-list text {
+    border: 1px solid #ccc;
+    padding: 5px 8px;
+    border-radius: 5px;
+    color: #888;
+    margin: 5px;
+    float: left;
+}
+
+.search-item .history-list .item {
+    line-height: 30px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #666;
+}
+
+.clear-history {
+    margin: 20px 0;
+}

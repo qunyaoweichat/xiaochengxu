@@ -1,0 +1,21 @@
+<!-- 合伙人计划 -->
+<import src="../../public/listTpl.wxml" />
+<view class='partner'>
+    <view class='item clearfix' wx:for='{{list}}' wx:key='partner'>
+        <navigator hover-class='none' url='../partnerQRcode/partnerQRcode?shopId={{item.shopId}}&partnerCode={{item.partnerUserIdBase64}}'>
+            <view class='pic'>
+                <image src='{{item.shopImage}}'></image>
+            </view>
+            <view class='row1'>
+                <text class='name'>{{item.partnerName}}</text>
+                <text class='back-money'>{{item.profit}}%</text>
+            </view>
+            <view class='row2'>共计返佣：
+                <text>￥{{item.profitMoney}}</text>
+            </view>
+        </navigator>
+    </view>
+</view>
+<view wx:if='{{list.length==0}}'>
+    <template is="empty" />
+</view>

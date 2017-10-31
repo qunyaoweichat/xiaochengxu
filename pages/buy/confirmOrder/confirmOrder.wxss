@@ -1,0 +1,94 @@
+page{
+    padding-bottom: 50px;
+}
+.address{
+    position: relative;
+    margin: 14px 0;
+    background-color: #fff;
+    padding-bottom: 6px;
+    border: 1px solid #dbdadb;
+    border-radius: 5px;
+}
+
+.address .inner{
+    padding: 10px 15px 0 20px;
+}
+.address .inner .frame{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    z-index: 1;
+}
+.address .inner .pitch-on{
+    position: absolute;
+   left: 0; 
+   top: -1px;
+   width: 35px;
+   height: 35px;
+   z-index: 2;
+}
+.address .inner .name{
+    color: #333;
+    line-height: 30px;
+    font-size: 14px;
+}
+.address .inner .name navigator{
+    display:inline;
+}
+.address .inner .name .phone{
+    padding-left: 10px;
+}
+.address .inner .name .iconfont{
+    font-size: 20px;
+    float: right;
+    color: #666;
+}
+.address .inner view{
+    font-size: 12px;
+    color: #666;
+    line-height: 20px;
+}
+.address .inner .zip{
+    padding-top: 3px;
+}
+/* 留言  */
+.order-list .express .status{
+    float: right;
+}
+.order-list .order-note text{
+    float: left;
+}
+.order-list .order-note textarea{
+    display: block;
+    width: auto;
+    height: 100px;
+    margin-left: 60px;
+}
+/* 优惠券  */
+.coupon{
+    line-height: 24px;
+}
+.coupon .iconfont{
+    float: right;
+}
+.coupon .price{
+    float: right;
+}
+.coupon .num{
+    background: #c00;
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    margin-left: 5px;
+}
+/*  价格信息  */
+.price-total .item{
+    line-height: 26px;
+}
+.price-total .price{
+    float: right;
+    color: #1aad19;
+}

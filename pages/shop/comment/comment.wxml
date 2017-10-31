@@ -1,0 +1,60 @@
+<import src="../../public/listTpl.wxml" />
+<view class='main-tabs comment-tabs'>
+    <view class='item {{commentType==0?"on":""}}' bindtap='changeType' data-type='0'>
+        <view>全部</view>
+        <view>{{comment.commentCount}}</view>
+    </view>
+    <view class='item {{commentType==1?"on":""}}' bindtap='changeType' data-type='1'>
+        <view>好评</view>
+        <view>{{comment.positiveCount}}</view>
+    </view>
+    <view class='item {{commentType==2?"on":""}}' bindtap='changeType' data-type='2'>
+        <view>中评</view>
+        <view>{{comment.moderateCount}}</view>
+    </view>
+    <view class='item {{commentType==3?"on":""}}' bindtap='changeType' data-type='3'>
+        <view>差评</view>
+        <view>{{comment.negativeCount}}</view>
+    </view>
+</view>
+<view class='list-wrap' wx:if='{{comment.commentList.length>0}}'>
+    <view class='comment-list clearfix' wx:for="{{comment.commentList}}" wx:key='comment'>
+        <view class='avatar'>
+            <image wx:if='{{item.commentIcon}}' src='{{item.commentIcon}}'></image>
+        </view>
+        <view class='comment-con'>
+            <view class='hd'>
+                <view class='username'>{{item.commentName}}</view>
+                <view class='star-num'>
+                    <text class='iconfont icon-favorfill {{star<=item.commentLevel  ? "on":""}}' wx:key='key' wx:for-item='star' wx:for="{{[1,2,3,4,5]}}"></text>
+                </view>
+
+            </view>
+            <view class='bd'>{{item.commentContent}}</view>
+        </view>
+    </view>
+    <view class='comment-list clearfix' wx:for="{{comment.commentList}}" wx:key='comment'>
+        <view class='avatar'>
+            <image wx:if='{{item.commentIcon}}' src='{{item.commentIcon}}'></image>
+        </view>
+        <view class='comment-con'>
+            <view class='hd'>
+                <view class='username'>{{item.commentName}}</view>
+                <view class='star-num'>
+                    <text class='iconfont icon-favorfill {{star<=item.commentLevel  ? "on":""}}' wx:key='key' wx:for-item='star' wx:for="{{[1,2,3,4,5]}}"></text>
+                </view>
+
+            </view>
+            <view class='bd'>{{item.commentContent}}</view>
+        </view>
+    </view>
+</view>
+
+<view wx:if='{{comment.commentList.length==0}}'>
+    <template is="empty" />
+</view>
+<view wx:else>
+    <view wx:if='{{loadAll}}'>
+        <template is="loadAll" />
+    </view>
+</view>

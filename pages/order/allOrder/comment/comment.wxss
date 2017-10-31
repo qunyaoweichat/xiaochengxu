@@ -1,0 +1,26 @@
+.order-list{
+    border-top: 1px solid #d9d9d9;
+}
+.star-num .iconfont{
+    color: #999;
+    margin-right: 5px;
+    font-size: 14px;
+}
+.star-num .iconfont.on{
+    color: #f80
+}
+.comment{
+    padding: 15px 0;
+}
+.comment textarea{
+    padding: 5px 0px;
+    border: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    outline: none;
+    resize: none;
+    font-size: 12px;
+    color: #666;
+    line-height: 16px;
+    height: 80px;
+}

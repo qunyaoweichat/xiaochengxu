@@ -1,0 +1,38 @@
+<import src="../../public/listTpl.wxml" />
+<view class='logistics-assistant'>
+
+    <view class='logistics-info' wx:for='{{list}}' wx:key='Assistant'>
+        <view class='time'>{{item.createTimeStr}}</view>
+        <view class='order'>
+            <view class='order-heard'>
+                <text class='name'>{{item.name}}</text>
+            </view>
+            <view class='order-list order-info'>
+                <view class='item clearfix' wx:for='{{item.list}}' wx:for-item='goods' wx:key='logistics'>
+                    <view class='pic'>
+                        <image src='{{goods.goodsImg}}'></image>
+                    </view>
+                    <view class='detail'>
+                        <text class='name'>{{goods.goodsName}}</text>
+                        <view class='infor'>
+                            <text class='num'>数量：{{goods.quantity}}</text>
+                            <text class='price'>￥{{goods.unitPrice}}</text>
+                        </view>
+                    </view>
+                </view>
+                <navigator class="more" url='../logisticsDetails/logisticsDetails?number={{item.number}}&type={{item.type}}' hover-class='none'>
+                    查看详情
+                    <text class='iconfont icon-right'></text>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <view wx:if='{{list.length==0}}'>
+        <template is="empty" />
+    </view>
+    <view wx:else>
+        <view wx:if='{{loadAll}}'>
+            <template is="loadAll" />
+        </view>
+    </view>
+</view>

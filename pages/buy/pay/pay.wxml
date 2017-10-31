@@ -1,0 +1,56 @@
+<view class='pay-hd'>
+    支付方式
+</view>
+<view class='pay-list'>
+    <radio-group class="radio-group" bindchange="radioChange">
+        <label class='item clearfix'>
+            <view class='pic'>
+                <image src='../../../images/zhye.png'></image>
+            </view>
+            <view class='text'>账户余额支付（￥{{payInfor.mine.cashCount}}）</view>
+            <radio value='cashCount'></radio>
+        </label>
+
+        <label class='item clearfix'>
+            <view class='pic'>
+                <image src='../../../images/bank.png'></image>
+            </view>
+            <view class='text'>微信支付</view>
+            <radio value='weichat'></radio>
+        </label>
+
+        <!-- <label class="radio" wx:for="{{items}}">
+            <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+        </label> -->
+    </radio-group>
+
+</view>
+<view class='back'>
+    <navigator url='../../shop/index' open-type='reLaunch'>
+        <button type='primary'>返回首页</button>
+    </navigator>
+</view>
+<view class='bottom-infor' bindtap='pay'>
+    <text class='price'>总计：￥200</text>
+    <view class='btn'>确定支付</view>
+
+</view>
+<view class='payLayer' wx:if='{{showLayer}}'>
+    <view class='password-list'>
+        <view>{{passwordStr[0]}}</view>
+        <view>{{passwordStr[1]}}</view>
+        <view>{{passwordStr[2]}}</view>
+        <view>{{passwordStr[3]}}</view>
+        <view>{{passwordStr[4]}}</view>
+        <view>{{passwordStr[5]}}</view>
+    </view>
+    <view class='keyboard'>
+        <view wx:for='{{[1,2,3,4,5,6,7,8,9]}}' bindtap='setPassword' data-v='{{item}}'>
+            <text >{{item}}</text>
+        </view>
+        <view> <text></text></view>
+        <view bindtap='setPassword' data-v='0'><text >0</text></view>
+        <view bindtap='delPasswird'> <text>x</text></view>
+    </view>
+</view>
+<view class='payLayer-cover' wx:if='{{showLayer}}' bindtap='hidePayLayer'></view>

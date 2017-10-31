@@ -1,0 +1,25 @@
+.weiquan-reason{
+    margin: 10px 0;
+    padding-left: 16px;
+    background-color: #fff;
+    border-bottom:1px solid #ddd; 
+    border-top:1px solid #ddd; 
+}
+.weiquan-reason view{
+    padding-right: 10px;
+    display: block;
+    line-height: 45px;
+    border-bottom:1px solid #ddd;
+}
+.weiquan-reason view:last-child{
+    border-bottom:0;
+}
+.weiquan-reason view text{
+    float: right;
+    font-weight:bold;
+    font-size: 22px;
+    color: #007aff;
+}
+
+
+

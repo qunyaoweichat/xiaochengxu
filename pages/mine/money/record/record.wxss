@@ -1,0 +1,41 @@
+page{
+    background: #fff;
+}
+.record-list {
+    margin-top: 10px;
+}
+.record-list .item{
+    margin-bottom: 10px;
+}
+.record-list .time{
+    height: 44px;
+    line-height: 44px;
+    background: #ddd;
+    padding: 0 10px;
+}
+.record-list .time text{
+    float: right;
+    color: #000;
+}
+.record-list .content{
+    padding: 5px 10px;
+    margin: 10px  0;
+}
+.record-list .content .row{
+    display: flex;
+}
+.record-list .content .row .c{
+    flex: 1;
+    width: 50%;
+    line-height: 26px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #999;
+}
+.record-list .content .row .c:last-child{
+    text-align: right;
+}
+.record-list .content .row .money{
+    color: #333;
+}

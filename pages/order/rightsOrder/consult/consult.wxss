@@ -1,0 +1,169 @@
+.head{
+    background-color: #fff;
+    padding: 10px 15px;
+    border-top: solid 1px #ddd;
+    border-bottom: solid 1px #ddd;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #8f8f94;
+}
+.head view .lf{
+    float: left;
+    margin-right: 20px;
+}
+.head view  .rg{
+    text-align: right;
+    display: block;
+}
+/* 商品 */
+.order-list {
+    padding-left:0;
+}
+.order-list .item{
+    padding-left: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-list .item .detail{
+    margin-left: 60px;
+    color: #000;
+}
+.order-list .item .pic wx-image{
+   line-height: 42px;
+    max-width: 42px;
+    height: 42px;
+}
+.order-list .item .name{
+    white-space: nowrap; 
+    height: auto;
+    width: 100%;
+    overflow: hidden 
+}
+.order-list .bottom-infor label{
+    margin-left: 20px;
+}
+.order-list .item .infor .num{
+    float:none;
+}
+.order-list .item .name{
+    color: #000;
+    font-weight:bold;
+}
+.order-list .item .infor .price{
+    color: #000;
+}
+.order-list .item .infor{
+    height:auto;
+    margin-top:0;
+    line-height: 25px;
+    color: #000;
+}
+.order-list .item .infor text{
+    display: block;
+    text-align: right;
+}
+
+
+/* 记录*/
+/* 对话 */
+.consult-out{
+    text-align: center;
+    background-color: #fff;
+}
+
+.consult{
+    display: block;
+}
+.consult-lf{
+    display: block;
+}
+.consult .msg-item,
+.consult-lf .msg-item{
+    padding: 15px 10px;
+}
+
+.consult .msg-item .pic{
+    float:right;
+}
+.consult-lf .msg-item .pic{
+    float: left;
+}
+.consult .msg-item .pic image{
+    width: 38px;
+    height: 38px;
+    border: solid 1px #d3d3d3;
+    background: #fff;
+    border-radius: 3px;
+}
+
+.consult .msg-item .details{
+    float: right;
+    background-color: #65ae51;
+    color: #fff;
+    border-color: #65ae51;
+    border-radius: 5px;  
+    padding: 8px;
+    vertical-align: top;
+    font-size: 15px;
+    position: relative;
+    margin: 0px 8px;
+    max-width: 75%;
+    min-width: 35px; 
+    z-index: 1;  
+}
+.consult-lf .msg-item .details{
+    float: left;
+}
+.consult .msg-item .details .inner,
+.consult-lf .msg-item .details .inner{
+    overflow-x: hidden;
+    font-size: 12px;
+}
+.consult .msg-item .details .inner text{
+    display: block;
+    line-height: 23px;
+}
+.consult .msg-item .details .arrow,
+.consult-lf .msg-item .details .arrow{
+    position: absolute;
+    border: solid 1px #d3d3d3;
+    border-right: none;
+    border-top: none;
+    width: 10px;
+    height: 10px;
+    top: 12px;
+    left: auto;
+    right: -5px;
+    transform: rotateZ(225deg);
+    background-color: #65ae51;
+    color: #fff;
+    border-color: #65ae51;
+}
+.consult-lf .msg-item .details .arrow{
+    left: -5px;
+}
+.consult .time,
+.consult-lf .time{
+    text-align: center;
+    padding: 3px 0;
+}
+
+
+/* 按钮 */
+.public-btn{
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    border-top: solid 1px #bbb;
+    left: 0px;
+    bottom: 0px;
+    padding: 10px 0;
+    background-color: #fafafa;
+    margin-bottom: 0;
+}
+
+.public-btn~view{
+    padding-bottom: 60px;
+}

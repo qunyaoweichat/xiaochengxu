@@ -1,0 +1,37 @@
+<view class='error-msg ' wx:if='{{errMsg}}'>
+    <text class='iconfont icon-tanhao'></text>
+    <text>{{errMsg}}</text>
+</view>
+<form bindsubmit="formSubmit">
+    <view class='form-list'>
+        <view class='item'>
+            <view class='text'>昵称</view>
+            <input class='inputs' name='nickname' maxlength="6" value='{{userInfor.userName}}' type='text' placeholder="请输入昵称" />
+        </view>
+        <view class='item'>
+            <view class='text'>性别</view>
+            <radio-group bindchange='changeSex' name='userSex'>
+                <label class="public-radio">
+                    <radio value='0' checked="{{userInfor.userSex==0}}" />保密
+                </label>
+                <label class="public-radio">
+                    <radio value='1' checked="{{userInfor.userSex==1}}" />男
+                </label>
+                <label class="public-radio">
+                    <radio value='2' checked="{{userInfor.userSex==2}}" />女
+                </label>
+            </radio-group>
+        </view>
+        <view class='item'>
+            <view class='text'>姓名</view>
+            <input class='inputs' name='realName' maxlength="6" value='{{userInfor.realName}}' type='text' placeholder="请输入姓名" />
+        </view>
+        <view class='item'>
+            <view class='text'>身份证号</view>
+            <input class='inputs' name='idCard' maxlength="18" value='{{userInfor.idCard}}' type='idcard' placeholder="请输入身份证" />
+        </view>
+    </view>
+    <view class='public-btn'>
+        <button type='primary' formType="submit">保存</button>
+    </view>  
+</form>

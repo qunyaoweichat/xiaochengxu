@@ -1,0 +1,39 @@
+.time{
+    width: 100%;
+    line-height: 45px;
+    overflow: hidden;
+    color: #999;
+    text-align: center;
+}
+.logistics-assistant .logistics-info:first-child .time{
+    border-top: 1px solid #d9d9d9;
+}
+/* 订单正文 */
+.order{
+   
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+}
+.order-heard{
+    border-bottom: 1px solid #d9d9d9;
+}
+
+
+/* 详情 */
+.more{
+    background-color: #fff;
+    position: relative;
+    display: block;
+    height: 47px;
+    line-height: 47px;
+    overflow: hidden;
+    font-size: 14px;
+    color: #222;
+}
+.more text{
+    position: absolute;
+    right: 16px;
+    top: 0px;
+    height: 47px;
+    color: #888;
+}

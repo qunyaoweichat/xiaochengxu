@@ -1,0 +1,51 @@
+/* pages/mine/setIndex/setIndex.wxss */
+
+.set-index .info_list{
+    border-top: 1px solid #f4f4f4;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px;
+}
+/* 头像 */
+.info_list .portrait{
+    position: relative;
+    background-color: #fff;
+    color: #666;
+    padding: 13px 10px 12px;
+    border-bottom: 1px solid #f4f4f4;
+    font-size: 14px;
+    overflow: hidden;
+}
+.info_list .portrait .pic{
+    float: left;
+}
+.info_list .portrait .pic image{
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+}
+
+.info_list .portrait navigator{
+    height: 60px;
+    line-height: 60px;
+    
+    margin-left: 100px;
+    font-size: 22px;
+}
+.info_list .portrait navigator .iconfont{
+    float: right;
+    color: #BABABA;
+}
+
+
+
+/* 按钮 */
+.butn{
+    padding:10px 20px;
+}
+.butn button{
+    line-height: 45px;
+    font-size: 15px;
+    background-color: #E44949;   
+}

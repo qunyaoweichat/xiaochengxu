@@ -1,0 +1,45 @@
+<view class='coupon-activity'>
+
+    <!-- 优惠券 -->
+    <view class='coupon'>
+        <view class='main'>
+            <view class='title'><text class='share'>分享</text>{{couponDetail.couponName}}</view>
+            <view class='word'> 最高可领取<text>{{couponDetail.maxMoney}}</text>元优惠券</view>
+            <view class='word'>订单满{{couponDetail.orderMoney}}元可以使用 可以任意领取</view>
+            <view class='word'>有效期：{{couponDetail.beginTimeStr}}至{{couponDetail.endTimeStr}}</view>
+            <view class='btn'>
+                <button bindtap='getCoupon' >立即领取</button>
+            </view>   
+        </view>
+
+        <view class='explain'>
+            <view class='pic'>
+                <image mode='widthFix' src='../../../../images/how.png'></image>
+            </view>
+            <view>使用说明{{couponDetail.useIntroduce}}</view>
+        </view>
+
+        <view class='public-btn' bindtap='back'>
+            <button>进入我的店铺</button>
+        </view>
+    </view>
+
+
+    <!-- 领取优惠券 -->
+    <view class='receive'>
+    
+        <view class='main'>
+            <view class='tltle1'>恭喜您</view>
+            <view class='tltle2'>获得了北京掌中彩现金优惠券！</view>
+            <view class='tltle2'>￥ <text class='tltle3'>50元</text></view>
+            <view class='tltle4'>领取成功</view>
+        </view>
+
+        <view class='public-btn'>
+            <button>进店逛逛</button>
+            <button>继续分享</button>
+        </view>
+    
+    </view>
+
+</view>

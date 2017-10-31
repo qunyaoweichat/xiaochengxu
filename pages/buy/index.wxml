@@ -1,0 +1,54 @@
+<import src="../public/listTpl.wxml" />
+<view class='shop-item' wx:for="{{cartList}}" wx:index='index' wx:for-item='shop' wx:key='shop'>
+    <view class='shop-infor clearfix'>
+        <checkbox data-index='{{index}}' data-checked='{{shop.checked}}' checked='{{shop.checked}}' bindtap='checkShop'></checkbox>
+        <text class='edt' data-index='{{index}}' bindtap='shopEdt'>编辑</text>
+        <navigator url='../shop/index?shopId={{shop.shopId}}&redirect={{redirect}}' open-type='{{redirect?"redirect":"navigate"}}' hover-class='none'>
+            <image src='{{shop.shopLogo}}'></image>
+            <text class='name'>{{shop.shopName}}</text>
+            <text class='iconfont icon-right'></text>
+        </navigator>
+    </view>
+    <view class='order-list'>
+        <view class='item' wx:for='{{shop.shopProduct}}' wx:for-item='goods' wx:for-index='goodsIndex' wx:key='goods'>
+            <view class='checkbox'>
+                <checkbox checked='{{goods.checked}}' data-index='{{index}}' data-goodsindex='{{goodsIndex}}' data-checked='{{goods.checked}}' bindtap='checkGoods'></checkbox>
+            </view>
+            <view class='pic'>
+                <navigator url='../shop/goodsDetail/goodsDetail?id={{goods.productId}}&redirect={{redirect}}' open-type='{{redirect?"redirect":"navigate"}}'>
+                    <image src='{{goods.productImage}}' mode='aspectFill'></image>
+                </navigator>
+            </view>
+            <view class='shop-ctrl' wx:if='{{shop.edt}}' data-index='{{index}}' data-goodsindex = '{{goodsIndex}}' data-id='{{goods.productItemId}}' bindtap='delGoods'>
+                删除
+            </view>
+            <view class='detail'>
+                <navigator url='../shop/goodsDetail/goodsDetail?id={{goods.productId}}&redirect={{redirect}}' open-type='{{redirect?"redirect":"navigate"}}'>
+                    <text class='name'>{{goods.productTitle}}</text>
+                </navigator>
+                <view class='params'>规格：{{goods.productSelect}}</view>
+                <view class='infor clearfix'>
+                    <view class='change-num'>
+                        <text class='iconfont icon-move' bindtap='subtractCount' data-index='{{index}}' data-goodsindex = '{{goodsIndex}}'></text>
+                        <input type='number' value='{{goods.productCount}}' bindblur='setCount' data-index='{{index}}' data-goodsindex = '{{goodsIndex}}'></input>
+                        <text class='iconfont icon-add' bindtap='addCount' data-index='{{index}}' data-goodsindex = '{{goodsIndex}}'></text>
+                    </view>
+                    <text class='price'>￥{{goods.productPrice}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class='bottom-infor' wx:if='{{cartList.length!=0}}'>
+    <checkbox-group bindchange="checkAll">
+        <label><checkbox checked='{{checkAll}}' value='{{checkAll}}'></checkbox> 全选</label>
+    </checkbox-group>
+    <text class='price'>总计：￥{{price}}</text>
+    <view class='btn' bindtap='goConfirm'>
+        结算
+    </view>
+</view>
+<view wx:if='{{cartList.length==0}}'>
+    <template is="empty" />
+</view>

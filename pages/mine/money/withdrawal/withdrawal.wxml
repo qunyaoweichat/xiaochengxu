@@ -1,0 +1,33 @@
+<view class="widthDrawal">
+    <form bindsubmit='submit'>
+        <view class='form-list'>
+            <label class='item clearfix'>
+                <view class='text'>金额</view>
+                <view class='inputs'>
+                    <input placeholder='可用余额{{data.remain}}' name='encashMoney' type='number'></input>
+                </view>
+            </label>
+            <label class='item clearfix'>
+                <view class='text'>支付密码</view>
+                <view class='inputs'>
+                    <input placeholder='请输入密码' name='dealPwd' type='number' password='true'></input>
+                </view>
+            </label>
+        </view>
+        <view class='list'>
+            <view class='item'>
+                <navigator url='../../bankCard/addCard/addCard'>+添加银行卡</navigator>
+            </view>
+            <radio-group bindchange="radioChange">
+                <view class='item' wx:for='{{cardList}}' wx:key='bankList'>
+                    <label class="radio">
+                        <radio value='{{item.bankId}}' checked="{{item.bankId==bankId}}"></radio>
+                        {{item.bankAlis}} 尾号{{item.cardNo}}
+                    </label>
+                </view>
+            </radio-group>
+        </view>
+        <button type='primary' form-type='submit'>1个工总日内审核,确认提现</button>
+    </form>
+
+</view>

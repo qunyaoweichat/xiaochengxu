@@ -1,0 +1,202 @@
+<!-- 我的主页 -->
+<!-- 页脚 -->
+<view class="tabBar">
+    <view class='tabBar-item' bindtap='goMineIndex'>
+        <navigator hover-class="none" open-type='navigateBack' url='../shop/index'>
+            <view>
+                <text class='iconfont icon-homefill'></text>
+            </view>
+            <view class='text'>首页</view>
+        </navigator>
+    </view>
+    <view class='tabBar-item' bindtap='showList' bindtap='toggleDrop'>
+        <view class='drop-list' wx:if="{{showDrop}}">
+            <view class='item' bindtap='changeGroup'>全部</view>
+            <view class='item' bindtap='changeGroup' wx:for='{{shopDetail.goodsGroupDataList}}' wx:key='{{groupId}}'>{{item.groupName}}</view>
+        </view>
+        <view>
+            <text class='iconfont icon-searchlist'></text>
+        </view>
+        <view class='text'>商品分组</view>
+    </view>
+    <view class='tabBar-item {{collector?"collector":""}}' bindtap='collector'>
+        <view>
+            <text class='iconfont icon-favor'></text>
+        </view>
+        <view class='text'>收藏</view>
+    </view>
+    <view class='tabBar-item' bindtap='contactBuss'>
+        <navigator hover-class="none" url='../webIM/index'>
+            <view>
+                <text class='iconfont icon-comment'></text>
+            </view>
+            <view class='text'>联系商家</view>
+        </navigator>
+    </view>
+    <view class='tabBar-item' bindtap='selecShop'>
+        <navigator hover-class="none" url="../buy/index">
+            <view>
+                <text class='iconfont icon-cart'></text>
+            </view>
+            <view class='text'>购物车</view>
+        </navigator>
+    </view>
+</view>
+<view class='shopIndex-cover' bindtap='hideDrop' wx:if="{{showDrop}}"></view>
+<view class="wrap">
+    <!-- 页头 -->
+    <view class='me-heard'>
+        <view class='top1 clearfix'>
+            <view class='inner'>
+                <navigator url='../message/index' hover-class='none'>
+                    <text class='le iconfont icon-comment'></text>
+                </navigator>
+                <navigator url='../set/setIndex' hover-class='none'>
+                    <text class='rg iconfont icon-settings'></text>
+                </navigator>
+            </view>
+        </view>
+
+        <view class='cover'>
+            <view class='avatar'>
+                <image src='{{userInfor.userIcon}}' wx:if='{{userInfor.userIcon}}' mode='aspectFill'></image>
+            </view>
+            <view class='ph'>{{userInfor.mobile}}</view>
+        </view>
+
+        <view class='me-list'>
+            
+            <view class='inner'>
+                <navigator url='../order/allOrder/orderList?orderType=1' hover-class='none'>
+                    <view class='iconfont icon-daifukuan'></view>
+                    <view>待付款</view>
+                </navigator>
+            </view>
+            
+            <view class='inner'>
+                <navigator url='../order/allOrder/orderList?orderType=2' hover-class='none'>
+                    <view class='iconfont icon-daifahuo'></view>
+                    <view>待发货</view>
+                </navigator>
+            </view>
+
+            <view class='inner'>
+                <navigator url='../order/allOrder/orderList?orderType=3' hover-class='none'>
+                    <view class='iconfont icon-daishouhuo'></view>
+                    <view>待收货</view>
+                </navigator>
+            </view>
+
+            <view class='inner'>
+                <navigator url='../order/allOrder/orderList?orderType=4' hover-class='none'>
+                    <view class='iconfont icon-daipingjia'></view>
+                    <view>待评价</view>
+                </navigator>
+            </view>
+            
+        </view>
+    </view>
+
+    <!-- 正文列 -->
+    <view class='info-list'>
+
+        <view class='inner'>
+            <navigator url='../order/allOrder/orderList?orderType=0' hover-class="none">
+                <text>全部订单</text>
+                <text class='iconfont icon-right'></text>
+            </navigator>
+        </view>
+        <view class='inner '>
+            <navigator url='../order/preferentialOrder/preferentialList/preferentialList' hover-class="none">
+                <text>优惠订单</text>
+                <text class='iconfont icon-right'></text>
+            </navigator>
+        </view>
+        <view class='inner '>
+            <navigator url='../order/rightsOrder/rightsList/rightsList' hover-class="none">
+                <text>维权订单</text>
+                <text class='iconfont icon-right'></text>
+            </navigator>
+        </view>
+    </view>
+
+    <view class='info-list'>
+        <view class='inner '>
+            <navigator url='../buy/index' hover-class="none">
+                <text>购物车</text>
+                <text class='iconfont icon-right'></text>
+            </navigator>
+        </view>
+    </view>
+
+    <view class='info-list'>
+        <view class='inner '>
+            <navigator url='integral/integral' hover-class="none">
+                <text>积分商城</text>
+                <text class='iconfont icon-right'></text>
+            </navigator>
+        </view>
+    </view>
+
+
+    <view class='info-list'>
+        <view class='hd'>我的钱包</view>
+        <view class='content-out'>
+            <view class='content'>
+                <navigator  url='integral/integral' hover-class="none">
+                    <image src='/images/icon_jf.png'></image>
+                    <view>
+                        <text>{{userInfor.creditCount}}</text>积分</view>
+                </navigator>
+            </view>
+            <view class='content'>
+                <navigator url='money/index' hover-class="none">
+                    <image src='/images/icon_xj.png'></image>
+                    <view>
+                        <text>￥{{userInfor.cashCount}}</text>现金</view>
+                </navigator>
+
+            </view>
+            <view class='content'>
+                <navigator url='bankCard/bankCard' hover-class="none">
+                    <image src='/images/icon_yhk.png'></image>
+                    <view>
+                        <text>{{userInfor.bankCardCount}}张</text>银行卡</view>
+                </navigator>
+            </view>
+            <view class='content'>
+                <navigator url='coupon/coupon' hover-class="none">
+                    <image src='/images/icon_yhq.png'></image>
+                    <view>
+                        <text>{{userInfor.couponCardCount}}张</text>优惠券</view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+
+    <view class='info-list'>
+        <view class='content-out'>
+            <view class='content'>
+                <navigator url='favorites/favorites' hover-class="none">
+                    <image src='/images/icon_sc.png'></image>
+                    <view>收藏</view>
+                </navigator>
+            </view>
+            <view class='content'>
+                <image src='/images/icon_yqhy.png'></image>
+                <view>邀请好友</view>
+            </view>
+            <view class='content'>
+                <navigator url='contact/contact' hover-class="none">
+                    <image src='/images/icon_contactus.png'></image>
+                    <view>联系我们</view>
+                </navigator>
+            </view>
+            <view class='content'></view>
+        </view>
+    </view>
+
+    <view class='public-btn'>
+        <button type="warn">我也要开店</button>
+    </view>
+</view>

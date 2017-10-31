@@ -1,0 +1,52 @@
+<import src="../../public/listTpl.wxml" />
+<view class='main-tabs'>
+    <view class='wx:if="{{type=="goods"? "on": ""}}"' data-type='goods' bindtap='changeType'>商品</view>
+    <view class='wx:if="{{type=="shop"? "on": ""}}"' data-type='shop' bindtap='changeType'>店铺</view>
+</view>
+
+<view class='list-wrap'>
+    <view class='favorite-goods' wx:if='{{type=="goods"}}'>
+        <view class='item' wx:for="{{list}}" wx:key='item'>
+            <view class='pic'>
+                <navigator url='../../shop/goodsDetail/goodsDetail?id={{item.productId}}'>
+                    <image wx:if='{{item.productImage}}' src='{{item.productImage}}'></image>
+                </navigator>
+
+            </view>
+            <view class='content'>
+                <view class='name'>
+                    <navigator url='../../shop/goodsDetail/goodsDetail?id={{item.productId}}'>{{item.productTitle}}</navigator>
+                </view>
+                <view class='infor'>
+                    <button size='mini' bindtap='goodsRemove' data-id='{{item.productId}}'>取消关注</button>
+                    <view>￥{{item.productPrice}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='favorite-goods' wx:if='{{type=="shop"}}'>
+        <view class='item' wx:for="{{list}}" wx:key='item'>
+            <view class='pic'>
+                <image wx:if='{{item.shopLogo}}' src='{{item.shopLogo}}'></image>
+            </view>
+            <view class='content'>
+                <view class='name'>
+                    {{item.shopName}}
+                    <!-- <navigator url='../../shop/goodsDetail/goodsDetail?'></navigator> -->
+                </view>
+                <view class='infor'>
+                    <button size='mini' bindtap='shopRemove' data-id='{{item.shopId}}'>取消关注</button>
+                    <view>粉丝数：{{item.subscribeNum}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:if='{{list.length==0}}'>
+        <template is="empty" />
+    </view>
+    <view wx:else>
+        <view wx:if='{{loadAll}}'>
+            <template is="loadAll" />
+        </view>
+    </view>
+</view>

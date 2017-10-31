@@ -1,0 +1,52 @@
+.add-address{
+    padding-left: 15px;
+    border-top: 1px solid #5ea02d;
+    border-bottom: 1px solid #d9d9d9;
+    background-color: #fff;
+    overflow: hidden;
+}
+.form-list{
+    margin-top: 0;
+    margin-bottom: 0;
+    border-top: 0;
+    border-bottom: 0;
+}
+.form-list .item:last-child{
+    border-bottom: 0;
+}
+.form-list .item{
+   padding: 10px 0;
+
+}
+.form-list .item .text1{
+    width: 100px;
+}
+.form-list .item .body-view{
+    text-align: right;
+}
+.form-list .item textarea{
+    height: 40px;
+    resize: none;
+    width: 100%;
+    padding: 5px 0px 0px;
+    line-height: 20px;
+    font-size: 13px;
+    color: #666;
+}
+
+/* 按钮 */
+.butn{
+    
+    padding:10px 20px;
+    margin-top: 20px;
+}
+.butn button{
+    line-height: 45px;
+    font-size: 15px;
+    border: 1px solid #60a031;
+    color: #60a031;
+    background-color: none;   
+}
+.public-btn .delete{
+    margin-top: 10px;
+}

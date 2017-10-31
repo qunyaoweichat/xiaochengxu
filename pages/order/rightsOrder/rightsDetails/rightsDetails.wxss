@@ -1,0 +1,143 @@
+.sevday{
+    background: #f8f99d;
+    padding: 6px 15px;
+    line-height: 22px;
+    color: #fc4106;
+    font-size: 12px;
+}
+.state{
+    background-color: #FFF;
+    padding:10PX;
+    color: #8f8f94;
+}
+.state .iconfont{
+    color: #8f8f94;
+    font-size: 24px;
+    margin-right: 10px;
+    vertical-align: middle
+}
+.seller{
+    margin-top: 10px;
+    padding: 0 10px;
+    line-height: 45px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;  
+}
+.seller navigator{
+    border: 1px solid #fc4106;
+    color: #fc4106;
+    padding: 0 16px;
+    height: 28px;
+    line-height: 26px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 8px;
+    float: right;
+}
+
+/* 退款原因 */
+.public-list{
+    border-top:1px solid #ddd;
+}
+.public-list .item{
+    font-size: 12px;
+    border-bottom:1px solid #ddd;
+}
+.public-list .item .middle{
+    padding-right: 0;
+}
+.public-list .item .title{
+     font-size: 14px;
+}
+.public-list .shop{
+    height: 55px;
+    padding: 10px;
+    line-height: 25px;
+}
+.public-list .item .pic{
+    float: left;
+}
+.public-list .item .text{
+    line-height: 20px;
+    padding-left: 70px;
+    display: block;
+}
+
+.public-list .item .text .name{
+    font-weight:bold;
+    height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.public-list .item .text .num{
+    float: right
+}
+.public-list .item .pic image{ 
+    height: 50px;
+    width: 50px;
+}
+
+/* 地址 */
+.address{
+    margin-top: 10px;
+    line-height: 25px;
+    background-color: #fff;
+    color: #666;
+    padding: 10px;
+    border-top: 1px solid #ddd;  
+}
+.address text{
+    display: block;
+}
+.address .title{
+    font-weight:bold;
+    line-height: 30px;
+}
+.address .zip{
+    margin-top: 3px;
+}
+.address-title{
+    background: #78909c;
+    color: #fff;
+    line-height: 32px;
+    padding: 0px 0 0 30px;
+    font-size: 12px;
+}
+
+/* 订单详情 */
+.public-list .information{
+    height: 50px;
+    line-height: 50px;
+}
+.public-list .information .order-id{
+    color: #ccc;
+    margin-top: 5px;
+}
+.public-list  .media{
+    height:auto;
+    padding: 10px;
+}
+.public-list  .media .pic{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+    text-align: center;
+}
+.public-list  .media .pic image{
+    height: 40px;
+    width: 40px;
+}
+.public-list  .media view{
+    line-height: 20px;
+}
+.public-list .Paid{
+    text-align: right;
+}
+.public-list .Paid text{
+    color: red;
+    padding-left:0px;
+    display:inline;
+
+}

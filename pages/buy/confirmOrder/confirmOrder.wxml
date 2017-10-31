@@ -1,0 +1,75 @@
+<view class='address '>
+    <view class='inner'>
+        <navigator hover-class='none' url='../../set/setAddressList/setAddressList?from=true'>
+            <view class='name'>{{address.name}}
+                <text class='phone'>{{address.phone}}</text>
+            </view>
+            <view>{{address.addressDetails}}</view>
+            <view class='zip'>{{address.postcode}}</view>
+        </navigator>
+    </view>
+</view>
+
+<view class='shop-item' wx:for="{{cartList}}" wx:index='index' wx:for-item='shop' wx:key='shop' wx:if='{{shop.shopProduct.length>0}}'>
+    <view class='order-heard'>
+        <navigator url='../shop/index?shopId={{shop.shopId}}' hover-class='none'>
+            <image src='{{shop.shopLogo}}'></image>
+            <text class='name'>{{shop.shopName}}</text>
+        </navigator>
+    </view>
+    <view class='order-list'>
+        <view class='item' wx:for='{{shop.shopProduct}}' wx:for-item='goods' wx:for-index='goodsIndex' wx:key='goods'>
+            <view class='pic'>
+                <navigator url='../../shop/goodsDetail/goodsDetail?id={{goods.productId}}'>
+                    <image src='{{goods.productImage}}' mode='aspectFill'></image>
+                </navigator>
+            </view>
+            <navigator url='../../shop/goodsDetail/goodsDetail?id={{goods.productId}}'>
+                <text class='name'>{{goods.productTitle}}</text>
+            </navigator>
+            <view class='infor'>
+                <text class='num'>数量：{{goods.productCount}}</text>
+                <text class='price'>￥{{goods.productPrice}}</text>
+            </view>
+        </view>
+        <view class='item express'>
+            <view class='status'>包邮{{goods.productPrice}}</view>
+            <view>配送方式：</view>
+        </view>
+        <view class='item order-note'>
+            <text>留言：</text>
+            <textarea placeholder='选填:对本次交易的说明(建议填写已和卖家协商一致的内容)' bindblur='setRemark' data-index='{{index}}'></textarea>
+        </view>
+    </view>
+</view>
+<view class='order-box'>
+    <view class='coupon' bindtap='goCoupon'>
+        <text class='iconfont icon-right'></text>
+        <text class='price'>-￥{{AllData.productPromotionPrice}}</text> 
+        优惠券<text class='num'>{{AllData.couponCount}}张可用</text>
+    </view>
+</view>
+<view class='order-box'>
+    <view class='price-total'>
+        <view class='item'>
+            <text class='price'>￥{{AllData.productTotalPrice}}</text>
+            <text>总价：</text>
+        </view>
+        <view class='item'>
+            <text class='price'>￥{{AllData.productPromotionPrice}}</text>
+            <text>优惠券抵扣：</text>
+        </view>
+        <view class='item'>
+            <text class='price'>￥{{AllData.freight}}</text>
+            <text>运费：</text>
+        </view>
+        <view class='item'>
+            <text class='price'>￥{{AllData.productTotalPrice-AllData.freight-AllData.productPromotionPrice}}</text>
+            <text>应付：</text>
+        </view>
+    </view>
+</view>
+<view class='bottom-infor'>
+    <text class='price'>总计：￥{{AllData.productTotalPrice-AllData.freight-AllData.productPromotionPrice}}</text>
+    <view class='btn' bindtap='creatOrder'>支付订单</view>    
+</view>

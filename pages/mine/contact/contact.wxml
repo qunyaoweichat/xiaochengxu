@@ -1,0 +1,67 @@
+<import src="../../../utils/wxParse/wxParse.wxml"/>
+<view class="contact">
+    <view class='box vcard'>
+        <view class='title'>{{list.companyName}}</view>
+        <view class='s-tit'>企业使命</view>
+        <view class='s-con'>
+            {{list.mission}}
+        </view>
+        <view class='s-tit'>企业价值观</view>
+        <view class='s-con'>
+            {{list.sense}}
+        </view>
+        <view class='s-tit'>根本定位</view>
+        <view class='s-con'>
+            {{list.orientation}}
+        </view>
+        <view class='s-tit'>经营理念</view>
+        <view class='s-con'>
+            {{list.philosophy}}
+        </view>
+    </view>
+    <view class='box'>
+        <view class='s-tit'>创始人</view>
+        <view class='ceo clearfix'>
+            <view class='avatar'> <image wx:if='{{list.founderIcon}}' src='{{list.founderIcon}}'></image></view>
+            <view class='ceo-con'>
+                <view class='name'>{{list.founder}}</view>
+                <view class='text'>{{list.founderSummary}}</view>
+            </view>
+        </view>
+    </view>
+    <view class='box'>
+        <view class='s-tit'>主营业务</view>
+        <view class='s-con'>
+            {{list.primaryBusiness}}
+        </view>
+    </view>
+    <view class='box'>
+        <view class='s-tit'>大事记</view>
+        <view class='timeline'>
+            <view class='timeline-item' wx:for='{{list.chronology}}' wx:key='contact'>
+                <view class='time'>{{item.date}}</view>
+                <view class='text'>{{item.title}}</view>
+            </view>
+        </view>
+    </view>
+    <view class='box'>
+        <view class='s-tit1'> <text> 企业资质</text> </view>
+        <view class='pic-list'>
+            <view class='item' wx:for="{{list.qualification}}" wx:key='qualification'> 
+                <image wx:if='{{item}}'  src='{{item}}' mode='widthFix'></image> 
+            </view>
+        </view>
+    </view>
+    <view class='box'>
+        <view class='s-tit1'> <text>生产工艺</text> </view>
+        <view class='s-con wxParse'>
+            <template is="wxParse" data="{{wxParseData:craftwork.nodes}}"/>
+        </view>
+    </view>
+    <view class='box'>
+        <view class='s-tit1'> <text>团队丰采</text> </view>
+        <view class='s-con wxParse'>
+            <template is="wxParse" data="{{wxParseData:teamGraceful.nodes}}"/>
+        </view>
+    </view>
+</view>

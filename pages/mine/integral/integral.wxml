@@ -1,0 +1,14 @@
+<view class='integral-top'>
+    <view>总积分</view>
+    <view class='number'>{{list.count}}</view>
+</view>
+
+<!-- <view class='integral-list'>
+    <view class='item' wx:for='{{[1,2]}}' wx:key=''>
+        <view class='c1'>
+        <view>赠送积分券（编号9527）</view>
+        <view class='time'>2016-06-30 00:09:53</view>
+        </view>
+        <view class='c2'>+1</view>
+    </view>
+</view> -->

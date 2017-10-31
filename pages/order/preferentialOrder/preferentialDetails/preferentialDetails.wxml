@@ -1,0 +1,55 @@
+<!-- 优惠付订单详情 -->
+<view class='preferential-details'>
+     <!-- 店铺 -->
+   
+        <view class='order-heard'>
+            <image src='../../../../images/order.jpg'></image>
+            <text class='name'>黑石旗舰店</text>
+            <navigator hover-class='none'>
+                <text class='lianxi iconfont icon-right '></text>
+            </navigator>
+        </view>
+
+        <!-- 订单 -->
+        <view class='public-list'>
+            <view class='item'>
+                <view class='lf'>付款金额</view>
+                <view class='middle'>￥</view>
+            </view>
+            <view class='item'>
+                <view class='lf'>商品</view>
+                <view class='middle'>测试店铺01的收款</view>
+            </view>
+            <view class='item'>
+                <view class='lf'>商家名称</view>
+                <view class='middle'>测试店铺01</view>
+            </view>
+            <view class='item'>
+                <view class='lf'>支付方式</view>
+                <view class='middle'>-</view>
+            </view>
+            <view class='item'>
+                <view class='lf'>支付时间</view>
+                <view class='middle'></view>
+            </view>
+            <view class='item'>
+                <view class='lf'>当前状态</view>
+                <view class='middle'>交易关闭</view>
+            </view>
+            <view class='item'>
+                <view class='lf'>订单号</view>
+                <view class='middle'>1234567898765432</view>
+            </view>
+            <view class='item'>
+                <view class='lf'>支付流水号</view>
+                <view class='middle'></view>
+            </view>
+            <view class='item'>
+                <view class='lf'>付款原因</view>
+                <view class='middle'></view>
+            </view>
+        </view>
+  
+
+
+</view>

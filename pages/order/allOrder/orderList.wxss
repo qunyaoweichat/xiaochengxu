@@ -1,0 +1,51 @@
+/* pages/order/orderList/orderList.wxss */
+.wrap{
+    margin-bottom: 60px;
+}
+
+
+.order-list  .total{
+    color: #1aad19;
+    line-height: 40px;
+    font-size: 13px;
+    padding-right: 10px;
+}
+
+.order-list .time{
+    float: left;
+}
+.order-list .num{
+    color: #666;    
+    float: right; 
+}
+.order-list  .total .time .iconfont{
+    font-size: 22px;
+    margin-right: 5px;
+}
+.order-list .order-ctrl{
+    padding: 10px;
+    text-align: right;
+    border-top: 1px solid #f4f4f4;
+}
+.order-list .order-ctrl navigator{
+    display: inline-block;
+   
+}
+.order-list .order-ctrl button{
+    width: 90px;
+    height: 34px;
+    line-height: 34px;
+     margin-left: 10px;
+}
+.order-list .order-ctrl .btn-green{
+    color: #1aad19;
+}
+.order-list .order-ctrl .btn-green::after{
+    border: solid 1px #1aad19;
+}
+.order-list .order-ctrl .btn-gray{
+    color: #666;
+}
+.order-list .order-ctrl .btn-gray::after{
+    border-color: #ddd
+}

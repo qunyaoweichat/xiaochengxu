@@ -1,0 +1,24 @@
+<!-- 商品评价 -->
+<view class='order-list'>
+    <view class='item' wx:for='{{orderInfor.orderShop.shopProduct}}' wx:for-item='product' wx:key='product' wx:for-index='productIndex'>
+        <view class='clearfix'>
+            <view class='pic'>
+                <image src='{{product.productImage}}'></image>
+            </view>
+            <view class='detail'>
+                <text class='name'>{{product.productTitle}}</text>
+                <view class='infor'>
+                    <view class='star-num'>
+                        <text class='iconfont icon-favorfill {{star<=submitData[productIndex].commentLevel  ? "on":""}}' wx:for="{{[1,2,3,4,5]}}" wx:for-item='star' wx:key='starItem' wx:index='index' bindtap='setStarnum' data-index='{{index+1}}' data-productindex='{{productIndex}}'></text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class='comment'>
+            <textarea placeholder='长度在10-500个字之间' data-productindex='{{productIndex}}' bindblur='setComment'></textarea>
+        </view>
+    </view>
+    <view class='public-btn'>
+        <button type='primary' bindtap='submit'>提交</button>
+    </view>
+</view>

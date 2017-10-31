@@ -1,0 +1,105 @@
+/* 优惠券 */
+.coupon{
+    display: block;
+}
+.receive{
+    display: none;
+}
+.coupon .main{
+    padding: 1px 10px 10px;
+    -webkit-tap-highlight-color: transparent;
+    color: #fff;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#fe314e), to(#fe6263));
+}
+.coupon .main .title{
+    font-size: 18px;
+    line-height: 60px;
+    padding-left: 10px;
+}
+.coupon .main .title .share{
+    float: right;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 0 15px;
+    line-height: 30px;
+    margin-top: 12px;
+    font-size: 14px;
+}
+.coupon .main .word{
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #fff;
+}
+.coupon .main .word text{
+    font-size: 32px;
+    line-height: 40px;
+    margin-right: 5px;
+}
+.coupon .main .btn{
+    text-align: center;
+    margin: 10px 0;
+}
+.coupon .main .btn button{
+    padding: 0 30px;
+    display: inline-block;
+    color: #fb8318;
+    background: #fff;
+    font-size: 16px;
+}
+.coupon .explain{
+    padding:30px 15px;
+}
+.coupon .explain .pic image{
+    width: 27%;
+}
+.coupon .explain view{
+    font-size: 14px;
+    color: #fb8318;
+    line-height: 1;
+}
+.public-btn{
+    text-align: center;
+    padding: 0;
+}
+.public-btn button{
+    color: #fff;
+    border-radius: 30px;
+    font-size: 16px;
+    background: #b07847;
+    width: 60%;
+}
+
+/* 领取优惠券 */
+.receive .main{
+    text-align: center;
+    color: #fff;
+    background-color:#fb8318;
+    padding: 30px 15px;
+}
+.receive .main .tltle1{
+    font-size: 30px;
+    line-height: 1.5em;
+}
+.receive .main .tltle2{
+    line-height: 2em;
+    font-size: 18px;
+}
+.receive .main .tltle3{
+    font-size: 50px;
+    font-weight:bold;
+    line-height: 2em;
+}
+.receive .main .tltle4{
+    font-size: 26px;
+    line-height: 1.5em;
+}
+
+.receive .public-btn{
+    margin: 30px 0;
+    display: flex;
+}
+.receive .public-btn button{
+    width: 40%;
+    text-align: center;
+}   

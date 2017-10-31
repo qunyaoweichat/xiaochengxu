@@ -1,0 +1,20 @@
+<view class='recharge'>
+    <view class='form-list'>
+        <label class='item clearfix'>
+            <view class='text'>金额</view>
+            <view class='inputs'>
+                <input placeholder='请输入金额' type='number'></input>
+            </view>
+        </label>
+    </view>
+    <view class='recharge-tips'>大额充值建议分批充值，单次不超过10000元</view>
+    <view class='form-list'>
+        <label class='item clearfix'>
+            <view class='text'>微信支付</view>
+            <view class='inputs icons'>
+                <text class='iconfont icon-check'></text>
+            </view>
+        </label>
+    </view>
+    <button type='primary'>确认支付</button>
+</view>

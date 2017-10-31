@@ -1,0 +1,54 @@
+page{
+    background: #fff;
+}
+
+.comment-tabs .item view{
+    line-height: 24px;
+   
+}
+.comment-tabs .item view:last-child{
+    font-size: 12px;
+}
+.comment-tabs .item.on{
+    color: #1aad19;
+    border-bottom: 2px solid #1aad19
+}
+
+
+.comment-list{
+    padding: 13px 15px;
+    border-bottom: 1px solid #ddd;
+}
+.comment-list:last-child{
+    border: none;
+}
+.comment-list .avatar{
+    float: left;
+}
+.comment-list .avatar image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.comment-list .comment-con{
+    margin-left: 60px;
+}
+.comment-list .hd{
+    height: 30px;
+    line-height: 30px;
+}
+.comment-list .hd .username{
+    float: right;
+}
+.comment-list .hd .iconfont{
+    font-size: 14px;
+    margin-right: 5px;
+    color: #999;
+}
+.comment-list .hd .iconfont.on{
+    color: #f80
+}
+.comment-list .bd{
+    color: #666;
+    line-height: 24px;
+}

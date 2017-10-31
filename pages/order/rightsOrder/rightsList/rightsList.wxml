@@ -1,0 +1,51 @@
+<import src="../../../public/listTpl.wxml" />
+<view class='main-tabs'>
+    <view wx:for='{{tabList}}' wx:key='tabs' class='{{item.refundStatus==refundStatus?"on":""}}' data-refundstatus='{{item.refundStatus}}' bindtap='changeType'>{{item.name}}</view>
+</view>
+<view class='list-wrap'>
+    <view class='shop-item' wx:for='{{list}}' wx:for-item='shopList' wx:key='shop'>
+        
+        <view class='order-heard'>
+            <navigator url='../../../shop/index?shopId={{shopList.shopBasicInfo.shopId}}&frome=order'>
+                <text class='status'>{{shpList.applyStatus}}</text>
+                <image src='{{shopList.shopBasicInfo.shopLogo}}'></image>
+                <text class='name'>{{shopList.shopBasicInfo.shopName}}</text>
+            </navigator>
+        </view>
+
+        <view class='order-list'>
+            <view class='item clearfix' wx:for="{{shopList.orderItemList}}" wx:for-item='goods' wx:key='goods'>
+                <view class='pic'>
+                    <image src='{{goods.goodsImg}}'></image>
+                </view>
+                <view class='detail'>
+                    <navigator hover-class='none' url='../rightsDetails/rightsDetails?refundId={{shopList.refundId}}'>
+                        <text class='name'>{{goods.goodsName}}</text>
+                        <view class='infor'>
+                            <text class='num'>数量：{{goods.quantity}}</text>
+                            <text class='price'>￥{{goods.unitPrice}}</text>
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+            <view class='total clearfix'>
+                <text class='num'>共{{shopList.orderItemList.length}}件商品  退款合计 <text class='money'>￥{{shopList.refundMoney}}</text></text>
+            </view>
+            <view class='order-ctrl clearfix'>
+                <!-- <navigator hover-class='none' url='../consult/consult?refundId={{shopList.refundId}}'>
+                    <button class='record' size='mini'>协商记录</button>
+                </navigator> -->
+                <button class='revoke' size='mini' data-id='{{shopList.refundId}}' wx:if='{{shpList.applyStatus}}' bindtap='cancelRefund'>撤销申请</button>
+            </view>
+        </view>
+    </view>
+
+    <view wx:if='{{list.length==0}}'>
+        <template is="empty" />
+    </view>
+    <view wx:else>
+        <view wx:if='{{loadAll}}'>
+            <template is="loadAll" />
+        </view>
+    </view>
+</view>

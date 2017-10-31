@@ -1,0 +1,63 @@
+<!--设置页面-->
+<view class='set-index'>
+    <view class='info_list'>
+        <view class='portrait'>
+            <view class='pic' bindtap='changeAvatar'>
+                <image src='{{userInfor.userIcon}}' wx:if='{{userInfor.userIcon}}'></image>
+            </view>
+            <navigator url='setBaseinfor/setBaseinfor' hover-class='none'>
+                <text class='iconfont icon-right'></text>
+                <view class='user-name'>{{userInfor.userName}}</view>
+            </navigator>
+        </view>
+    </view>
+    <view class='public-list'>
+        <navigator hover-class='none' url='setAddressList/setAddressList'>
+            <view class='item'>
+                <view class='lf'>收货地址</view>
+                <view class='iconfont icon-right'></view>
+            </view>
+        </navigator>
+    </view>
+
+    <view class='public-list'>
+        <navigator hover-class='none' url='edtPaypassword/edtPaypassword'>
+            <view class='item'>
+                <view class='lf'>支付密码</view>
+                <view class='iconfont icon-right'></view>
+            </view>
+        </navigator>
+
+        <navigator hover-class='none' url='password/password'>
+            <view class='item'>
+                <view class='lf'>修改密码</view>
+                <view class='iconfont icon-right'></view>
+            </view>
+        </navigator>
+        <view class='item' bindtap='goBindPhone'>
+            <view class='lf'>绑定号码</view>
+            <view class='iconfont icon-right' wx:if='{{userInfor.mobile}}'></view>
+            <view class='middle'>{{userInfor.sortMobile}}</view>
+        </view>
+        <navigator hover-class='none' url='mailbox/mailbox'>
+            <view class='item'>
+                <view class='lf'>绑定邮箱</view>
+                <view class='iconfont icon-right'></view>
+                <view class='middle'>{{userInfor.email}}</view>
+            </view>
+        </navigator>
+
+        <navigator hover-class='none' url='partner/partner'>
+            <view class='item'>
+                <view class='lf'>合伙人计划</view>
+                <view class='iconfont icon-right'></view>
+            </view>
+        </navigator>
+    </view>
+    <!-- 
+
+    <view class='info-list butn'>
+        <button type="primary" size="90%">退出</button>
+    </view> -->
+
+</view>

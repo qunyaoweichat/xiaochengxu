@@ -1,0 +1,121 @@
+
+.contact .box{
+    background: #fff;
+    margin: 15px 0;
+    padding: 10px 15px;
+}
+.contact .vcard .title{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.contact .s-tit{
+    font-size: 16px;
+    line-height: 30px;
+}
+.contact .s-tit1{
+    position: relative;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+.contact .s-tit1::before{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    top: 50%;
+    left: 25%;
+    background: #aaa
+}
+.contact .s-tit1 text{
+    position: relative;
+    z-index: 1;
+    padding: 0 10px;
+     background: #fff; 
+}
+.contact .s-con{
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+.contact .s-con image{
+    max-width: 100%;
+    margin: 10px 0;
+}
+.contact .ceo{
+    margin-top: 10px;
+}
+.contact .ceo image{
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+.contact .ceo .name{
+    line-height: 34px;
+    font-size: 16px;
+}
+.contact .timeline{
+    position: relative;
+    margin-left: 10px;
+}
+.contact .timeline-item{
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+.contact .timeline-item .time{
+    line-height: 44px;
+    font-size: 20px;
+    color: #1aad19
+}
+.contact .timeline-item .text{
+    font-size: 12px;
+}
+.contact .timeline-item::after,.contact .timeline-item .time::before,.contact .timeline-item .time::after{
+    position: absolute;
+    content: '';
+}
+.contact .timeline-item::after{
+    height: 130%;
+    left: 0;
+    top: 20px;
+    width: 1px;
+    background: #1aad19;
+}
+.contact .timeline-item:last-child::after{
+    background: none;
+}
+.contact .timeline-item .time::before{
+    left: -7px;
+    top: 15px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #ccc
+}
+.contact .timeline-item .time::after{
+    left: -4px;
+    top: 18px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1aad19
+}
+
+.contact .pic-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+.contact .pic-list .item{
+    width: 46%;
+    margin: 2% 2%;
+}
+.contact .pic-list .item image{
+    width: 100%;
+}

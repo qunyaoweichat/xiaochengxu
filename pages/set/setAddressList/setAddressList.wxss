@@ -1,0 +1,68 @@
+
+.address{
+    position: relative;
+    margin: 18px 16px 0;
+    background-color: #fff;
+    padding-bottom: 6px;
+    border: 1px solid #dbdadb;
+    border-radius: 5px;
+}
+
+.address .inner{
+    padding: 10px 15px 0 20px;
+}
+.address .inner .frame{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    z-index: 1;
+}
+.address .inner .pitch-on{
+    position: absolute;
+   left: 0; 
+   top: -1px;
+   width: 35px;
+   height: 35px;
+   z-index: 2;
+}
+.address .inner .name{
+    color: #333;
+    line-height: 30px;
+    font-size: 14px;
+}
+.address .inner .name navigator{
+    display:inline;
+}
+.address .inner .name .phone{
+    padding-left: 10px;
+}
+.address .inner .name .iconfont{
+    font-size: 20px;
+    float: right;
+    color: #666;
+}
+.address .inner view{
+    font-size: 12px;
+    color: #666;
+    line-height: 20px;
+}
+.address .inner .zip{
+    padding-top: 3px;
+}
+
+
+/* 新增加地址 */
+.addr_cur{
+    line-height: 60px;
+    margin: 47px 16px 47px;
+    border: 1px dotted #bbb;
+    text-align: center;
+    color: #666;
+}
+
+.addr_cur .iconfont{
+    color: green;
+    font-size: 24px; 
+}

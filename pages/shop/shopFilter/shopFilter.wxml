@@ -1,0 +1,70 @@
+<import src="../../public/listTpl.wxml" />
+<view class='shopFilter-page {{showFilterBox ? "noscroll":""}}'>
+    <view class="search-box" bindtap="goSearch">
+        <text>{{keyword}}</text>
+        <icon type="search" size="20" />
+    </view>
+    <view class='filter-bar'>
+        <view class='item icon'>
+            <text bindtap='changeTypebySales' class='{{params.orderType<3?"on":""}} ' data-type='{{salesType}}'>销量</text>
+        </view>
+        <view class='item icon'>
+            <text bindtap='changeTypebyPrice' class='{{params.orderType>2?"on":""}} {{params.orderType==3?"up":""}} {{params.orderType==4?"down":""}}' data-type='{{priceType}}'>价格</text>
+        </view>
+        <view class='item' bindtap='showFilterBox'>
+            <text>筛选</text>
+        </view>
+    </view>
+    <view class='filter-box' wx:if="{{showFilterBox}}">
+        <view class='inner'>
+            <view class='title'>
+                类别
+            </view>
+            <view class='list'>
+                <text class='{{item.className==selectConditions.className?"on":""}}' bindtap='setClass' wx:for='{{conditionList.screen}}' wx:key='conditionList' data-classname='{{item.className}}'>{{item.className}}</text>
+            </view>
+            <view class='title'>
+                品牌
+            </view>
+            <view class='list'>
+                <text class='{{item.checked?"on":""}}' bindtap='setBrand' wx:for='{{conditionList.brand}}' wx:index='index' wx:key='brand' data-brand='{{item.text}}' data-index='{{index}}'>{{item.text}}</text>
+            </view>
+            <view class='title'>
+                价格
+            </view>
+            <view class='list'>
+                <text class='{{item.checked?"on":""}}' bindtap='setPrice' wx:for='{{conditionList.price}}' wx:index='index' wx:key='price' data-min='{{item.minPrice}}' data-max='{{item.maxPrice}}' data-index='{{index}}'>{{item.textPrice}}</text>
+            </view>
+            <view class='submit-box'>
+                <button bindtap='hideFilterbBox'>取消</button>
+                <button type='primary' bindtap='filterGoods'>筛选</button>
+            </view>
+        </view>
+    </view>
+    <view class='goods-list small-list nocar '>
+        <view class='item' wx:for="{{list}}" wx:key='goods'>
+            <navigator url="../goodsDetail/goodsDetail?id={{item.productId}}">
+                <view class='item-inner clearfix'>
+                    <view class='pic'>
+                        <image wx:if='{{item.productImage}}' src='{{item.productImage}}' lazy-load='true'></image>
+                    </view>
+                    <view class='desc'>
+                        <view class='title'>{{item.productTitle}}</view>
+                        <view class='content'>
+                            <text class='iconfont icon-cart'></text>
+                            <text class='price'>￥{{item.productPrice}}</text>
+                        </view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view wx:if='{{list.length==0}}'>
+        <template is="empty" />
+    </view>
+    <view wx:else>
+        <view wx:if='{{loadAll}}'>
+            <template is="loadAll" />
+        </view>
+    </view>
+</view>

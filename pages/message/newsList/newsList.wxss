@@ -1,0 +1,24 @@
+/* pages/notice/noticeNews/noticeNews.wxss */
+.notice-news .item{
+    background-color: #fff; 
+    margin-bottom: 10px;
+    padding: 0px 15px;
+    border-top: 1px solid #f4f4f4;
+    border-bottom: 1px solid #f4f4f4; 
+}
+.notice-news .item .title{
+    line-height: 27px;
+    font-size: 18px;
+    padding: 13px 0;
+    display: block;
+}
+.notice-news .item image{
+    width: 100%;
+}
+.notice-news .item .sj{
+    padding: 7px 0px;
+    font-size: 13px;
+    color: #999;
+    height: 20px;
+    display: block;
+}

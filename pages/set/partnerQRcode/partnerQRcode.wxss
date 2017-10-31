@@ -1,0 +1,40 @@
+.qrcode{
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+.qrcode view{
+    margin: 20px auto;
+    font-size: 16px;
+}
+.qrcode image{
+    width: 212px;
+}
+.or{
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.share{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 10px;
+}
+.share navigator{
+    padding: 0 10px;
+    font-size: 16px;
+    display: block;
+    margin: 0 8%;
+    background: #57a841;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+}

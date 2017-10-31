@@ -1,0 +1,26 @@
+<view class='search-page'>
+    <view class="search-box">
+        <form bindsubmit='bindconfirm' >
+            <label>
+                <input placeholder='请输入搜索关键字' confirm-type="search" bindconfirm='searchGoods'  name='keywords' ></input>
+            </label>
+            <icon type='search' bindtap='searchGoods'></icon>
+        </form>
+    </view>
+    <view class='search-item'>
+
+        <view class='title'>
+            热门搜索
+        </view>
+        <view class='hot-list clearfix'>
+            <text wx:for='{{list}}' wx:key='keyword' bindtap='searchGoods' data-keyword='{{item.text}}'>{{item.text}}</text>
+        </view>
+        <view class='title'>
+            搜索历史
+        </view>
+        <view class='history-list'>
+            <view class='item'  wx:for='{{keywordHistory}}' wx:key='history' data-keyword='{{item}}' bindtap='searchGoods'>{{item}}</view>
+        </view>
+        <button class='clear-history' type='primary' bindtap='clearStorage'>清空历史搜索</button>
+    </view>
+</view>

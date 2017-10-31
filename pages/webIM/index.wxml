@@ -1,0 +1,77 @@
+<!-- 文字输入框 -->
+<view class="footer-input">
+    <text class='iconfont icon-add1'></text>
+     <view class='input'>
+        <textarea></textarea>
+    </view> 
+    <text class='send-out'>发送</text>
+</view>
+
+
+<view class="contact"> 
+    <view class='consult-out'>
+        <!-- 默认是右边的对话框 加上consult-lf是左边的对话框 -->
+        <view class='consult consult-lf'>
+            <view class='msg-item clearfix'>
+                <view class='pic'>
+                    <image src='../../../../images/order1.jpg'></image>
+                </view>
+                <view class='details'>
+                    <view class='inner'>
+                        <text>发起了维权申请</text>
+                        <text>维权原因：</text>
+                        <text>处理方式：</text>
+                        <text>退款金额:</text>
+                        <text>退款说明:</text>
+                        <text>联系电话:</text>
+                    </view>
+                    <view class='arrow'></view>
+                </view>
+            </view>
+        </view>
+
+        <view class='consult'>
+            <view class='msg-item clearfix'>
+                <view class='pic'>
+                    <image src='../../../../images/order1.jpg'></image>
+                </view>
+                <view class='details'>
+                    <view class='inner'>
+                        <text>发起了维权申请</text>
+                        <text>维权原因：</text>
+                        <text>处理方式：</text>
+                        <text>退款金额:</text>
+                        <text>退款说明:</text>
+                        <text>联系电话:</text>
+                    </view>
+                    <view class='arrow'></view>
+                </view>
+            </view>
+        </view>
+        <view class='time'>2017-09-22 09:09:40</view>
+    </view>
+
+    <view class='consult-out'>
+        <!-- 默认是右边的对话框 加上consult-lf是左边的对话框 -->
+        <view class='consult consult-lf'>
+            <view class='msg-item clearfix'>
+                <view class='pic'>
+                    <image src='../../../../images/order1.jpg'></image>
+                </view>
+                <view class='details'>
+                    <view class='inner'>
+                        <text>发起了维权申请</text>
+                        <text>维权原因：</text>
+                        <text>处理方式：</text>
+                        <text>退款金额:</text>
+                        <text>退款说明:</text>
+                        <text>联系电话:</text>
+                    </view>
+                    <view class='arrow'></view>
+                </view>
+            </view>
+        </view>
+        <view class='time'>2017-09-22 09:09:40</view>
+    </view>
+
+</view> 

@@ -1,0 +1,37 @@
+<!-- 可用优惠券 -->
+<block wx:if='{{shopCouponList.length==0}}'>
+    <view class='not-data'>
+        <view class='pic'>
+            <image mode='widthFix' src='/images/news-not.png'></image>
+        </view>
+        <view class='title'>暂无优惠券</view>
+    </view>
+</block>
+<block wx:else>
+    <view class='coupon-list'>
+        <view class='shop' wx:for='{{shopCouponList}}' wx:for-item='shop' wx:key='shop' wx:for-index='shopIndex'>
+            <view class='company-name'>
+                <navigator hover-class='none'>
+                    {{shop.shopName}}
+                </navigator>
+            </view>
+            <view class='item' wx:for='{{shop.couponList}}' wx:key='coupon' wx:for-index='couponIndex' bindtap='selectCoupon' data-shopIndex='{{shopIndex}}' data-couponIndex='{{couponIndex}}'>
+                <image src='../../../images/yhq.png' mode='widthFix'></image>
+                <view class='content'>
+                    <view class='c1'>
+                        <view class='price'>￥
+                            <text>{{item.couponPrice}}</text>
+                        </view>
+                        <view class='desc'>{{item.couponLimit}}</view>
+                    </view>
+                    <view class='c2'>
+                        <view class='r1'>优惠券</view>
+                        <view>有效期至：{{item.couponEndDate}}</view>
+                        <view>{{item.couponScope}} ~ ({{item.couponShopName}})</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+    </view>
+</block>

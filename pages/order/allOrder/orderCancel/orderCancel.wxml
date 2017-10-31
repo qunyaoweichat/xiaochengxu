@@ -1,0 +1,97 @@
+<!--pages/order/directOrderList/directOrderList.wxml-->
+
+<view class='wrap'>
+    <!-- 订单状态 -->
+    <view class='order-details'>
+        <text class='order-infor'>订单状态：{{orderDetail.orderDescription}}</text>
+    </view>
+
+    <!-- 地址 -->
+    <view class='order-details'>
+        <view class='text'>{{orderDetail.addressData.name}} {{orderDetail.addressData.phone}} </view>
+        <view class='text'> {{orderDetail.addressData.addressDetails}}</view>
+    </view>
+
+    <!-- 订单详情 -->
+    <view class='order-form'>
+
+        <view class='list clearfix'>
+            <text class='mj'>卖家：{{orderDetail.orderShop.shopName}}</text>
+            <view class='lx'>
+                <navigator url='../../../webIM/index?shopId={{orderDetail.orderShop.shopId}}'>联系卖家</navigator>
+            </view>
+        </view>
+        <view class='list clearfix'>
+            <text>订单</text>
+            <text class='rg'>{{orderDetail.orderId}}</text>
+        </view>
+
+        <view class='list clearfix'>
+            <text class='sp'>等{{orderDetail.orderShop.shopProduct.length}}件商品</text>
+            <view class='pic-list'>
+                <image src='{{item.productImage}}' wx:for='{{orderDetail.orderShop.shopProduct}}' wx:key='product'></image>
+            </view>
+
+        </view>
+
+        <view class='list'>
+            <text>由 {{orderDetail.orderShop.shopName}} 配送</text>
+        </view>
+
+        <view class='list'>
+            <view class='money clearfix'>
+                <text>商品总额</text>
+                <text class='c2'>￥{{orderDetail.salesMoney}}</text>
+            </view>
+            <view class='money clearfix'>
+                <text>运费</text>
+                <text class='c2'>￥{{orderDetail.shipFee}}</text>
+            </view>
+            <view class='money clearfix'>
+                <text>优惠金额</text>
+                <text class='c2'>￥{{orderDetail.allCouponMoney}}</text>
+            </view>
+        </view>
+
+        <view class='list'>
+            <view class='js'>
+                实付款：
+                <text>+{{orderDetail.orderMoney}}</text>
+            </view>
+            <view class='js cdsj'>
+                下单时间：
+                <text>{{orderDetail.createTime}}</text>
+            </view>
+        </view>
+    </view>
+
+    <!-- 支付方式 -->
+    <view class='order-form order-fs'>
+        <view class='list clearfix'>
+            <text>处理方式</text>
+            <text>仅退款</text>
+        </view>
+        <view class='list clearfix' bindtap='selectReason'>
+            <text>退款原因</text>
+            <text>
+                <text class='iconfont icon-right'></text>
+            </text>
+        </view>
+        <view class='list clearfix'>
+            <text>支付时间</text>
+            <text>{{orderDetail.payTime}}</text>
+        </view>
+        <view class='list clearfix'>
+            <text>退款</text>
+            <text>{{orderDetail.payIpsNo}}</text>
+        </view>
+        <view class='list clearfix'>
+            <text>手机号</text>
+            <text>{{orderDetail.addressData.phone}}</text>
+        </view>
+    </view>
+    <!--待发货和待付款的取消  -->
+    <view class='public-btn clearfix' wx:if='{{orderDetail.orderStatus==2}}'>
+        <button bindtap='cancelOrder'>取消订单 </button>
+    </view>
+</view>

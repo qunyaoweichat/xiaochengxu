@@ -1,0 +1,124 @@
+.shop-item{
+    margin: 0;
+    border-top: 0;
+    border-bottom: 0;
+}
+.order-heard{
+    border-bottom: 0;
+}
+
+.order-heard .lianxi {
+    float: right;
+    color: #ff9800;
+}
+
+.public-list{
+    margin-top: 0;  
+}
+.public-list .item{
+    text-align: right;
+    color: #000;
+    font-size: 13px; 
+}
+.public-list .item .lf{
+    text-align: left;
+}
+
+/* 商品 */
+.shop-item-weiquan{
+    border-bottom:1px solid #f4f4f4;
+}
+.shop-infor {
+    margin-top: 10px;
+    background: #fff;
+    line-height: 30px;
+    padding: 8px 10px 8px 15px;
+    border-top:1px solid #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
+
+}
+.shop-infor .num{
+    float: right;
+}
+
+
+.goods-item {
+    padding: 14px 10px;
+    background: #fff;
+    border-bottom: 1px solid #f4f4f4;  
+}
+
+
+.order-list .item{
+    border-bottom: 1px solid #f4f4f4;
+}
+.order-list .item:last-child{
+     border-bottom: 0;
+}
+.order-list .item .detail{
+    margin-left: 95px;
+}
+.order-list .item .name{
+     white-space: nowrap; 
+    height: auto;
+    width: 100%;
+     overflow: hidden 
+}
+.order-list .item .infor{
+    height: auto;
+    margin-top: 10px;
+    line-height: 32px;
+}
+.order-list .item .change-num{
+    float: right;
+    padding: 2px 10px;
+    line-height: 26px;
+}
+.order-list .item .change-num input{
+    display: inline-block;
+    width: 40px;
+    vertical-align: middle;
+    text-align: center
+}
+.order-list .item .change-num .iconfont{
+    color: #000;
+}
+.bottom-infor label{
+    margin-left: 20px;
+}
+.order-list .item .infor{
+    height:auto;
+    margin-top:30px;
+
+}
+
+/* 理由 */
+.reason{
+    margin-top: 10px;
+}
+
+/* 地址 */
+.address{
+    
+    margin-top: 10px;
+    line-height: 25px;
+    background-color: #fff;
+    color: #666;
+    padding: 10px;
+}
+.address text{
+    display: block;
+}
+.address .title{
+    font-weight:bold;
+    line-height: 30px;
+}
+.address .zip{
+    margin-top: 3px;
+}
+.address-title{
+    background: #b08e13;
+    line-height: 40px;
+    text-align: center;
+    color: #fff; 
+}
