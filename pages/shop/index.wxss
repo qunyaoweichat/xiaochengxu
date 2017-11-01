@@ -4,7 +4,6 @@
 .shop-mode .banner image{
     width: 100%;
     height: 100%;
-    vertical-align: middle
 }
 
 .shop-mode .avatar image{
@@ -195,4 +194,189 @@
 .shop-closed .text{
     color: #666;
     line-height: 30px;
+}
+
+/* 新加的模板5 */
+.shop-tpl5 .search{
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #d9d9d9;
+    height: 30px;
+    padding: 8px 50px 7px;
+}
+.shop-tpl5 .search .cover{
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+}
+.shop-tpl5 .search .cover image{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.shop-tpl5 .search .section{
+    position: relative;
+    padding: 0px 35px;
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #f2f2f2
+}
+.shop-tpl5 .search .section .iconfont{
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    font-size: 18px;
+    color: #CDCCCC;
+}
+.shop-tpl5 .search .section input{
+    background-color: #F2F2F2;
+    height: 32px;
+    color: #999;
+}
+.shop-tpl5 .search .fadein{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.shop-tpl5 .search .fadein text{
+    font-size: 28px;
+    color: #515151;
+    
+}
+/* 导航滚动 */
+.shop-tpl5 .scroll-nav .row{
+    padding: 0 8px;
+    width: 100%;
+    overflow-y: scroll;
+    background-color: #fff;
+    white-space: nowrap;
+    line-height: 40px;
+    color: #727272;
+}
+.shop-tpl5 .scroll-nav .row::-webkit-scrollbar {
+    display: none;
+}
+.shop-tpl5 .scroll-nav .row  text{
+    padding: 0 10px;
+    display: inline-block;
+    border-bottom: solid 3px #fff; 
+}
+.shop-tpl5 .scroll-nav .row .scroll-selected{
+    color: #1196DA;
+    border-bottom: solid 3px #1196DA;
+}
+
+/* 图片滚动 */
+.shop-tpl5 .slider image{
+    width: 100%;
+}
+
+/* 广告 */
+.shop-tpl5 .push{
+    margin-top: 10px;
+    padding:10px 2%;
+    background-color: #fff;
+    display: flex;
+}
+.shop-tpl5 .push .inner{
+    flex: 1;
+}
+.shop-tpl5 .push .inner image{
+    width: 100%;
+}
+.shop-tpl5 .push .inner:first-child{
+    margin-right:2%;
+}
+.shop-tpl5 .push .inner .top{
+    margin-bottom: 2%;
+}
+.shop-tpl5 .push .inner .top,
+.shop-tpl5 .push .inner .bottom{
+    height: 49%;
+}
+
+
+/* 首页推荐的 */
+.shop-tpl5 .recommend{
+    margin-top: 10px;
+    background-color: #fff;
+}
+.shop-tpl5 .recommend .title{
+    padding: 10px 0;
+    font-size: 16px;
+    text-align: center;
+    color: #333333;
+}
+.shop-tpl5 .recommend .row{
+    display: flex;
+    padding: 0 2.13%;
+    margin-bottom: 2.13%;
+}
+.shop-tpl5 .recommend .row .item{
+    flex: 1;
+    padding-bottom: 8px;
+}
+.shop-tpl5 .recommend .row .item:first-child{
+    margin-right: 2.13%;
+}
+.shop-tpl5 .recommend .row .item  image{
+    width: 100%;
+}
+.shop-tpl5 .recommend .row .item .name{
+    height: 38px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    color: #333333;
+    margin-top: 5px;
+    line-height: 19px;
+    margin-bottom: 3px;
+    padding: 0 4px;
+}
+.shop-tpl5 .recommend .row .item .price{
+    color: #A0141C;
+    line-height: 25px;
+    font-size: 14px;
+}
+.shop-tpl5 .recommend .row .item .price .now{
+    font-size: 18px;
+}
+.shop-tpl5 .recommend .row .item .price .expire{
+    text-decoration: line-through;
+    color: #B3B3B3;
+    margin-left: 5px;
+    font-size: 14px;
+}
+.shop-tpl5 .recommend .row .item .time-limit{
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    background-color: #CB3D38;
+    margin: 0 4px;
+}
+.shop-tpl5 .recommend  .more{
+    line-height: 40px;
+    font-size: 16px;
+    color: #D81E06;
+    text-align: center;
+    padding-bottom: 2.31%;
+}
+.shop-tpl5 .recommend .more image{
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
 }

@@ -1,6 +1,7 @@
-﻿{ 
+{
     "pages": [
-        
+        "pages/shopManage/createShop/branchShop/branchShop",
+        "pages/class/classList",
         "pages/shop/index",
         "pages/shop/shopFilter/shopFilter",
         "pages/shop/shopSearch/shopSearch",
@@ -8,7 +9,6 @@
         "pages/shop/comment/comment",
         "pages/shop/couponActivity/couponActivity",
         "pages/public/indexNav",
-        "pages/class/classList",
         "pages/webIM/index",
         "pages/buy/index",
         "pages/buy/confirmOrder/confirmOrder",
@@ -41,7 +41,6 @@
         "pages/mine/money/withdrawal/withdrawal",
         "pages/mine/money/record/record",
         "pages/mine/favorites/favorites",
-        
         "pages/mine/bankCard/bankCard",
         "pages/mine/bankCard/addCard/addCard",
         "pages/mine/bankCard/bankCardDetail/bankCardDetail",
@@ -57,6 +56,7 @@
         "pages/set/telePhone/telePhone",
         "pages/set/partner/partner",
         "pages/set/partnerQRcode/partnerQRcode"
+        
     ],
     "window": {
         "backgroundTextStyle": "#000",
