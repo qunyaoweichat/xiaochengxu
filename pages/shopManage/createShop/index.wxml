@@ -1,0 +1,52 @@
+<!-- 开店 -->
+<view class='create-shop'>
+    <view class='title'>开通店铺只需三步</view>
+    <view class='tab'>
+        <view class='step selected'>1.店铺资料</view>
+        <view class='step'>2.选择模板</view>
+        <view class='step'>3.开通</view>
+    </view>
+
+    <!-- 第一步 店铺资料-->
+    <view class='data'>
+        <form>
+            <view class='form-list'>
+                <view class='item'>
+                    <view class='text'>店铺名称</view>
+                    <input class='inputs' name='name' placeholder="创建后只能修改一次" />
+                </view>
+
+                <view class='item clearfix'>
+                    <view class='text'>主营类目</view>
+                    <picker bindchange="changeClass" value="{{index}}"  range="{{[1,2,3,4,5]}}">
+                        <view class="picker">
+                            <text wx:if='{{classss}}'>{{classss}}</text>
+                            <text wx:else>请选择类目</text>
+                        </view>
+                    </picker>
+                </view>
+
+                <view class='item clearfix'>
+                    <view class='text'>店铺地址</view>
+                    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{[1,2,3,4,5]}}">
+                        <view class="picker">
+                            当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+                        </view>
+                    </picker>
+                </view>
+
+
+                <view class='item clearfix'>
+                    <view class='text'>详细地址</view>
+                    <textarea class='inputs' placeholder="请输入详细地址"></textarea>
+                </view>
+            </view>
+        </form>
+    </view>
+
+
+
+
+
+
+</view>

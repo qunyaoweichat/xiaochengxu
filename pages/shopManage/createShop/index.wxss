@@ -1,0 +1,43 @@
+/* 开店 */
+.create-shop .title{
+    text-align: center;
+    line-height: 40px;
+    margin-top: 10px;
+    color: #888;
+}
+.create-shop .tab{
+    display: flex;
+    margin: 0 15px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: solid 1px #ddd;
+}
+.create-shop .tab .step{
+    flex: 1;
+    text-align: center;
+}
+.create-shop .tab .step{
+    border-right: solid 1px #ddd;
+}
+.create-shop .tab .step:last-child{
+    border-right:none;
+}
+.create-shop .tab  .selected{
+    background-color: #65ae51;
+    color: #fff;
+}
+
+
+/* 店铺资料 */
+.data .form-list .item{
+    padding:12px 10px;
+
+}
+.data .form-list .item .text {
+    line-height:none;
+}
+.data .form-list textarea{
+    height: 20px;
+    margin-top: 5px;
+}

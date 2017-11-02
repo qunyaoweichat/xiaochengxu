@@ -1,0 +1,44 @@
+/* VIP卡权益 */
+.vip-power .power{
+    padding: 15px 22px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.vip-power .power:first-child{
+    margin-top: 1px;
+}
+.vip-power .power .title{
+    margin-bottom: 10px;
+    font-size: 1em
+    
+}
+.vip-power .power .title image{
+    width: 23px;
+    height: 23px;
+}
+.vip-power .power .inner{
+    color: #858686;
+    line-height: 23px;
+    padding-left: 7px;
+    font-size: .9em;
+}
+.vip-power .power .inner .list{
+    position: relative;
+}
+.vip-power .power .inner .list::after{
+    content: '';
+    position: absolute;
+    top: 9px;
+    right: 100%;
+    margin-right: 7px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #858686;
+}
+.vip-power .power .inner-selected{
+    color: #0EAAD7;
+}
+.vip-power .power .inner-selected .list::after{
+    background-color: #0EAAD7;
+}
