@@ -8,8 +8,8 @@
             <view class='text'>店铺</view>
         </navigator>
     </view>
-    <view class='tabBar-item' bindtap='contactBuss'>
-        <navigator url='../../webIM/index'>
+    <view class='tabBar-item' >
+        <navigator url='../../webIM/index?shipId={{product.productShop.shopId}}'>
             <view>
                 <text class='iconfont icon-comment'></text>
             </view>
