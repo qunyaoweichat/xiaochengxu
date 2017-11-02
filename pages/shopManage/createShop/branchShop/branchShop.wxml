@@ -45,11 +45,11 @@
 </view>
 
 <!--VIP卡-->
-<view class='branch-card' wx:if="{{flash}}">
+<view class='branch-card' >
     <view class='card'>
         <navigator class='rights' hover-class='none' url=''>VIP卡权益 </navigator>
         <view class='item'>
-            <image mode='widthFix' src='/images/puhuika2x.png'></image>
+            <image mode='widthFix' src='/images/ka1.jpg'></image>
             <view class='text'>
                 <view class='title'>vip普惠卡权益：</view>
                 <view>享购物最高20%的利润优惠，买多优惠多</view>
@@ -61,7 +61,7 @@
     </view>
     <view class='card selected'>
         <view class='item'>
-            <image mode='widthFix' src='/images/puhuika1x.png'></image>
+            <image mode='widthFix' src='/images/ka2.jpg'></image>
             <view class='text'>
                 <view class='title'>vip普惠卡权益：</view>
                 <view>享购物最高20%的利润优惠，买多优惠多</view>
@@ -73,7 +73,7 @@
     </view>
     <view class='card'>
         <view class='item'>
-            <image mode='widthFix' src='/images/jinka2x.png'></image>
+            <image mode='widthFix' src='/images/ka3.jpg'></image>
             <view class='text'>
                 <view class='title'>vip普惠卡权益：</view>
                 <view>享购物最高20%的利润优惠，买多优惠多</view>
@@ -85,7 +85,7 @@
     </view>
     <view class='card'>
         <view class='item'>
-            <image mode='widthFix' src='/images/zuanka3x.png'></image>
+            <image mode='widthFix' src='/images/ka4.jpg'></image>
             <view class='text'>
                 <view class='title'>vip普惠卡权益：</view>
                 <view>享购物最高20%的利润优惠，买多优惠多</view>
@@ -98,7 +98,7 @@
 </view>
 
 <!-- vip卡购买 -->
-<view class='branch-buy'>
+<view class='branch-buy' wx:if="{{flash}}">
     <view class='card'>
         <image mode='widthFix' src='/images/zuanka3x.png'></image>
     </view>

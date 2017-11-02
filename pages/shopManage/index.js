@@ -1,4 +1,4 @@
-// pagesop/index.js
+// pages/shopManage/index.js
 Page({
 
   /**
