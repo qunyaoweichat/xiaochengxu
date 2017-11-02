@@ -40,12 +40,24 @@ Page({
         recordStatus: RecordStatus.HIDE,
     },
     onLoad: function (options) {
+        let that = this;
         let myName = "16000275";
         let yourname = "16000272";
         this.setData({
             myName: myName,
             yourname: yourname
         })
+        var history = wx.getStorageSync(yourname + myName);
+        console.log(history)
+        var num = wx.getStorageSync(yourname + myName).length - 1
+        if (num > 0) {
+            setTimeout(function () {
+                that.setData({
+                    chatMsg: history,
+                    toView: wx.getStorageSync(yourname + myName)[num].mid
+                })
+            }, 10)
+        }
         this.hxloign();
 
     },
@@ -297,7 +309,6 @@ Page({
                 console.log('send text message success')
             }
         });
-        console.log(msg)
         console.log("Sending textmessage")
         msg.body.chatType = 'singleChat';
         WebIM.conn.send(msg.body);
@@ -319,7 +330,6 @@ Page({
                 mid: msg.id
             }
             that.data.chatMsg.push(msgData)
-            // console.log(that.data.chatMsg)
 
             wx.setStorage({
                 key: that.data.yourname + myName,
@@ -345,11 +355,13 @@ Page({
     },
 
     receiveMsg: function (msg, type) {
+        console.log(msg)
         var that = this
         var myName = wx.getStorageSync('myUsername')
         if (msg.from == that.data.yourname || msg.to == that.data.yourname) {
             if (type == 'txt') {
                 var value = WebIM.parseEmoji(msg.data.replace(/\n/mg, ''))
+                
             } else if (type == 'emoji') {
                 var value = msg.data
             } else if (type == 'audio') {
@@ -493,9 +505,7 @@ Page({
             sizeType: ['original', 'compressed'],
             sourceType: ['album'],
             success: function (res) {
-                if (pages[1]) {
-                    pages[1].upLoadImage(res, that)
-                }
+
             }
         })
     },
@@ -735,6 +745,7 @@ Page({
             urls: [url]  // 需要预览的图片http链接列表
         })
     }
+    
 })
 
 
