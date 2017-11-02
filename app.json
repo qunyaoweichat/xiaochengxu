@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/webIM/index",
         "pages/shop/index",
         "pages/shop/shopFilter/shopFilter",
         "pages/shop/shopSearch/shopSearch",
@@ -7,14 +8,14 @@
         "pages/shop/comment/comment",
         "pages/shop/couponActivity/couponActivity",
         
-        "page/shopManage/createShop/index",
-        "page/shopManage/createShop/branchSuccess/branchSuccess",
-        "page/shopManage/createShop/branchShop/branchShop",
+        "pages/shopManage/createShop/index",
+        "pages/shopManage/createShop/branchSuccess/branchSuccess",
+        "pages/shopManage/createShop/branchShop/branchShop",
 
         
         "pages/class/classList",
         "pages/public/indexNav",
-        "pages/webIM/index",
+        
         "pages/buy/index",
         "pages/buy/confirmOrder/confirmOrder",
         "pages/buy/coupon/coupon",
