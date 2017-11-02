@@ -1,1 +1,76 @@
-<text>店铺管理首页</text>
+<!-- 店铺管理首页 -->
+<view class="my-shop">
+    <view class="index-head">
+        <view class="inner">
+            <view class="day">近30天收入（元）<navigator hover-class='none'><text class="revenue">店铺营收<text class="iconfont icon-right"></text></text></navigator></view>
+            <view class="money">11</view>
+        </view>
+        <view class="inner">
+            <view class="day">钻石卡店铺<navigator hover-class='hove'><text class="revenue">升级等级<text class="iconfont icon-right"></text></text></navigator></view>
+        </view>
+    </view>
+    
+    <view class="index-num">
+        <view class='row'>
+            <view class='list'>
+                <view class='item'>今日访客</view>
+                <view>0</view>
+            </view>
+            <view class='list'>
+                <view class='item'>昨日新增</view>
+                <view>0</view>
+            </view>
+            <view class='list'>
+                <view class='item'>7日订单</view>
+                <view>0</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="index-main">
+        <view class="inner">
+            <navigator  hover-class='hove' href="">
+                <view class='main'>
+                    <image mode='widthFix' src='/images/icon_logistics.png'></image>
+                    <view class='text'>店铺设置</view>
+                </view>
+            </navigator>
+            <navigator  hover-class='hove' href="">
+                <view class='main'>
+                    <image mode='widthFix' src='/images/icon_logistics.png'></image>
+                    <view class='text'>数据统计</view>
+                </view>
+            </navigator>
+            <navigator  hover-class='hove' href="">
+                <view class='main'>
+                    <image mode='widthFix' src='/images/icon_logistics.png'></image>
+                    <view class='text'>资产</view>
+                </view>
+            </navigator>
+        </view>
+
+        <view class="inner">
+            <navigator  hover-class='hove' href="">
+                <view class='main'>
+                    <image mode='widthFix' src='/images/icon_logistics.png'></image>
+                    <view class='text'>查看订单</view>
+                </view>
+            </navigator>
+            <navigator  hover-class='hove' href="">
+                <view class='main'>
+                    <image mode='widthFix' src='/images/icon_logistics.png'></image>
+                    <view class='text'>会员管理</view>
+                </view>
+            </navigator>
+            <navigator  hover-class='hove' href="">
+                <view class='main'>
+                    <image mode='widthFix' src='/images/icon_logistics.png'></image>
+                    <view class='text'>直属分店</view>
+                </view>
+            </navigator>
+        </view>
+
+    </view>
+
+    
+</view>

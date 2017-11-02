@@ -1,1 +1,110 @@
 /* 店铺管理首页 */
+.my-shop .index-head {
+    background-color: #1196DA;
+    color: white;
+}
+.my-shop .index-head .inner {
+	padding: 16px;
+	border-bottom: solid 1px #dadada;
+}
+
+.my-shop .index-head .inner:last-child {
+	border-bottom: none;
+}
+
+.my-shop .index-head .inner .day {
+	font-size: 14px;
+}
+.my-shop .index-head .inner .day .grade-pic{
+	width: 22px;
+    margin-right: 5px;
+}
+.my-shop .index-head .inner .day .revenue {
+	float: right;
+	font-size: 12px;
+	padding-top: 2px;
+}
+
+.my-shop .index-head .inner .day .revenue .iconfont {
+	font-size: 12px;
+    color: #fff;
+}
+
+.my-shop .index-head .inner .money {
+	font-size: 30px;
+	margin: 10px 0 0;
+}
+.my-shop .index-head .inner navigator{
+    display: inline;
+}
+.my-shop .index-num {
+	text-align: center;
+	background-color: #fff;
+	margin: 0 0 8px;
+}
+
+.my-shop .index-num .row {
+	display: flex;
+	padding: 15px 0;
+}
+
+.my-shop .index-num .row .list {
+	flex: 1;
+	list-style: none;
+	position: relative;
+}
+
+.my-shop .index-num .row .list:after {
+	content: '';
+	position: absolute;
+	height: 40px;
+	width: 1px;
+	top: 5px;
+	right: -2px;
+	background-color: #c0d9f5;
+}
+
+.my-shop .index-num .row .list:last-child:after {
+	background: none;
+}
+
+.my-shop .index-num .row .list .item {
+	margin: 0;
+}
+
+.my-shop .index-num .row .list .item:first-child {
+	font-size: 14px;
+	margin: 5px 0;
+}
+
+.my-shop .index-main {
+	background-color: white;
+	padding: 10px  0;
+    margin-bottom: 15px;
+}
+
+.my-shop .index-main .inner {
+	display: flex;
+}
+
+.my-shop .index-main .inner:first-child {
+	margin: 0;
+}
+.my-shop .index-main .inner navigator{
+	flex: 1;
+}
+.my-shop .index-main .inner .main {
+	
+	margin: 15px auto;
+	text-align: center;
+}
+
+.my-shop .index-main .inner .main image {
+	width: 50px;
+	height: 50px;
+}
+
+.my-shop .index-main .inner .main .text{
+	color: #3b3b3b;
+	margin: 16px 0;
+}
