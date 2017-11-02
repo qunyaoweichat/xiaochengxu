@@ -100,7 +100,7 @@
 <!-- vip卡购买 -->
 <view class='branch-buy' wx:if="{{flash}}">
     <view class='card'>
-        <image mode='widthFix' src='/images/zuanka3x.png'></image>
+        <image mode='widthFix' src='/images/ka1.jpg'></image>
     </view>
     <view class='power'>
         <view class='title'>VIP卡权益</view>
