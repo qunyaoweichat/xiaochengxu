@@ -81,6 +81,7 @@
 }
 .branch-card .card .item image{
     width: 100%;
+    border-radius: 10px;
 }
 .branch-card .card .item .text{
     display: none;
