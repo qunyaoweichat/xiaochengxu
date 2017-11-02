@@ -37,7 +37,7 @@ Page({
     setAdress:function(e){
         var index = e.currentTarget.dataset.index;
         var data = this.data.addressList[index];
-        if(this.from){
+        if (this.from =="confirmOrder"){
             this.prevPage.setData({
                 address: data
             })

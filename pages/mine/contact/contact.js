@@ -17,13 +17,8 @@ Page({
     onLoad: function (options) {
         wx.hideShareMenu();
         // 从本地拿到shopId 并调用数据
-        wx.getStorage({
-            key: 'shopDetail',
-            success: (res)=> {
-                this.getData(res.data.shopId)
-            },
-        })
-        
+        let shopId = options.shopId
+        this.getData(shopId);
     },
 
     getData: function (shopId) {

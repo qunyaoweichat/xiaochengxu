@@ -1,7 +1,7 @@
 <import src="../../../utils/wxParse/wxParse.wxml" />
 <view class="tabBar">
     <view class='tabBar-item'>
-        <navigator url="../index?shipId={{product.productShop.shopId}}&redirect=true" open-type='redirect'>
+        <navigator url="../index?shipId={{product.productShop.shopId}}" open-type='switchTab'>
             <view>
                 <text class='iconfont icon-shop'></text>
             </view>
@@ -37,8 +37,8 @@
             </swiper-item>
         </block>
         <view class='buy'>
-            <navigator url='../../buy/index?redirect=true' open-type='{{redirect?"redirect":"navigate"}}'>
-                <image src='../../../../images/icon_gouwu.png'></image>
+            <navigator url='../../buy/index' open-type='switchTab'>
+                <image src='/images/icon_gouwu.png'></image>
             </navigator>
         </view>
     </swiper>
@@ -111,7 +111,7 @@
         </view>
     </view>
     <view class='item shop-infor'>
-        <navigator url='../index?shopId={{product.productShop.shopId}}&redirect=true' open-type='redirect' hover-class='none'>
+        <navigator url='../index?shopId={{product.productShop.shopId}}' open-type='switchTab' hover-class='none'>
             <view class='shop-avatar'>
                 <image wx:if='{{product.productShop.shopLogo}}' src='{{product.productShop.shopLogo}}'></image>
             </view>

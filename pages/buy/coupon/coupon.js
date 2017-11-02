@@ -46,6 +46,8 @@ Page({
         this.prevPage.setData({
             AllData: AllData,
         });
+        // 计算真实金额
+        this.prevPage.getTruePrice();
         // 返回上一页
         wx.navigateBack()
     },

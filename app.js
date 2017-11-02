@@ -18,7 +18,7 @@ App({
             }
         })
     },
-    // 这个方法先个嗯据jscode来获取到用户的openid，然后调用wx.getUserInfo方法获取到用户的信息，将这俩数据组合起来调用登录接口
+    // 这个方法先个据jscode来获取到用户的openid，然后调用wx.getUserInfo方法获取到用户的信息，将这俩数据组合起来调用登录接口
     getLoginParams: function (jsCode) {
         let self = this;
         let apiHost = this.globalData.apiHost;
@@ -29,6 +29,7 @@ App({
             method: 'post',
             data: params,
             success: data => {
+                console.log(data.data)
                 let openid = data.data.data.openid;
                 // 获取用户信息
                 wx.getUserInfo({
@@ -67,8 +68,8 @@ App({
         userInfo: null,
         apiHost: 'https://wxapi.solohui.com/api/wechat/',
         appConfig: {
-            AppID: 'wx3afce0650513ade9',
-            secret: '0603169bafde8bbcb788d4f7663339cf',
+            AppID: 'wx855f9297017d54df',
+            secret: '12e85a1bef0173d30b6ab0245ca642e1',
             grantType: 'authorization_code'
         },
 

@@ -2,7 +2,7 @@
 <view class='partner-qrcode'>
     <view class='qrcode'>
         <view>长按二维码并识别,可保存</view>
-        <image mode='widthFix' src='../../../../images/qr.png'></image>
+        <image mode='widthFix' src='https://wxapi.solohui.com/api/wechat/qrcode?content={{data.qrcodeUrl}}'></image>
     </view>
     <view class='or'>或</view>
 

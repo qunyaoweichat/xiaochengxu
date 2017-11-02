@@ -1,6 +1,6 @@
 <!-- 我的主页 -->
 <!-- 页脚 -->
-<view class="tabBar">
+<!-- <view class="tabBar">
     <view class='tabBar-item' bindtap='goMineIndex'>
         <navigator hover-class="none" open-type='navigateBack' url='../shop/index'>
             <view>
@@ -42,7 +42,7 @@
         </navigator>
     </view>
 </view>
-<view class='shopIndex-cover' bindtap='hideDrop' wx:if="{{showDrop}}"></view>
+<view class='shopIndex-cover' bindtap='hideDrop' wx:if="{{showDrop}}"></view> -->
 <view class="wrap">
     <!-- 页头 -->
     <view class='me-heard'>
@@ -106,12 +106,13 @@
                 <text class='iconfont icon-right'></text>
             </navigator>
         </view>
-        <view class='inner '>
+        <!--  优惠付暂时不做  -->
+        <!-- <view class='inner '>
             <navigator url='../order/preferentialOrder/preferentialList/preferentialList' hover-class="none">
                 <text>优惠订单</text>
                 <text class='iconfont icon-right'></text>
             </navigator>
-        </view>
+        </view> -->
         <view class='inner '>
             <navigator url='../order/rightsOrder/rightsList/rightsList' hover-class="none">
                 <text>维权订单</text>
@@ -187,7 +188,7 @@
                 <view>邀请好友</view>
             </view>
             <view class='content'>
-                <navigator url='contact/contact' hover-class="none">
+                <navigator url='contact/contact?shopId={{shopId}}' hover-class="none">
                     <image src='/images/icon_contactus.png'></image>
                     <view>联系我们</view>
                 </navigator>

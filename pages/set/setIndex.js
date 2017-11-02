@@ -12,31 +12,35 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        wx.hideShareMenu()
+        wx.hideShareMenu();
     },
     onShow: function () {
         this.getData();
     },
-
-
     getData:function(){
-        wx.getStorage({
-            key: 'userInfor',
-            success: (res)=> {
-                let mobile = res.data.mobile;
-                var sortMobile="";
-                if (mobile){
-                    sortMobile= mobile.replace(mobile.substr(3, 4), "****");
-                }else{
-                    sortMobile="暂未绑定手机号，点击绑定"
-                }
-                
-                res.data.sortMobile = sortMobile
-                this.setData({   
-                    userInfor : res.data
-                })
-            },
+        ajaxPost('mine', {}, (data) => {
+            let mobile = data.mine.mobile;
+            var sortMobile = "";
+            if (mobile) {
+                sortMobile = mobile.replace(mobile.substr(3, 4), "****");
+            } else {
+                sortMobile = "暂未绑定手机号，点击绑定"
+            }
+
+            data.mine.sortMobile = sortMobile;
+            this.setData({
+                userInfor: data.mine
+            })
+
         })
+        // wx.getStorage({
+        //     key: 'userInfor',
+        //     success: (res)=> {
+        //         this.setData({
+        //             userInfor : res.data
+        //         })
+        //     },
+        // })
     },
     changeAvatar: function () {
         wx.chooseImage({

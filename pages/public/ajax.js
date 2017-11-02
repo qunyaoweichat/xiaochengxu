@@ -7,6 +7,10 @@ let apiHost = 'https://wxapi.solohui.com/api/wechat/';
 // errCallBack：请求成功，但是报错时候调用 非必填，如果没有的话就直接弹窗请求异常
 function ajaxPost(url,params,callBack,errCallBack){
     let loginInfor = wx.getStorageSync('loginInfor');
+    if (!loginInfor){
+        loginInfor= new Object();
+    }
+    params.total=20;
     wx.request({
         url: apiHost+url,
         method: 'post',

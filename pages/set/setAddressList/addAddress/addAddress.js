@@ -1,6 +1,7 @@
 import { ajaxPost } from '../../../public/ajax.js';
 Page({
     prevPage: {},//上一页 ，操作完后修改数据
+    from:'',
     /**
      * 页面的初始数据
      */
@@ -31,6 +32,7 @@ Page({
                 addressDetail: params,
             })
         }
+        this.from = options.from
         this.setTitle();
     },
     setTitle: function () {
@@ -88,8 +90,18 @@ Page({
         this.setData({
             errMsg: ""
         })
+        console.log(params);
+        return;
         ajaxPost('mine/addAddress', params, (data) => {
-            this.prevPage.getData()
+            this.prevPage.setData({
+                address:{
+                    addressArea:"",
+                    addressDetails:"",
+                    phone:"",
+                    postcode:"710222",
+
+                }
+            })
             wx.showToast({
                 title: '添加成功',
             })

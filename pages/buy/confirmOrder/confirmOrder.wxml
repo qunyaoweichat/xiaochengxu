@@ -1,12 +1,18 @@
 <view class='address '>
     <view class='inner'>
-        <navigator hover-class='none' url='../../set/setAddressList/setAddressList?from=true'>
+        <navigator hover-class='none' url='../../set/setAddressList/setAddressList?from=confirmOrder' wx:if='{{address.name}}'>
             <view class='name'>{{address.name}}
                 <text class='phone'>{{address.phone}}</text>
             </view>
-            <view>{{address.addressDetails}}</view>
+            <view>{{address.addressArea}} {{address.addressDetails}}</view>
             <view class='zip'>{{address.postcode}}</view>
         </navigator>
+        <navigator wx:else hover-class='none' url='../../set/setAddressList/addAddress/addAddress?from=confirmOrder&isAdd=true'>
+            <button>添加地址</button>
+        </navigator>
+        <view >
+        
+        </view>
     </view>
 </view>
 
@@ -64,12 +70,12 @@
             <text>运费：</text>
         </view>
         <view class='item'>
-            <text class='price'>￥{{AllData.productTotalPrice-AllData.freight-AllData.productPromotionPrice}}</text>
+            <text class='price'>￥{{truePrice}}</text>
             <text>应付：</text>
         </view>
     </view>
 </view>
 <view class='bottom-infor'>
-    <text class='price'>总计：￥{{AllData.productTotalPrice-AllData.freight-AllData.productPromotionPrice}}</text>
+    <text class='price'>总计：￥{{truePrice}}</text>
     <view class='btn' bindtap='creatOrder'>支付订单</view>    
 </view>

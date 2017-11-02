@@ -5,7 +5,8 @@
     top: 5px;
     height: 32px;
     z-index: 11;
+    color: #666;
 }
-.get-code~input{
+.get-code~.input{
     width: 50%;
 }

@@ -79,10 +79,18 @@ Page({
 
     },
 
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-
+    onShareAppMessage: function (res) {
+        let page = getCurrentPages();
+        let path = page[page.length - 1].route ;
+        return {
+            title: '快来领取优惠券吧',
+            path: path,
+            success: function (res) {
+                // 转发成功
+            },
+            fail: function (res) {
+                // 转发失败
+            }
+        }
     }
 })

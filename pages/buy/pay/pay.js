@@ -18,23 +18,30 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        let orderId = options.orderId ? options.orderId : '17101910151111011004062'
+        // 这个是为了测试，开发完后将不会是三元运算符
+        let orderId = options.orderId ? options.orderId : '17110110434711275004612'
+        let truePrice = options.truePrice;
         this.setData({
-            orderId: orderId
+            orderId: orderId,
+            truePrice: truePrice
         })
         this.getData(orderId)
     },
     getData: function (orderId) {
+        // 获取用户信息，包括余额（接口名字气的真奇葩）
         ajaxPost('order/selPayType', { orderId: orderId }, (data) => {
-            console.log(data)
             this.setData({
                 payInfor: data
             })
         })
+        // 获取微信预支付订单
         ajaxPost('pay/wechat/app', { orderId: orderId },(data)=>{
+            console.log(data)
             this.setData({
                 wxPayParams: data.payRequestUrl
             })
+        }, (error) => {
+            console.log(error)
         })
     },
     radioChange: function (e) {

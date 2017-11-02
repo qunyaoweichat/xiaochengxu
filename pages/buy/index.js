@@ -6,6 +6,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+        emptyText:'购物车为空',
         checkAll: false,
         price: 0,
     },
@@ -15,7 +16,12 @@ Page({
      */
     onLoad: function (options) {
         wx.hideShareMenu();
-        let redirect = options.redirect;
+        
+    },
+    /**
+     * 生命周期函数--监听页面显示
+     */
+    onShow: function () {
         ajaxPost('cart', {}, (data) => {
             //给每个店铺和每个商品都加上checked属性，在选择时候会用到
             for (let i = 0; i < data.cart.length; i++) {
@@ -27,7 +33,7 @@ Page({
             }
             this.setData({
                 cartList: data.cart,
-                redirect: redirect
+                checkAll: false
             })
             this.getPrice()
         })
@@ -272,7 +278,6 @@ Page({
         wx.showLoading()
         ajaxPost('order/check', { shopList: shopList }, data => {
             wx.hideLoading()
-            console.log(data)
             wx.navigateTo({
                 url: './confirmOrder/confirmOrder?data=' + JSON.stringify(data),
             })
@@ -286,12 +291,7 @@ Page({
 
     },
 
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
-    },
+    
 
     /**
      * 生命周期函数--监听页面隐藏

@@ -23,8 +23,7 @@ Page({
      */
     onLoad: function (options) {
         this.setData({
-            productId: options.id,
-            redirect: options.redirect
+            productId: options.id
         })
         this.getData(options.id)
     },

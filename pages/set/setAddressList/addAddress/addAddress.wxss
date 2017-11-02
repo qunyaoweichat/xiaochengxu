@@ -34,19 +34,3 @@
     color: #666;
 }
 
-/* 按钮 */
-.butn{
-    
-    padding:10px 20px;
-    margin-top: 20px;
-}
-.butn button{
-    line-height: 45px;
-    font-size: 15px;
-    border: 1px solid #60a031;
-    color: #60a031;
-    background-color: none;   
-}
-.public-btn .delete{
-    margin-top: 10px;
-}

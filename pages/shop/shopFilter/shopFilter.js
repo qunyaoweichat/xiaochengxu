@@ -38,7 +38,6 @@ Page({
         // 初始化一个空的实例获取到参数
         let creatData = new CreatData();
         creatData.params.groupId = groupId;
-        creatData.params.shopId = shopId;
         this.setData({
             params: creatData.params,
             shopId: shopId
@@ -65,6 +64,8 @@ Page({
         let list = this.data.list ? this.data.list : [];
         let loadAll = this.data.loadAll;
         let params = this.data.params;
+        params.shopId = this.data.shopId;
+        console.log(params)
         ajaxPost('product/list', params, (data) => {
             // wx.hideLoading()
             if (params.page > 0) {

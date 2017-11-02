@@ -52,7 +52,7 @@ Page({
         this.setData({ errMsg: '' });
         wx.showLoading()
         ajaxPost('user/editUser', params, (res) => {
-            let userInfor = this.data.userInfor;
+            let userInfor = wx.getStorageSync("userInfor");
             userInfor.userName = params.nickname;
             userInfor.userSex = params.userSex;
             userInfor.realName = params.realName;

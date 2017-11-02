@@ -1,13 +1,18 @@
 {
     "pages": [
-        "pages/shopManage/createShop/branchShop/branchShop",
-        "pages/class/classList",
         "pages/shop/index",
         "pages/shop/shopFilter/shopFilter",
         "pages/shop/shopSearch/shopSearch",
         "pages/shop/goodsDetail/goodsDetail",
         "pages/shop/comment/comment",
         "pages/shop/couponActivity/couponActivity",
+        
+        "page/shopManage/createShop/index",
+        "page/shopManage/createShop/branchSuccess/branchSuccess",
+        "page/shopManage/createShop/branchShop/branchShop",
+
+        
+        "pages/class/classList",
         "pages/public/indexNav",
         "pages/webIM/index",
         "pages/buy/index",
@@ -63,5 +68,30 @@
         "navigationBarBackgroundColor": "#fff",
         "navigationBarTitleText": "群邀网",
         "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/shop/index",
+                "text": "首页",
+                "iconPath": "/images/tabBar-index.png",
+                "selectedIconPath": "/images/tabBar-index-on.png"
+            },{
+                "pagePath": "pages/shopManage/index",
+                "text": "店铺管理 ",
+                "iconPath": "/images/tabBar-shopManage.png",
+                "selectedIconPath": "/images/tabBar-shopManage-on.png"
+            },{
+                "pagePath": "pages/buy/index",
+                "text": "购物车",
+                "iconPath": "/images/tabBar-car.png",
+                "selectedIconPath": "/images/tabBar-car-on.png"
+            },{
+                "pagePath": "pages/mine/index",
+                "text": "我的",
+                "iconPath": "/images/tabBar-mine.png",
+                "selectedIconPath": "/images/tabBar-mine-on.png"
+            }
+        ]
     }
 }

@@ -13,7 +13,7 @@
 
         <label class='item clearfix'>
             <view class='pic'>
-                <image src='../../../images/bank.png'></image>
+                <image src='../../../images/weichat.jpg'></image>
             </view>
             <view class='text'>微信支付</view>
             <radio value='weichat'></radio>
@@ -25,13 +25,13 @@
     </radio-group>
 
 </view>
-<view class='back'>
+<!-- <view class='back'>
     <navigator url='../../shop/index' open-type='reLaunch'>
         <button type='primary'>返回首页</button>
     </navigator>
-</view>
+</view> -->
 <view class='bottom-infor' bindtap='pay'>
-    <text class='price'>总计：￥200</text>
+    <text class='price'>总计：￥{{truePrice}}</text>
     <view class='btn'>确定支付</view>
 
 </view>

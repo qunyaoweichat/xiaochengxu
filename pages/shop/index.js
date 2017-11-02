@@ -11,21 +11,24 @@ Page({
         shopHead:{},
         shopTpl: '',
         shopTplConfig: {},
-        couponList:[],
-        redirect: ''//是否使用redirect跳转，因为小程序路由长度最多为5多的话会不能跳转，所以需要删除
+        couponList:[]
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        console.log(options)
         let shopId = options.shopId ? options.shopId : 4;
-        console.log(shopId)
         this.setData({
             shopId: shopId,
-            redirect: options.redirect ,
             partnerCode: options.partnerCode
         })
+        // 将shopId存在本地，其他地方会用到
+        wx.setStorageSync("shopId", shopId)
+    },
+    /**
+     * 生命周期函数--监听页面显示
+     */
+    onShow: function () {
         this.getData();
     },
     getData: function () {
@@ -65,23 +68,19 @@ Page({
                 })
             }
         });
-        ajaxPost('shop/isMarkShop', { shopId: this.data.shopId }, (data)=>{
-            this.setData({
-                isMark: data.isMark
-            })
-        })
-    },
-
-    //展示隐藏分组
-    toggleDrop: function () {
-        this.setData({
-            'showDrop': !this.data.showDrop
-        })
-    },
-    hideDrop: function () {
-        this.setData({
-            'showDrop': false
-        })
+        // 获取收藏状态,由于登录是异步的可能请求的时候还没有登录完成，所以先获取登录信息，如果有登录信息再请求;
+        let getMarkStatus = setInterval(() => {
+            let loginInfor = wx.getStorageSync("loginInfor");
+            if (loginInfor) {
+                ajaxPost('shop/isMarkShop', { shopId: this.data.shopId }, (data) => {
+                    this.setData({
+                        isMark: data.isMark
+                    })
+                })
+                clearInterval(getMarkStatus)
+            }
+        }, 3000)
+        
     },
     // 收藏
     collector: function () {
@@ -107,7 +106,6 @@ Page({
     onShareAppMessage: function (res) {
         let page = getCurrentPages();
         let path = page[page.length - 1].route + '?shopId=' + this.data.shopId;
-        console.log(path)
         return {
             title: this.data.shopDetail.shopName,
             path: path,

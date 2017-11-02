@@ -3,7 +3,7 @@
     <!-- 优惠券 -->
     <view class='coupon'>
         <view class='main'>
-            <view class='title'><text class='share'>分享</text>{{couponDetail.couponName}}</view>
+            <view class='title'><button class='share' open-type='share'>分享</button> {{couponDetail.couponName}}</view>
             <view class='word'> 最高可领取<text>{{couponDetail.maxMoney}}</text>元优惠券</view>
             <view class='word'>订单满{{couponDetail.orderMoney}}元可以使用 可以任意领取</view>
             <view class='word'>有效期：{{couponDetail.beginTimeStr}}至{{couponDetail.endTimeStr}}</view>

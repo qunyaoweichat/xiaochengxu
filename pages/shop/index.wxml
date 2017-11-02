@@ -1,47 +1,6 @@
 <import src="../public/listTpl.wxml" />
 <block wx:if='{{shopTpl !="shopClose"}}'>
-    <view class='tabBar'>
-        <view class='tabBar-item' bindtap='toggleDrop'>
-            <view class='drop-list' wx:if="{{showDrop}}">
-                <view class='item' bindtap='changeGroup'>全部</view>
-                <view class='item' bindtap='changeGroup' wx:for='{{shopDetail.goodsGroupDataList}}' wx:key='{{groupId}}'>
-                    <navigator url="shopFilter/shopFilter?shopId={{shopId}}&groupId={{item.groupId}}&groupName={{item.groupName}}" hover-class='none'>{{item.groupName}}</navigator>
-                </view>
-            </view>
-            <view>
-                <text class='iconfont icon-searchlist'></text>
-            </view>
-            <view class='text'>商品分组</view>
-        </view>
-
-        <view class='tabBar-item {{isMark==1?"collector":""}}' bindtap='collector'>
-            <view>
-                <text class='iconfont icon-favor'></text>
-            </view>
-            <view class='text'>收藏</view>
-        </view>
-        <view class='tabBar-item'>
-            <navigator url='../webIM/index?shopId={{shopId}}' hover-class="none">
-                <view>
-                    <text class='iconfont icon-comment'></text>
-                </view>
-                <view class='text'>联系商家</view>
-            </navigator>
-        </view>
-        <view class='tabBar-item'>
-            
-            <navigator url="../buy/index?shopid={{shopDetail.shopId}}" hover-class="none" open-type='{{redirect?"redirect":"navigate"}}'>
-                <view>
-                    <text class='iconfont icon-cart'></text>
-                </view>
-                <view class='text'>购物车</view>
-            </navigator>
-        </view>
-    </view>
-    <view class='shopIndex-cover' bindtap='hideDrop' wx:if="{{showDrop}}"></view>
-
-
-    <view class='shop-index' wx:if="{{flash}}">
+    <view class='shop-index'>
         <view class='shop-hd clearfix'>
             <view class='c1'>
                 <image src='{{shopDetail.shopLogo}}' wx:if='{{shopDetail.shopLogo}}' mode='aspectFill' lazy-load='true'></image>
@@ -100,7 +59,7 @@
             <!-- 优惠券 -->
             <view class='cards-list'>
                 <view class='inner' wx:for='{{couponList}}' wx:for-item='coupon' wx:key='coupon'>
-                    <navigator url='couponActivity/couponActivity?couponActivityId={{coupon.couponActivityId}}' >
+                    <navigator url='couponActivity/couponActivity?couponActivityId={{coupon.couponActivityId}}'>
                         <view class='price'>￥{{coupon.maxMoney}}</view>
                         <view class='text'>{{coupon.useIntroduce}}</view>
                     </navigator>
@@ -133,7 +92,7 @@
         <block wx:if='{{goodsList.length>0}}'>
             <view class='goods-list {{shopTplConfig.cardStyle==2?"simple-style":""}} {{shopTplConfig.listStyle==1? "small-list" : ""}} {{shopTplConfig.listStyle==2? "big-small" : ""}} {{shopTplConfig.listStyle==3? "inline-list" : ""}}'>
                 <view class='item' wx:for="{{goodsList}}" wx:key="id">
-                    <navigator url="goodsDetail/goodsDetail?id={{item.id}}&redirect={{redirect}}" open-type='{{redirect?"redirect":"navigate"}}'>
+                    <navigator url="goodsDetail/goodsDetail?id={{item.id}}">
                         <view class='item-inner clearfix'>
                             <view class='pic'>
                                 <image src='{{item.image}}' wx:if='{{item.image}}' lazy-load='true'></image>
@@ -157,14 +116,14 @@
     </view>
 
     <!-- 新加的模板 -->
-    <view class='shop-tpl5'>
+    <view class='shop-tpl5' wx:if="{{false}}">
         <view class='search'>
             <navigator class='cover' hover-class='none'>
                 <image mode='widthFix' src='/images/order1.jpg'></image>
             </navigator>
             <view class="section">
                 <text class='iconfont icon-search_light'></text>
-                <input placeholder="请输入搜索关键词"/>
+                <input placeholder="请输入搜索关键词" />
             </view>
             <navigator class='fadein' hover-class='none'>
                 <text class='iconfont icon-fenlei'></text>
@@ -173,7 +132,7 @@
         <!-- 滚动 -->
         <view class='scroll-nav'>
             <view class='row'>
-                <text class="scroll-selected" >美妆</text>
+                <text class="scroll-selected">美妆</text>
                 <text>衣服</text>
                 <text>包包</text>
                 <text>美妆</text>
@@ -189,7 +148,7 @@
                 <text>衣服</text>
                 <text>包包</text>
             </view>
-        
+
         </view>
 
         <!-- 图片滚动 -->
@@ -200,7 +159,7 @@
         <view class='push'>
             <view class='inner'>
                 <navigator hover-class='none'>
-                     <image mode='widthFix' src='/images/logo.png'></image>
+                    <image mode='widthFix' src='/images/logo.png'></image>
                 </navigator>
             </view>
 
@@ -219,16 +178,17 @@
         </view>
 
         <!-- 推荐的 -->
-       <view class='recommend'>
+        <view class='recommend'>
             <view class='title'>特 惠</view>
             <view class='row'>
                 <view class='item'>
                     <navigator hover-class='none'>
                         <image mode='widthFix' src='/images/logo.png'></image>
                         <view class='name'>这是产品的标题这是产品的标题这是产品的标题这是产品的标题</view>
-                        <view  class='price'>
-                            
-                            ￥<text class='now'>99</text>
+                        <view class='price'>
+
+                            ￥
+                            <text class='now'>99</text>
                             <text class='expire'>199</text>
                         </view>
                         <text class='time-limit'>限时特惠</text>
@@ -238,9 +198,10 @@
                     <navigator hover-class='none'>
                         <image mode='widthFix' src='/images/logo.png'></image>
                         <view class='name'>这是产品的标题这是产品的标题这是产品的标题这是产品的标题</view>
-                        <view  class='price'>
-                            
-                            ￥<text class='now'>99</text>
+                        <view class='price'>
+
+                            ￥
+                            <text class='now'>99</text>
                             <text class='expire'>199</text>
                         </view>
                         <text class='time-limit'>限时特惠</text>
@@ -252,9 +213,10 @@
                     <navigator hover-class='none'>
                         <image mode='widthFix' src='/images/logo.png'></image>
                         <view class='name'>这是产品的标题这是产品的标题这是产品的标题这是产品的标题</view>
-                        <view  class='price'>
-                            
-                            ￥<text class='now'>99</text>
+                        <view class='price'>
+
+                            ￥
+                            <text class='now'>99</text>
                             <text class='expire'>199</text>
                         </view>
                         <text class='time-limit'>限时特惠</text>
@@ -264,9 +226,10 @@
                     <navigator hover-class='none'>
                         <image mode='widthFix' src='/images/logo.png'></image>
                         <view class='name'>这是产品的标题这是产品的标题这是产品的标题这是产品的标题</view>
-                        <view  class='price'>
-                            
-                            ￥<text class='now'>99</text>
+                        <view class='price'>
+
+                            ￥
+                            <text class='now'>99</text>
                             <text class='expire'>199</text>
                         </view>
                         <text class='time-limit'>限时特惠</text>
@@ -280,18 +243,19 @@
                     <image src='/images/arrow.png'></image>
                 </navigator>
             </view>
-       </view>
+        </view>
 
-       <view class='recommend'>
+        <view class='recommend'>
             <view class='title'>值得买</view>
             <view class='row'>
                 <view class='item'>
                     <navigator hover-class='none'>
                         <image mode='widthFix' src='/images/logo.png'></image>
                         <view class='name'>这是产品的标题这是产品的标题这是产品的标题这是产品的标题</view>
-                        <view  class='price'>
-                            
-                            ￥<text class='now'>99</text>
+                        <view class='price'>
+
+                            ￥
+                            <text class='now'>99</text>
                             <text class='expire'>199</text>
                         </view>
                         <text class='time-limit'>限时特惠</text>
@@ -301,9 +265,10 @@
                     <navigator hover-class='none'>
                         <image mode='widthFix' src='/images/logo.png'></image>
                         <view class='name'>这是产品的标题这是产品的标题这是产品的标题这是产品的标题</view>
-                        <view  class='price'>
-                            
-                            ￥<text class='now'>99</text>
+                        <view class='price'>
+
+                            ￥
+                            <text class='now'>99</text>
                             <text class='expire'>199</text>
                         </view>
                         <text class='time-limit'>限时特惠</text>
@@ -315,9 +280,10 @@
                     <navigator hover-class='none'>
                         <image mode='widthFix' src='/images/logo.png'></image>
                         <view class='name'>这是产品的标题这是产品的标题这是产品的标题这是产品的标题</view>
-                        <view  class='price'>
-                            
-                            ￥<text class='now'>99</text>
+                        <view class='price'>
+
+                            ￥
+                            <text class='now'>99</text>
                             <text class='expire'>199</text>
                         </view>
                         <text class='time-limit'>限时特惠</text>
@@ -327,9 +293,10 @@
                     <navigator hover-class='none'>
                         <image mode='widthFix' src='/images/logo.png'></image>
                         <view class='name'>这是产品的标题这是产品的标题这是产品的标题这是产品的标题</view>
-                        <view  class='price'>
-                            
-                            ￥<text class='now'>99</text>
+                        <view class='price'>
+
+                            ￥
+                            <text class='now'>99</text>
                             <text class='expire'>199</text>
                         </view>
                         <text class='time-limit'>限时特惠</text>
@@ -343,18 +310,19 @@
                     <image src='/images/arrow.png'></image>
                 </navigator>
             </view>
-       </view>
+        </view>
 
-       <view class='recommend'>
+        <view class='recommend'>
             <view class='title'>VIP商品</view>
             <view class='row'>
                 <view class='item'>
                     <navigator hover-class='none'>
                         <image mode='widthFix' src='/images/logo.png'></image>
                         <view class='name'>这是产品的标题这是产品的标题这是产品的标题这是产品的标题</view>
-                        <view  class='price'>
-                            
-                            ￥<text class='now'>99</text>
+                        <view class='price'>
+
+                            ￥
+                            <text class='now'>99</text>
                             <text class='expire'>199</text>
                         </view>
                         <text class='time-limit'>限时特惠</text>
@@ -364,9 +332,10 @@
                     <navigator hover-class='none'>
                         <image mode='widthFix' src='/images/logo.png'></image>
                         <view class='name'>这是产品的标题这是产品的标题这是产品的标题这是产品的标题</view>
-                        <view  class='price'>
-                            
-                            ￥<text class='now'>99</text>
+                        <view class='price'>
+
+                            ￥
+                            <text class='now'>99</text>
                             <text class='expire'>199</text>
                         </view>
                         <text class='time-limit'>限时特惠</text>
@@ -378,9 +347,10 @@
                     <navigator hover-class='none'>
                         <image mode='widthFix' src='/images/logo.png'></image>
                         <view class='name'>这是产品的标题这是产品的标题这是产品的标题这是产品的标题</view>
-                        <view  class='price'>
-                            
-                            ￥<text class='now'>99</text>
+                        <view class='price'>
+
+                            ￥
+                            <text class='now'>99</text>
                             <text class='expire'>199</text>
                         </view>
                         <text class='time-limit'>限时特惠</text>
@@ -390,9 +360,10 @@
                     <navigator hover-class='none'>
                         <image mode='widthFix' src='/images/logo.png'></image>
                         <view class='name'>这是产品的标题这是产品的标题这是产品的标题这是产品的标题</view>
-                        <view  class='price'>
-                            
-                            ￥<text class='now'>99</text>
+                        <view class='price'>
+
+                            ￥
+                            <text class='now'>99</text>
                             <text class='expire'>199</text>
                         </view>
                         <text class='time-limit'>限时特惠</text>
@@ -406,7 +377,7 @@
                     <image src='/images/arrow.png'></image>
                 </navigator>
             </view>
-       </view>
+        </view>
 
 
     </view>

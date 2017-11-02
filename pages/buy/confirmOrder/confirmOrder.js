@@ -7,7 +7,7 @@ Page({
     data: {
         AllData: '',//全部数据
         address:{},
-        cartList: {},
+        cartList: {}, 
         shopCouponList:{},
 
     },
@@ -21,7 +21,16 @@ Page({
             AllData: data,
             address: data.address,
             cartList: data.shopList,
-            shopCouponList: data.shopCouponList
+            shopCouponList: data.shopCouponList,
+            
+        })
+        // 计算实际支付金额
+        this.getTruePrice()
+    },
+    getTruePrice:function(){
+        let truePrice = this.data.AllData.productTotalPrice - this.data.AllData.freight - this.data.AllData.productPromotionPrice;
+        this.setData({
+            truePrice: truePrice
         })
     },
     goCoupon:function(){
@@ -43,9 +52,10 @@ Page({
     creatOrder:function(){
         // 先将店铺选中元素为空的数据剔除出来，再生成订单
         let params = this.data.AllData;
+        console.log(params)
         ajaxPost('order/create', params,(data)=>{
             wx.redirectTo({
-                url: '../pay/pay?orderId=' + data.orderId,
+                url: '../pay/pay?orderId=' + data.orderId + '&truePrice=' + this.data.truePrice,
             })
         })
         return;

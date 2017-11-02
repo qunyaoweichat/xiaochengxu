@@ -3,7 +3,7 @@
     <view class='shop-infor clearfix'>
         <checkbox data-index='{{index}}' data-checked='{{shop.checked}}' checked='{{shop.checked}}' bindtap='checkShop'></checkbox>
         <text class='edt' data-index='{{index}}' bindtap='shopEdt'>编辑</text>
-        <navigator url='../shop/index?shopId={{shop.shopId}}&redirect={{redirect}}' open-type='{{redirect?"redirect":"navigate"}}' hover-class='none'>
+        <navigator url='../shop/index?shopId={{shop.shopId}}' open-type='switchTab' hover-class='none'>
             <image src='{{shop.shopLogo}}'></image>
             <text class='name'>{{shop.shopName}}</text>
             <text class='iconfont icon-right'></text>
@@ -15,7 +15,7 @@
                 <checkbox checked='{{goods.checked}}' data-index='{{index}}' data-goodsindex='{{goodsIndex}}' data-checked='{{goods.checked}}' bindtap='checkGoods'></checkbox>
             </view>
             <view class='pic'>
-                <navigator url='../shop/goodsDetail/goodsDetail?id={{goods.productId}}&redirect={{redirect}}' open-type='{{redirect?"redirect":"navigate"}}'>
+                <navigator url='../shop/goodsDetail/goodsDetail?id={{goods.productId}}'>
                     <image src='{{goods.productImage}}' mode='aspectFill'></image>
                 </navigator>
             </view>
@@ -23,7 +23,7 @@
                 删除
             </view>
             <view class='detail'>
-                <navigator url='../shop/goodsDetail/goodsDetail?id={{goods.productId}}&redirect={{redirect}}' open-type='{{redirect?"redirect":"navigate"}}'>
+                <navigator url='../shop/goodsDetail/goodsDetail?id={{goods.productId}}'>
                     <text class='name'>{{goods.productTitle}}</text>
                 </navigator>
                 <view class='params'>规格：{{goods.productSelect}}</view>
@@ -50,5 +50,5 @@
     </view>
 </view>
 <view wx:if='{{cartList.length==0}}'>
-    <template is="empty" />
+    <template is="empty" data="{{emptyText}}"/>
 </view>
