@@ -1,4 +1,4 @@
-// pages/shopManage/index/index.js
+// pages/shopManage/shopGrade/shopGrade.js
 Page({
 
   /**

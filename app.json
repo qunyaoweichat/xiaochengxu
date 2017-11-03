@@ -1,5 +1,8 @@
 {
     "pages": [
+        "pages/shopManage/shopChoice/shopChoice",
+        "pages/shopManage/shopGrade/shopGrade",
+        "pages/shopManage/memberTag/memberTag",
         "pages/shopManage/memberData/memberData",
         "pages/shopManage/member/member",
         "pages/shopManage/shopBranch/shopBranch",
@@ -64,7 +67,7 @@
         "pages/set/telePhone/telePhone",
         "pages/set/partner/partner",
         "pages/set/partnerQRcode/partnerQRcode"
-        
+    
     ],
     "window": {
         "backgroundTextStyle": "#000",

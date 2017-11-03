@@ -1,0 +1,50 @@
+<!--店铺等级-->
+<view class='shop-grade'>
+    <view class="item">
+            <view class="pic">
+                <image mode='widthFix' src='/images/big-jinka.png'></image>
+            </view>
+        <view class="title">
+            <text>vip权益</text>
+            钻石店铺
+        </view>
+    </view>
+
+    <view class="grade">
+        <view class="inner">
+            <text class="nav">提升到白银等级需要</text>
+            <view class="shop">
+                <view class="row">
+                    <navigator hover-class='none'>
+                        <view class="class">
+                            <image mode='widthFix' src='/images/xiaoshou.png'></image>
+                            <view>销售<text>1111</text>元</view>
+                        </view>
+                    </navigator>
+                    <navigator hover-class='none'>
+                        <view class="class">
+                            <image mode='widthFix' src='/images/goumai.png'></image>
+                            <view>购买<text>钻石</text>vip卡</view>
+                        </view>
+                    </navigator>
+                </view>
+                <view class="row">
+                    <navigator hover-class='none'>
+                        <view class="class">
+                            <image mode='widthFix' src='/images/tuijian.png'></image>
+                            <view>推荐<text>13个</text>普惠店铺</view>
+                        </view>
+                    </navigator>
+                    <navigator hover-class='none'>
+                        <view class="class">
+                            
+                        </view>
+                    </navigator>
+                </view>
+            
+            </view>
+        </view>
+        
+        
+    </view> 
+</view>
