@@ -1,4 +1,4 @@
-<import src="../../../../utils/weCropper/weCropper.wxml" /> {{cropperOpt.src}}
+<import src="../../../utils/weCropper/weCropper.wxml" /> {{cropperOpt.src}}
 <view class="cropper-wrapper">
     <template is="weCropper" data="{{...cropperOpt}}" />
 

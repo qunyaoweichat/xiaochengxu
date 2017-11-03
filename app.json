@@ -1,5 +1,16 @@
 {
     "pages": [
+        
+        
+        "pages/shop/index",
+        "pages/shop/shopFilter/shopFilter",
+        "pages/shop/shopSearch/shopSearch",
+        "pages/shop/goodsDetail/goodsDetail",
+        "pages/shop/comment/comment",
+        "pages/shop/couponActivity/couponActivity",
+        "pages/shop/class/classList",
+        "pages/webIM/index",
+
         "pages/shopManage/shopChoice/shopChoice",
         "pages/shopManage/shopGrade/shopGrade",
         "pages/shopManage/memberTag/memberTag",
@@ -9,18 +20,10 @@
         "pages/shopManage/shopCode/shopCode",
         "pages/shopManage/shopSet/shopSet",
         "pages/shopManage/index",
-        "pages/webIM/index",
-        "pages/shop/index",
-        "pages/shop/shopFilter/shopFilter",
-        "pages/shop/shopSearch/shopSearch",
-        "pages/shop/goodsDetail/goodsDetail",
-        "pages/shop/comment/comment",
-        "pages/shop/couponActivity/couponActivity",
         "pages/shopManage/createShop/index",
         "pages/shopManage/createShop/branchSuccess/branchSuccess",
         "pages/shopManage/createShop/branchShop/branchShop",
-        "pages/class/classList",
-        "pages/public/indexNav",
+
         "pages/buy/index",
         "pages/buy/confirmOrder/confirmOrder",
         "pages/buy/coupon/coupon",

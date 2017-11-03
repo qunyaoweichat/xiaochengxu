@@ -7,7 +7,7 @@
                 <text>{{shopDetail.shopName}}</text>
             </view>
             <view class='c2'>
-                <navigator url="../mine/index?shopId={{shopDetail.shopId}}" hover-class='none'>我的订单</navigator>
+                <navigator url="../order/allOrder/orderList?shopId={{shopDetail.shopId}}" hover-class='none'>我的订单</navigator>
             </view>
         </view>
         <view class='shop-mode'>

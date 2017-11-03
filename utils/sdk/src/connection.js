@@ -778,22 +778,19 @@ connection.prototype.open = function (options) {
             conn.context.restTokenData = data;
             //console.log(options)
             if (data.statusCode != '404' && data.statusCode != '400') {
-                wx.showToast({
-                    title: '登录成功',
-                    icon: 'success',
-                    duration: 1000
-                });
+                // wx.showToast({
+                //     title: '登录成功',
+                //     icon: 'success',
+                //     duration: 1000
+                // });
+                console.log("登录成功")
             }
             _login(data.data, conn);
         };
         var error = function (res, xhr, msg) {
             console.log('error', res, xhr, msg)
             conn.clear();
-            wx.showModal({
-                title: '用户名或密码错误!',
-                showCancel: false,
-                confirmText: 'OK'
-            });
+            console.log("用户名或密码错误")
             if (res.error && res.error_description) {
                 conn.onError({
                     type: _code.WEBIM_CONNCTION_OPEN_USERGRID_ERROR,
@@ -825,7 +822,7 @@ connection.prototype.open = function (options) {
             success: suc || _utils.emptyfn,
             error: error || _utils.emptyfn
         };
-        console.log("options", options.success)
+        // console.log("options", options.success)
         _utils.ajax(options);
     }
 

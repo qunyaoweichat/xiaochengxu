@@ -1,5 +1,5 @@
 import { ajaxPost } from "../../public/ajax.js";
-import { hexMD5  } from "../../../utils/MD5.js";
+import { hexMD5 } from "../../../utils/MD5.js";
 Page({
 
     /**
@@ -35,7 +35,9 @@ Page({
             })
         })
         // 获取微信预支付订单
-        ajaxPost('pay/wechat/app', { orderId: orderId },(data)=>{
+        let loginParams = wx.getStorageSync('loginParams');
+        console.log(loginParams)
+        ajaxPost('pay/wechat/wap', { orderId: orderId, openId: loginParams.openid }, (data) => {
             console.log(data)
             this.setData({
                 wxPayParams: data.payRequestUrl
@@ -67,17 +69,26 @@ Page({
         let wxPayParams = JSON.parse(this.data.wxPayParams);
         console.log(wxPayParams)
         wx.requestPayment({
-            timeStamp: wxPayParams.timestamp,
-            nonceStr: wxPayParams.noncestr,
-            package: 'prepay_id=' + wxPayParams.prepayid,
+            timeStamp: wxPayParams.timeStamp,
+            nonceStr: wxPayParams.nonceStr,
+            package: wxPayParams.package,
             signType: 'MD5',
-            paySign: wxPayParams.sign,
-            success:function(data){
-                console.log('成功')
+            paySign: wxPayParams.paySign,
+            success: function (data) {
                 console.log(data)
+                wx.showToast({
+                    title: '支付成功',
+                });
+                setTimeout(function () {
+                    wx.redirectTo({
+                        url: '../../order/allOrder/orderList?orderType=2',
+                    })
+                }, 2000)
             },
-            fail:function(err){
-                console.log('异常')
+            fail: function (err) {
+                wx.showToast({
+                    title: '支付失败',
+                });
                 console.log(err)
             }
         })
@@ -88,12 +99,12 @@ Page({
             wx.hideLoading()
             wx.showToast({
                 title: '支付成功',
-            }),
-                setTimeout(function () {
-                    wx.redirectTo({
-                        url: '../../order/allOrder/orderList?orderType=2',
-                    })
-                }, 2000)
+            });
+            setTimeout(function () {
+                wx.redirectTo({
+                    url: '../../order/allOrder/orderList?orderType=2',
+                })
+            }, 2000)
         }, (data) => {
             wx.showToast({
                 title: data.retInfo,

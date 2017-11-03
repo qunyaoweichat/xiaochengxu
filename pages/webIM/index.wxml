@@ -48,25 +48,25 @@
     <template name="audio">
         <audio src="{{ item.msg.url }}" controls autoplay/>
     </template>
-
-
     <view class="room_bar">
         <form bindreset="cleanInput">
             <view class="f-row">
+                <view class="send_image" bindtap="sendImage">
+                    <image src="../../images/iconImage@2x.png"/>
+                </view>
+                <button class="send_btn" bindtap="sendMessage" formType="reset">发送</button>
                 <input wx:if="{{!showRecordHandler}}" class="f news" type="text" value="{{ inputMessage }}" placeholder="输入新消息" placeholder-style="color:#CFCFCF;padding-left:5px;" bindinput="bindMessage" bindtap="focus" bindfocus="focus" />
                 <button wx:else class="f btn-recording" catchtouchstart="handleRecording" catchtouchend="handleRecordingCancel" catchtouchcancel="handleRecordingCancel">按住 说话
                 </button>
-                <button class="send_btn" bindtap="sendMessage" formType="reset">发送</button>
+                
             </view>
         </form>
-        <view class="other_func">
-            <view class="open_emoji" bindtap="openEmoji">
+        <view class="other_func" style='display:none'>
+            <!-- <view class="open_emoji" bindtap="openEmoji">
                 <image src="../../images/Emoji.png" />
-            </view>
-            <view class="send_image" bindtap="sendImage">
-                <image src="../../images/iconImage@2x.png" style="height: 18px;" />
-            </view>
-            <view class="open_camera" bindtap="openCamera">
+            </view> -->
+            
+            <!-- <view class="open_camera" bindtap="openCamera">
                 <image src="../../images/iconCamera@2x.png" style="width: 26px;" />
             </view>
             <view class="v-record" bindtap="toggleRecordModal">
@@ -74,17 +74,9 @@
             </view>
             <view class="send_image" bindtap="sendLocation">
                 <image src="../../images/iconLocation@2x.png" style="height: 18px;" />
-            </view>
+            </view> -->
         </view>
-        <view class="other_func">
-            <view class="open_emoji" bindtap="testInterfaces">
-                <image src="../../images/Emoji.png" />
-            </view>
-            <view class="open_emoji" bindtap="quitChatRoom">
-                <image src="../../images/iconImage@2x.png" />
-            </view>
-        </view>
-        <swiper class="emoji_list" class="{{ show }}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <!-- <swiper class="emoji_list" class="{{ show }}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
             <block>
                 <swiper-item>
                     <view class="emoji_item">
@@ -111,6 +103,6 @@
                     </view>
                 </swiper-item>
             </block>
-        </swiper>
+        </swiper> -->
     </view>
 </view>

@@ -266,6 +266,7 @@ App({
             },
             // 各种异常
             onError: function (error) {
+                var page = that.getRoomPage()
                 // 16: server-side close the websocket connection
                 if (error.type == WebIM.statusCode.WEBIM_CONNCTION_DISCONNECTED) {
                     if (WebIM.conn.autoReconnectNumTotal < WebIM.conn.autoReconnectNumMax) {
@@ -276,9 +277,7 @@ App({
                         title: 'server-side close the websocket connection',
                         duration: 1000
                     });
-                    wx.redirectTo({
-                        url: '../login/login'
-                    });
+                    page.hxLogin()
                     return;
                 }
 
@@ -288,9 +287,7 @@ App({
                         title: 'offline by multi login',
                         duration: 1000
                     })
-                    wx.redirectTo({
-                        url: '../login/login'
-                    })
+                    page.hxLogin()
                     return;
                 }
             },
@@ -305,7 +302,7 @@ App({
             }
         })
     },
-    // 这个方法先个据jscode来获取到用户的openid，然后调用wx.getUserInfo方法获取到用户的信息，将这俩数据组合起来调用登录接口
+    // 这个方法先根据上面获取到的jscode来获取到用户的openid，然后调用wx.getUserInfo方法获取到用户的信息，将这俩数据组合起来调用登录接口
     getLoginParams: function (jsCode) {
         let self = this;
         let apiHost = this.globalData.apiHost;
