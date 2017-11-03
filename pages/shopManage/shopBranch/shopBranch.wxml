@@ -1,0 +1,59 @@
+<!--pages/shopManage/shopBranch/shopBranch.wxml-->
+<view class='shop-branch'>
+     <view class="index-num">
+        <view class='row'>
+            <view class='list'>
+                <view class='item'>今日访客</view>
+                <view>0</view>
+            </view>
+            <view class='list'>
+                <view class='item'>昨日新增</view>
+                <view>0</view>
+            </view>
+            <view class='list'>
+                <view class='item'>7日订单</view>
+                <view>0</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="withdrawals">
+        <view class="bank">
+            <view class="pic">
+                <image src="/images/ka1.jpg"></image>
+            </view>
+            <view class="grade">
+                <image mode='widthFix' src="/images/big-jinka.png"></image>
+            </view>
+            <view class="inner clearfix">
+                <view class='c1'>中国工商银行</view>
+                <view class='c2'>何建</view>
+            </view>
+        </view>
+        <view class="foot">
+            <text>上月销售：2000</text>
+            <text>上月返利：2000</text>
+        </view>
+    </view>
+
+    <view class="withdrawals">
+        <view class="bank">
+            <view class="pic">
+                <image src="/images/ka1.jpg"></image>
+            </view>
+            <view class="grade">
+                <image mode='widthFix' src="/images/big-jinka.png"></image>
+            </view>
+            <view class="inner clearfix">
+                <view class='c1'>中国工商银行</view>
+                <view class='c2'>何建</view>
+            </view>
+        </view>
+        <view class="foot">
+            <text>上月销售：2000</text>
+            <text>上月返利：2000</text>
+        </view>
+    </view>
+
+
+</view>

@@ -1,0 +1,61 @@
+<!--会员管理l-->
+<view class='member'>
+    <view class="index-num">
+        <view class='row'>
+            <view class='list'>
+                <view class='item'>0</view>
+                <view>会员总数</view>
+            </view>
+            <view class='list'>
+                <view class='item'>0</view>
+                <view>本月新增</view>
+            </view>
+            <view class='list'>
+                <view class='item'>0</view>
+                <view>本月消费</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="withdrawals">
+        <view class="bank">
+            <navigator hover-class='none'>
+                <view class="pic">
+                    <image src="/images/ka1.jpg"></image>
+                </view>
+                <text class='iconfont icon-right'></text>
+                <view class="inner clearfix">
+                    <view class='c1'>宅男</view>
+                    <view class='c2'>最后一次登录2008.10.10</view>
+                </view>
+            </navigator>
+        </view>
+        <view class="bank">
+            <navigator hover-class='none'>
+                <view class="pic">
+                    <image src="/images/ka1.jpg"></image>
+                </view>
+                <text class='iconfont icon-right'></text>
+                <view class="inner clearfix">
+                    <view class='c1'>花痴</view>
+                    <view class='c2'>最后一次登录2008.10.10</view>
+                </view>
+            </navigator>
+        </view>
+        <view class="bank">
+            <navigator hover-class='none'>
+                <view class="pic">
+                    <image src="/images/ka1.jpg"></image>
+                </view>
+                <text class='iconfont icon-right'></text>
+                <view class="inner clearfix">
+                    <view class='c1'>花痴</view>
+                    <view class='c2'>最后一次登录2008.10.10</view>
+                </view>
+            </navigator>
+        </view>
+        
+    </view>
+
+
+</view>

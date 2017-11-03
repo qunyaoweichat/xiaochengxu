@@ -1,0 +1,38 @@
+<view class='shop-set'>
+    <view class='title'>基本资料</view>
+    <form >
+        <view class='form-list'>
+            <view class='item'>
+                <view class='text shop-pic'>店主形象</view>
+                <view class='inpts pic'>
+                    <image mode='widthFix' src='/images/weichat.jpg'></image>
+                </view>
+            </view>
+
+            <view class='item'>
+                <view class='text'>店铺名称</view>
+                <input class='inputs' placeholder="请输入您的店铺名称" />
+            </view>
+
+            <view class='item'>
+                <view class='text'>创建时间</view>
+                <input class='inputs'  placeholder="请输入创建时间" />
+            </view>
+
+            <view class='item'>
+                <view class='text'>店铺等级</view>
+                <input class='inputs'  placeholder="请输入店铺等级" />
+            </view>
+
+            <view class='item'>
+                <view class='text'>邀请人</view>
+                <input class='inputs'  placeholder="请输入邀请人" />
+            </view>
+        </view>
+    </form>
+
+    <view class='public-btn'>
+        <button type='primary' form-type='submit'>确定</button>
+    </view>
+
+</view>

@@ -41,8 +41,8 @@ Page({
     },
     onLoad: function (options) {
         let that = this;
-        let myName = "16000275";
-        let yourname = "16000272";
+        let myName = "16000272";
+        let yourname = "16000275";
         this.setData({
             myName: myName,
             yourname: yourname

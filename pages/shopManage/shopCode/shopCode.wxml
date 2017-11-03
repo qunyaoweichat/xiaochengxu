@@ -1,0 +1,18 @@
+<!-- 店铺二维码 -->
+<view class='shop-code'>
+    <view class="code">
+        <view class="title">
+            <image class="pic" src="/images/img_bb.png" ></image> 
+            <text>黑石旗舰店</text>
+        </view>
+        <view class="code-pic">
+            <image mode='widthFix' src="/images/qr.png"></image> 
+        </view>
+        
+        <view class="share">长按或扫描二维码关注我的店铺</view>
+    </view>
+    <view class="send-out">发送二维码给好友，吸引更多资源</view>
+    <view class='public-btn'>
+        <button type='primary' form-type='submit'>保存到相册</button>
+    </view>
+</view>
