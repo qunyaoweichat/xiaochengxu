@@ -1,3 +1,4 @@
+import { ajaxPost} from '../public/ajax.js';
 var strophe = require('../../utils/strophe.js')
 var WebIM = require('../../utils/WebIM.js')
 var WebIM = WebIM.default
@@ -20,8 +21,8 @@ Page({
     data: {
         chatMsg: [],
         emojiStr: '',
-        yourname: '',
-        myName: '',
+        toUid: '',
+        fromUid: '',
         sendInfo: '',
         userMessage: '',
         inputMessage: '',
@@ -41,32 +42,27 @@ Page({
     },
     onLoad: function (options) {
         let that = this;
-        let myName = "16000275";
-        let yourname = "16000272";
+        let fromUid = "16000275";
+        let toUid = "16000272";
         this.setData({
-            myName: myName,
-            yourname: yourname
+            fromUid: fromUid,
+            toUid: toUid
         })
         // 获取聊天记录，暂时从本地取，后面会从接口获取
-        var history = wx.getStorageSync(yourname + myName);
+        this.getHistory(fromUid, toUid)
+
+        var history = wx.getStorageSync(toUid + fromUid);
         console.log(history)
-        var num = wx.getStorageSync(yourname + myName).length - 1
-        if (num > 0) {
-            setTimeout(function () {
-                that.setData({
-                    chatMsg: history,
-                    toView: wx.getStorageSync(yourname + myName)[num].mid
-                })
-            }, 10)
-        }
+        this.setData({
+            chatMsg: history
+        })
         wx.setNavigationBarTitle({
-            title: yourname,
+            title: toUid,
         })
         this.hxloign();
 
     },
     onShow: function () {
-        var that = this
         this.setData({
             inputMessage: ''
         })
@@ -75,12 +71,21 @@ Page({
     hxloign: function () {
         var options = {
             apiUrl: WebIM.config.apiURL,
-            user: this.data.myName,
+            user: this.data.fromUid,
             pwd: '767269cce4004b2fa9e290f3ae3ed13f7183d1ad',
             grant_type: 'password',
             appKey: WebIM.config.appkey //应用key
         }
         WebIM.conn.open(options)
+    },
+    // 获取聊天记录
+    getHistory: function (fromUid, toUid){
+        ajaxPost("huanxin/getHuanxinChatInfo", { fromUid:fromUid,toUid:toUid},data=>{
+            console.log(data)
+        })
+    },
+    saveMsgToServe: function (option, frome) {
+
     },
     bindMessage: function (e) {
         this.setData({
@@ -99,13 +104,13 @@ Page({
     sendMessage: function () {
         if (!this.data.userMessage.trim()) return;
         var that = this
-        var myName = that.data.myName;
-        var yourname = that.data.yourname;
+        var fromUid = that.data.fromUid;
+        var toUid = that.data.toUid;
         var id = WebIM.conn.getUniqueId();
         var msg = new WebIM.message('txt', id);
         msg.set({
             msg: that.data.sendInfo,
-            to: yourname,
+            to: toUid,
             roomType: false,
             success: function (id, serverMsgId) {
                 console.log('send text message success')
@@ -114,6 +119,7 @@ Page({
         console.log("Sending textmessage")
         msg.body.chatType = 'singleChat';
         WebIM.conn.send(msg.body);
+        
         if (msg) {
             var value = WebIM.parseEmoji(msg.value.replace(/\n/mg, ''))
             var time = WebIM.time()
@@ -121,8 +127,8 @@ Page({
                 info: {
                     to: msg.body.to
                 },
-                username: yourname,
-                yourname: msg.body.to,
+                username: fromUid,
+                toUid: msg.body.to,
                 msg: {
                     type: msg.type,
                     data: value
@@ -133,7 +139,7 @@ Page({
             }
             that.data.chatMsg.push(msgData)
             wx.setStorage({
-                key: yourname + myName,
+                key: toUid + fromUid,
                 data: that.data.chatMsg,
                 success: function () {
                     //console.log('success', that.data)
@@ -154,13 +160,14 @@ Page({
             })
         }
     },
+    
     // 接收数据
     receiveMsg: function (msg, type) {
         console.log(msg)
         var that = this
-        var myName = that.data.myName;
-        var yourname = that.data.yourname;
-        if (msg.from == yourname || msg.to == yourname) {
+        var fromUid = that.data.fromUid;
+        var toUid = that.data.toUid;
+        if (msg.from == toUid || msg.to == toUid) {
             if (type == 'txt') {
                 var value = WebIM.parseEmoji(msg.data.replace(/\n/mg, ''))
                 
@@ -190,7 +197,7 @@ Page({
                                 to: msg.to
                             },
                             username: '',
-                            yourname: msg.from,
+                            toUid: msg.from,
                             msg: {
                                 type: type,
                                 data: value,
@@ -201,7 +208,7 @@ Page({
                             mid: msg.type + msg.id
                         }
 
-                        if (msg.from == yourname) {
+                        if (msg.from == toUid) {
                             msgData.style = ''
                             msgData.username = msg.from
                         } else {
@@ -234,7 +241,7 @@ Page({
                     to: msg.to
                 },
                 username: '',
-                yourname: msg.from,
+                toUid: msg.from,
                 msg: {
                     type: type,
                     data: value,
@@ -245,7 +252,7 @@ Page({
                 mid: msg.type + msg.id
             }
             console.log('Audio Audio msgData: ', msgData);
-            if (msg.from == yourname) {
+            if (msg.from == toUid) {
                 msgData.style = ''
                 msgData.username = msg.from
             } else {
@@ -255,7 +262,7 @@ Page({
             //console.log(msgData, that.data.chatMsg, that.data)
             that.data.chatMsg.push(msgData)
             wx.setStorage({
-                key: yourname + myName,
+                key: toUid + fromUid,
                 data: that.data.chatMsg,
                 success: function () {
                     if (type == 'audio')
@@ -289,8 +296,8 @@ Page({
     },
     receiveImage: function (msg, type) {
         var that = this
-        var myName = that.data.myName;
-        var yourname = that.data.yourname;
+        var fromUid = that.data.fromUid;
+        var toUid = that.data.toUid;
         //console.log(msg)
         if (msg) {
             //console.log(msg)
@@ -301,7 +308,7 @@ Page({
                     to: msg.to
                 },
                 username: msg.from,
-                yourname: msg.from,
+                toUid: msg.from,
                 msg: {
                     type: 'img',
                     data: msg.url
@@ -314,7 +321,7 @@ Page({
             that.data.chatMsg.push(msgData)
             //console.log(that.data.chatMsg)
             wx.setStorage({
-                key: yourname + myName,
+                key: toUid + fromUid,
                 data: that.data.chatMsg,
                 success: function () {
                     that.setData({
@@ -331,8 +338,8 @@ Page({
     },
     upLoadImage: function (res, that) {
         var that = this
-        var myName = that.data.myName;
-        var yourname = that.data.yourname;
+        var fromUid = that.data.fromUid;
+        var toUid = that.data.toUid;
         var tempFilePaths = res.tempFilePaths[0]
         wx.getImageInfo({
             src: tempFilePaths,
@@ -379,7 +386,7 @@ Page({
                             var option = {
                                 apiUrl: WebIM.config.apiURL,
                                 body: file,
-                                to: yourname,                  // 接收消息对象
+                                to: toUid,                  // 接收消息对象
                                 roomType: false,
                                 chatType: 'singleChat'
                             }
@@ -392,8 +399,8 @@ Page({
                                     info: {
                                         to: msg.body.to
                                     },
-                                    username: myName,
-                                    yourname: msg.body.to,
+                                    username: fromUid,
+                                    toUid: msg.body.to,
                                     msg: {
                                         type: msg.type,
                                         data: msg.body.body.url,
@@ -408,7 +415,7 @@ Page({
                                 }
                                 that.data.chatMsg.push(msgData)
                                 wx.setStorage({
-                                    key: yourname + myName,
+                                    key: toUid + fromUid,
                                     data: that.data.chatMsg,
                                     success: function () {
                                         that.setData({
