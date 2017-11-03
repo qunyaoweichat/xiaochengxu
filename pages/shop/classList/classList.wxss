@@ -1,0 +1,134 @@
+/* pages/class/classList.wxss */
+/* 页头分类 */
+.class-head {
+    position: relative;
+    z-index: 99;
+    height: 44px;
+    line-height: 44px;
+    padding: 8px 45px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.class-head navigator{
+    display: inline-block;
+}
+.class-head .return{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    text-align: center;
+}
+.class-head .search{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    text-align: center;
+}
+.class-head .iconfont{
+    font-size: 22px;
+}
+.class-head .category-tab{
+    float: left;
+    width: 100%;
+}
+.class-head .category-tab .tab{
+    display: flex;
+    width: 100%;
+    height: 28px;
+    border: 1px solid #65ae51;
+    border-radius: 4px;
+}
+.class-head .category-tab .tab .class{
+    flex: 1;
+    height: 28px;
+    line-height: 28px;
+    width: 50%;
+    color: #65ae51;
+    font-size: 14px;  
+}
+.class-head .category-tab .tab .active{
+    background: #65ae51;
+    color: #fff;
+}
+
+/***********分类 ***********/
+.class-wrap .class-goods{
+    margin-top: 15px;
+    background-color: #fff;
+}
+
+.class-wrap .class-goods .row{
+    display: flex;
+}
+.class-wrap .class-goods .row .list{
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    border-bottom: solid 1px #f6f6f6;
+    border-right: solid 1px #f6f6f6;
+}
+.class-wrap .class-goods .row .list navigator{
+    width: 100%;
+}
+.class-wrap .class-goods .row .list .title{
+    padding-top: 10px;
+    font-size: 14px;
+    color: #333333;
+    line-height: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.class-wrap .class-goods .row .list .abstract{
+    color: #999999;
+    font-size: 12px;
+    line-height: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  
+}
+.class-wrap .class-goods .row .list .pic{
+    padding: 18px;
+}
+.class-wrap .class-goods .row .list .pic image{
+    width: 100%;
+}
+
+
+/***********品牌 ***********/
+.class-wrap .class-brand{
+    background-color: #fff;
+}
+.class-wrap .class-brand .nav{
+    line-height: 40px;
+    color: #666;
+    margin: 5px 12px;
+    display: flex;
+    border-bottom: solid 1px #f6f6f6;
+}
+.class-wrap .class-brand .nav text{
+    color: #999999;
+    font-size: 12px;
+    padding: 1px 10px;
+}
+.class-wrap .class-brand  .class-goods{
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+
