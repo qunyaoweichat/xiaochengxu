@@ -190,12 +190,13 @@ Page({
         }
     },
     sendImage: function () {
+        var that = this;
         wx.chooseImage({
             count: 1,
             sizeType: ['original', 'compressed'],
             sourceType: ['album'],
             success: (res)=> {
-                this.upLoadImage(res)
+                that.upLoadImage(res)
             },
             fial:function(res){
                 console.log(res)
@@ -203,6 +204,7 @@ Page({
         })
     },
     receiveImage: function (msg, type) {
+        console.log(msg,type)
         var fromUid = this.data.fromUid;
         var toUid = this.data.toUid;
         //console.log(msg)
