@@ -145,6 +145,7 @@ Page({
     
     // 接收数据
     receiveMsg: function (msg, type) {
+        console.log(msg)
         var fromUid = this.data.fromUid;
         var toUid = this.data.toUid;
         if (msg.from == toUid || msg.to == toUid) {
@@ -193,7 +194,7 @@ Page({
             count: 1,
             sizeType: ['original', 'compressed'],
             sourceType: ['album'],
-            success: function (res) {
+            success: (res)=> {
                 this.upLoadImage(res)
             },
             fial:function(res){
