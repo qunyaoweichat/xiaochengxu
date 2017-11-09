@@ -1,0 +1,39 @@
+<!-- 积分明细 -->
+<view class="form-record">
+    <navigator hover-class='none' url='../rechargeDetailed/rechargeDetailed'>
+        <view class='list'>
+            <view class="row">
+                <view class="c">订单入账</view>
+                <view class="c font-reduce">+100</view>
+            </view>
+            <view class="row">
+                <view class="c">2018.10.10 22:22</view>
+                <view class="c">微信支付-代收</view>
+            </view>
+        </view>
+    </navigator>
+    <navigator hover-class='none' url='../rechargeDetailed/rechargeDetailed'>
+        <view class='list'>
+            <view class="row">
+                <view class="c">积分券采购</view>
+                <view class="c font-add">-100</view>
+            </view>
+            <view class="row">
+                <view class="c">2018.10.10 22:22</view>
+                <view class="c">微信支付-代收</view>
+            </view>
+        </view>
+    </navigator>
+    <navigator hover-class='none' url='../rechargeDetailed/rechargeDetailed'>
+        <view class='list'>
+            <view class="row">
+                <view class="c ">赠送</view>
+                <view class="c ">-100</view>
+            </view>
+            <view class="row">
+                <view class="c">2018.10.10 22:22</view>
+                <view class="c">微信支付-代收</view>
+            </view>
+        </view>
+    </navigator>
+</view>

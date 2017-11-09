@@ -1,0 +1,23 @@
+<!--创建成功-->
+<view class='shop-success'>
+    <view class='title'>
+        <view class='nav'>恭喜您，店铺已成功开通</view>
+        <view>服务有效期至2019年10月10日</view>
+    </view>
+    
+    <view class='text_title'>恭喜，店铺已成功开通，您需要登录电脑版进行店铺的维护，感谢您的订购，群邀将持续为您提供周到服务</view>
+    <view class='connect'>电脑版登录入口：<navigator>http://168.qunyao.biz/login</navigator></view>
+    <view class='code'>
+        <view>可以长按店铺二维码保存至手机</view>
+        <view class='pic'>
+            <image mode='widthFix' src="/images/qr.png"></image>
+        </view>
+        <view>或</view>
+        <view class='btn'>
+            <navigator hover-class='none'>立即查看店铺</navigator>
+        </view>
+    </view>
+    <view class='tel'>客服电话：400-629-0909</view>
+
+</view>
+

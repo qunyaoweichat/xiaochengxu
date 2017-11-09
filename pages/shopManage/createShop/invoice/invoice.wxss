@@ -1,0 +1,45 @@
+.invoice .form-list .item{
+    padding:12px 10px;
+}
+.invoice .form-list .item .text {
+    line-height: 24px;
+}
+.invoice .form-list textarea{
+    height: 20px;
+    margin-top: 5px;
+}
+
+/* 发票信息 */
+.invoice-info{
+    padding: 15px 12px;
+    margin-top: 15px;
+    background-color: #fff;
+    border-top: solid 1px #e5e5e5;
+    border-bottom: solid 1px #e5e5e5;
+}
+
+.invoice-info .title{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    color: #E51C23;
+}
+.invoice-info .send{
+   margin: 10px auto 10px;
+}
+.invoice-info .btn{
+    margin: 15px auto 10px;
+    text-align: center;
+}
+.invoice-info .btn navigator{
+    line-height: 34px;
+    font-size: 14px;
+    padding: 0 20px;
+    display: inline-block;
+    background-color: #65ae51;
+    border: 1px solid #2baf2b;
+    color: #fff;
+    border-radius: 5px;
+}

@@ -8,7 +8,7 @@
     </view>
 
     <!-- 第一步 店铺资料-->
-    <view class='data'>
+    <view class='data'  wx:if='{{false}}'>
         <form>
             <view class='form-list'>
                 <view class='item'>
@@ -44,8 +44,57 @@
         </form>
     </view>
 
+    <!-- 选择模板 -->
+    <view class='template' wx:if='{{false}}'>
+        <view class='row'>
+            <view class='pic'>
+                <image mode='widthFix' src="/images/template1.jpg"></image>
+            </view>
+            <view class='pic'>
+                <image mode='widthFix' src="/images/template1.jpg"></image>
+            </view>
+        </view>
 
+        <view class='row'>
+            <view class='pic'>
+                <image mode='widthFix' src="/images/template1.jpg"></image>
+            </view>
+            <view class='pic'>
+                <image mode='widthFix' src="/images/template1.jpg"></image>
+            </view>
+        </view>
+    </view>
 
+    <!-- 创建成功 -->
+    <view class='success-out'>
+        <view class='success'>
+            <view class='rg'>
+                <view class='num'>￥2999</view>
+                <view class='price'>原价：￥99999</view>
+                <view>可开发票</view>
+            </view>
+            <view class='lf'>
+                <view class='nav'>微商开通一年</view>
+                <view>完整的微商系统</view>
+                <view>7*12小时客服</view>
+                <view>丰富的微商工具及多彩的积分商城</view>
+            </view>
+        </view>
+        <view class='success'>
+            <view class='rg'>
+                <view class='num'>￥2999</view>
+                <view class='price'>原价：￥99999</view>
+                <view>可开发票</view>
+            </view>
+            <view class='lf'>
+                <view class='nav'>微商开通一年</view>
+                <view>完整的微商系统</view>
+                <view>7*12小时客服</view>
+                <view>丰富的微商工具及多彩的积分商城</view>
+            </view>
+        </view>
+        
+    </view>
 
 
 

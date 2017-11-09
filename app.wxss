@@ -431,6 +431,7 @@ checkbox{
     padding-top: 54px;
 }
 /*  ----------商品列表--------  */
+/* 左标题，又输入框 */
 /* 公用表单，例如修改密码 */
 .form-list{
     margin: 15px 0;
@@ -478,7 +479,6 @@ checkbox{
 .public-list .item .lf{
     float: left;
     color: #888;
-    font-size: 15px;
     font-family: Helvetica, Microsoft YaHei, Arial;
     height: 45px;
     width: 90px;
@@ -493,7 +493,7 @@ checkbox{
     float: right;
     line-height: 45px;
     text-align:right;
-    font-size: 18px;
+    font-size: 16px;
     color: #BABABA;
     width: 18px;
 }
@@ -654,4 +654,87 @@ checkbox{
 .list-all-load{
     text-align: center;
     padding: 10px 0;
+}
+
+/*列表记录    例如充值记录*/
+.form-record {
+	border-top: solid #f3f5f7 1px;
+}
+
+.form-record .list {
+	background-color: white;
+	padding: 8px 15px;
+	border-bottom: solid #f3f5f7 1px;
+	line-height: 28px;
+}
+
+.form-record .list :last-child {
+	border-bottom: none;
+}
+
+.form-record .list  .row {
+	display: flex;
+	line-height: 30px;
+}
+
+.form-record .list  .row .c {
+	flex: 1;
+}
+
+.form-record .list  .row .c-gray {
+	flex: 1;
+	color:#999999;
+}
+
+.form-record .list  .row .c-gray:last-child {
+	text-align: right;
+}
+
+.form-record .list  .row .c:last-child {
+	text-align: right;
+}
+
+.form-record .list  .row .c1 {
+	text-align: left;
+}
+
+.form-record .list  .row-small {
+	display: flex;
+	line-height: 25px;
+	font-size: 12px;
+	color:#999999;
+}
+.font-add{
+    color: #fe504f;
+}
+.font-reduce{
+    color: #3eb135;
+}
+/*列表明细    例如充值明细*/
+.form-detailed .title {
+	padding: 15px;
+	background-color: #fff;
+	border-top: 1px solid #F3F5F7;
+	border-bottom: 1px solid #F3F5F7;
+}
+
+.form-detailed .title view {
+	margin-top: 5px;
+}
+
+.form-detailed .title .rg,
+.form-detailed .list .rg {
+	float: right;
+}
+
+.form-detailed {
+	border-bottom: 1px solid #F3F5F7;
+}
+.form-detailed .detailed{
+    background-color: #fff;
+    padding: 5px 0;
+}
+.form-detailed .list {
+	padding: 8px 15px;
+    
 }

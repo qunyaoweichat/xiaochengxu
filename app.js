@@ -298,6 +298,7 @@ App({
     wxLogin:function(){
         wx.login({
             success: res => {
+                console.log(res)
                 this.getLoginParams(res.code)
             }
         })

@@ -42,8 +42,8 @@ Page({
     },
     onLoad: function (options) {
         let that = this;
-        let fromUid = "16000275";
-        let toUid = "16000272";
+        let fromUid = "16000272";
+        let toUid = "16000275";
         this.setData({
             fromUid: fromUid,
             toUid: toUid

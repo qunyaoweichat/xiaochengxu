@@ -1,0 +1,17 @@
+<!--账户可用余额-->
+<view class='shop-balance'>
+			
+    <view class="index-head">
+        <view class="inner">
+            <view class="day">近30天收入(元)</view>
+            <view class="money">11</view>
+        </view>
+    </view>
+    
+    <view class="item">
+        <view><navigator hover-class='none' url=''>提现</navigator></view>
+        <view><navigator hover-class='none' url=''>提现</navigator></view>
+    </view>
+
+
+</view>

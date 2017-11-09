@@ -1,0 +1,35 @@
+<!-- 充值明细 -->
+<view class="form-detailed">
+    <view class="title">
+        <text>发生金额</text>
+        <text class="rg">￥100</text>
+    </view>
+    
+    <view class="detailed">
+        <view class='list'>
+            <text>流水号</text>
+            <text class="rg">12345678098765433</text>
+        </view>
+        <view class='list'>
+            <text>充值时间</text>
+            <text class="rg">2018-10-10 11:09:00</text>
+        </view>
+        <view class='list'>
+            <text>支付方式</text>
+            <text class="rg">微信支付-代收</text>
+        </view>
+        <view class='list'>
+            <text>收款行</text>
+            <text class="rg">中国银行</text>
+        </view>
+        <view class='list'>
+            <text>充值状态</text>
+            <text class="rg font-add">充值失败</text>
+        </view>
+    </view>
+    <view class="title">
+        <text>失败原因</text>
+        <view class="font-add">群邀未收到银行确认信息，请重新充值</view>
+    </view>
+    
+</view>

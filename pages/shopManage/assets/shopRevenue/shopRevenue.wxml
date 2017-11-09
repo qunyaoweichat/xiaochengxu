@@ -1,0 +1,46 @@
+<!--店铺营收（资产）-->
+<view class='shop-revenue'>
+    <view class='charts'></view>
+    <view class='public-list'>
+        <navigator hover-class='none' url=''>
+            <view class='item'>
+                <view class='lf'>账户可用余额</view>
+                <view class='iconfont icon-right'></view>
+                <view class='middle'>￥111.00</view>
+            </view>
+        </navigator>
+    </view>
+    <view class='public-list'>
+        <navigator hover-class='none' url=''>
+            <view class='item'>
+                <view class='lf'>待结算金额</view>
+                <view class='iconfont icon-right'></view>
+                <view class='middle'>￥111.00</view>
+            </view>
+        </navigator>
+        <navigator hover-class='none' url=''>
+            <view class='item'>
+                <view class='lf'>不可用金额</view>
+                <view class='iconfont icon-right'></view>
+                <view class='middle'>￥111.00</view>
+            </view>
+        </navigator>
+        <navigator hover-class='none' url=''>
+            <view class='item'>
+                <view class='lf'>积分</view>
+                <view class='iconfont icon-right'></view>
+                <view class='middle'>100</view>
+            </view>
+        </navigator>
+    </view>
+    
+    <view class='public-list'>
+        <navigator hover-class='none' url=''>
+            <view class='item'>
+                <view class='lf'>交易记录</view>
+                <view class='iconfont icon-right'></view>
+
+            </view>
+        </navigator>
+    </view>
+</view>

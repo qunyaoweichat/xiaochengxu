@@ -1,16 +1,27 @@
 {
     "pages": [
-        
-        
+        "pages/shopManage/statistics/statisticsIndex/statisticsIndex",
+        "pages/shopManage/assets/transactionRecord/transactionRecord",
+        "pages/shopManage/assets/integralRecord/integralRecord",
+        "pages/shopManage/assets/integral/integral",
+        "pages/shopManage/assets/withdrawalsDetailed/withdrawalsDetailed",
+        "pages/shopManage/assets/withdrawalsRecord/withdrawalsRecord",
+        "pages/shopManage/assets/withdrawals/withdrawals",
+        "pages/shopManage/assets/rechargeRecord/rechargeRecord",
+        "pages/shopManage/assets/rechargeDetailed/rechargeDetailed",
+        "pages/shopManage/assets/recharge/recharge",
+        "pages/shopManage/assets/shopRevenueRecord/shopRevenueRecord",
+        "pages/shopManage/assets/shopBalance/shopBalance",
+        "pages/shopManage/assets/shopRevenue/shopRevenue",
+        "pages/webIM/index",
         "pages/shop/index",
         "pages/shop/shopFilter/shopFilter",
         "pages/shop/shopSearch/shopSearch",
         "pages/shop/goodsDetail/goodsDetail",
         "pages/shop/comment/comment",
         "pages/shop/couponActivity/couponActivity",
-        "pages/shop/class/classList",
-        "pages/webIM/index",
-
+        "pages/shop/classList/classList",
+        "pages/shopManage/index",
         "pages/shopManage/shopChoice/shopChoice",
         "pages/shopManage/shopGrade/shopGrade",
         "pages/shopManage/memberTag/memberTag",
@@ -19,11 +30,11 @@
         "pages/shopManage/shopBranch/shopBranch",
         "pages/shopManage/shopCode/shopCode",
         "pages/shopManage/shopSet/shopSet",
-        "pages/shopManage/index",
         "pages/shopManage/createShop/index",
         "pages/shopManage/createShop/branchSuccess/branchSuccess",
         "pages/shopManage/createShop/branchShop/branchShop",
-
+        "pages/shopManage/createShop/shopSuccess/shopSuccess",
+        "pages/shopManage/createShop/invoice/invoice",
         "pages/buy/index",
         "pages/buy/confirmOrder/confirmOrder",
         "pages/buy/coupon/coupon",
@@ -70,7 +81,7 @@
         "pages/set/telePhone/telePhone",
         "pages/set/partner/partner",
         "pages/set/partnerQRcode/partnerQRcode"
-    
+       
     ],
     "window": {
         "backgroundTextStyle": "#000",
