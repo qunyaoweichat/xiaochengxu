@@ -1,0 +1,191 @@
+.statistics-report {
+    margin-bottom: 200px;
+}
+.statistics-report .date-bar{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    padding: 0 15px;
+    line-height: 44px;
+}
+.statistics-report .date-bar .date-text{
+    float: right;
+}
+.statistics-report .date-bar .icon-calendar{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* 原型统计 */
+.statistics-report .main-box{
+    background: #fff;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.statistics-report .title{
+    height: 40px;
+    line-height: 40px;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: center;
+}
+.statistics-report .general-box{
+    width: 180px;
+    height: 180px;
+    background: #119ad4;
+    border-radius: 50%;
+    margin: 10px auto;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 5% 0;
+    line-height: 44px;
+    border-bottom: 1px solid #ddd;
+}
+.statistics-report .general-box .bd{
+    width: 60%;
+    margin: 0 auto;
+    line-height: 40px;
+    border-bottom: 1px solid #fff;
+    font-size: 16px;
+}
+.statistics-report .general-list .dl{
+    float: left;
+    width: 40%;
+    padding: 20px 5%;
+    line-height: 30px;
+    font-size: 12px;
+}
+.statistics-report .general-list .compare{
+    color: #666;
+}
+/* 折线图 */
+.statistics-report .trand{
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+.statistics-report .trand .chart-hd{
+    line-height: 60px;
+    padding: 0 15px;
+}
+.statistics-report .trand .chart-hd .legend{
+    float: right;
+}
+.statistics-report .trand .chart-hd .legend .c{
+    margin-left: 10px;
+}
+.statistics-report .trand .chart-hd .legend .line{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    margin-right: 5px;
+}
+.statistics-report .trand .chart-hd .legend .line2{
+    background: #119ad4;
+}
+.statistics-report .trand .charts{
+    height: 200px;
+    background-color: #fe504f;
+}
+
+/* 转化率 */
+.statistics-report .title{
+    height: 40px;
+    line-height: 40px;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: center;
+}
+.conversion-chart{
+    position: relative;
+    max-width: 350px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+.conversion-chart image{
+    width: 100%;
+}
+.conversion-text{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+.conversion-text .c1{
+    float: left;
+    width: 50%;
+    margin-left: 15%;
+    color: #fff;
+    height: 100%;
+}
+.conversion-text .c1 .li{
+    line-height: 20px;
+    padding-top: 8%;
+    padding-bottom: 3%;
+}
+.conversion-text .c2{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+}
+.conversion-text .c2 .r1{
+    position: absolute;
+    left: 52%;
+    top: 33%;
+    margin-top: -20px;
+}
+.conversion-text .c2 .r2{
+        position: absolute;
+    left: 45%;
+    top: 70%;
+    margin-top: -20px;
+}
+.conversion-text .c2 .r3{
+    position: absolute;
+    left: 71%;
+    top: 55%;
+    margin-top: -20px;
+}
+.statistics-report .conversion .statistics-list1{
+    margin: 20px 0;
+    line-height: 30px;
+}
+.statistics-list1 .ul{
+    display: flex;
+    padding: 0 15px;
+}
+.statistics-list1 .li{
+    flex: 1;
+    font-size: 12px;
+}
+.statistics-list1 .li view:last-child{
+    font-size: 16px;
+}
+.statistics-list2 .dl{
+        border-top: 1px solid #ddd;
+    padding: 15px 15px;
+}
+.statistics-list2 .dl .dt{
+    margin-bottom: 5px;
+}
+.statistics-list2 .dl .ul{
+    display: flex;
+}
+.statistics-list2 .dl .li{
+    flex: 1;
+    font-size: 12px;
+    line-height: 20px;
+    color: #666;
+}
+.statistics-report .up{
+    color: #21BA1A;
+}

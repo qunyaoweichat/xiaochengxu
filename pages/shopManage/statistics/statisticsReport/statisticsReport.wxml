@@ -1,0 +1,152 @@
+<!-- 经营周报 -->
+<view class='statistics-report'>
+    <!-- 日历 -->
+    <view class="date-bar">
+        <view class="date-text">
+            2017.01.01 - 2017.11.01 <text class="iconfont icon-moreunfold"></text>
+        </view>
+        <view class="data-title">
+            <text class="iconfont icon-calendar"></text>自然周
+        </view>
+    </view>
+
+    <!-- 统计 -->
+    <view class="main-box">
+        <view class="title">一周概要</view>
+        <view class="general-box">
+            <view class="hd">交易总额（元）</view>
+            <view class="bd">1000.00</view>
+            <view class="ft">较上周 +0.00%</view>
+        </view>
+        
+        <view class="general-list clearfix">
+            <view class="dl">
+                <view class="dt">全店转化率</view>
+                <view class="dd">
+                    <view>0.00 <text>%</text></view>
+                    <view class="compare">较上周 <text>--</text></view>
+                </view>
+            </view>
+            <view class="dl">
+                <view class="dt">客单价(元/人)</view>
+                <view class="dd">
+                    <view>0.00 <text>%</text></view>
+                    <view class="compare">较上周 <text>--</text></view>
+                </view>
+            </view>
+            <view class="dl">
+                <view class="dt">访客数(人)</view>
+                <view class="dd">
+                    <view>0.00 <text>%</text></view>
+                    <view class="compare">较上周 <text>-2%</text></view>
+                </view>
+            </view>
+            <view class="dl">
+                <view class="dt">付款人数(人)</view>
+                <view class="dd">
+                    <view>0.00 <text>%</text></view>
+                    <view class="compare">较上周 <text>+4%</text></view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 折线统计 -->
+    <view class='trand'>
+        <view class='chart-hd'>
+            <view class='legend'>
+                <text class='c'><text class="line line1"></text>下单金额</text>
+                <text class='c'><text class="line line2"></text>付款金额</text>
+            </view>
+            <text>一周交易趋势</text>
+        </view>
+        <view class='charts'></view>
+    </view>
+
+    <!-- 转化率 -->
+    <view class='main-box conversion'>
+        <view class="title">转化率</view>
+        <view class="conversion-chart">
+            <image src="/images/statistics-pic.jpg" mode='widthFix' alt=""></image>
+            <view class="conversion-text">
+                <view class="c1">
+                    <view class="li">
+                        <view class="p">访客数</view>
+                        <view class="p">0</view>
+                    </view>
+                    <view class="li">
+                        <view class="p">下单人数</view>
+                        <view class="p">20</view>
+                    </view>
+                    <view class="li">
+                        <view class="p">付款人数</view>
+                        <view class="p">10</view>
+                    </view>
+                </view>
+                <view class="c2">
+                    <view class="r1">
+                        <view class="p">下单转化率</view>
+                        <view class="p">00.00%</view>
+                    </view>
+                    <view class="r2">
+                        <view class="p">付款转化率</view>
+                        <view class="p">00.00%</view>
+                    </view>
+                    <view class="r3">
+                        <view class="p">下单转化率</view>
+                        <view class="p">00.00%</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        
+        <view class="statistics-list1">
+            <view class="ul clearfix">
+                <view class="li">
+                    <view>下单总额（元）</view>
+                    <view>0</view>
+                </view>
+                <view class="li">
+                    <view>交易总额（元）</view>
+                    <view>0</view>
+                </view>
+            </view>
+        </view>
+
+        <view class="statistics-list2">
+            <view class="dl">
+                <view class="dt">下单转化率</view>
+                <view class="dd">
+                    <view class="ul">
+                        <view class="li">本周 11.00%</view>
+                        <view class="li">上周 00.00%</view>
+                        <view class="li">较上周 <text class="up">+11%</text></view>
+                    </view>
+                </view>
+            </view>
+            <view class="dl">
+                <view class="dt">下单转化率</view>
+                <view class="dd">
+                    <view class="ul">
+                        <view class="li">本周 11.00%</view>
+                        <view class="li">上周 00.00%</view>
+                        <view class="li">较上周 <text class="up">+11%</text></view>
+                    </view>
+                </view>
+            </view>
+            <view class="dl">
+                <view class="dt">下单转化率</view>
+                <view class="dd">
+                    <view class="ul">
+                        <view class="li">本周 11.00%</view>
+                        <view class="li">上周 00.00%</view>
+                        <view class="li">较上周 <text class="up">+11%</text></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+    </view>
+
+
+
+</view>

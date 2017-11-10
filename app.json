@@ -1,5 +1,7 @@
 {
     "pages": [
+        "pages/shopManage/statistics/statisticsReport/statisticsReport",
+        "pages/shopManage/statistics/statisticsAnalysis/statisticsAnalysis",
         "pages/shopManage/statistics/statisticsIndex/statisticsIndex",
         "pages/shopManage/assets/transactionRecord/transactionRecord",
         "pages/shopManage/assets/integralRecord/integralRecord",
@@ -81,7 +83,7 @@
         "pages/set/telePhone/telePhone",
         "pages/set/partner/partner",
         "pages/set/partnerQRcode/partnerQRcode"
-       
+        
     ],
     "window": {
         "backgroundTextStyle": "#000",

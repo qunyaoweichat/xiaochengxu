@@ -1,0 +1,119 @@
+
+.main-tabsBar{
+    padding: 10px 0;
+}
+.main-tabsBar .ul{
+    display: flex;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 0 15px;
+    border-radius: 5px;
+}
+.main-tabsBar .ul .list{
+    flex: 1;
+    text-align: center;
+    line-height: 40px;
+    border-right: 1px solid #ddd;
+}
+.main-tabsBar .ul .on{
+    color: #1196DA;
+}
+.analysis-total{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    padding: 10px 0;
+}
+.analysis-total .ul{
+    display: flex;
+}
+.analysis-total .ul .list{
+    flex: 1;
+    text-align: center;
+    line-height: 30px;
+}
+.analysis-total .ul .list view:first-child{
+    font-size: 24px;
+}
+.main-box{
+    background: #fff;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.main-box .title{
+    height: 40px;
+    line-height: 40px;
+    margin: 20px 0 ;
+    font-size: 16px;
+    text-align: center;
+}
+.main-box .legend{
+    padding: 10px 30px;
+    line-height: 30px;
+}
+.main-box .legend .list text{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+}
+.main-box .legend .list:first-child text{
+    background: #1196DA;
+}
+.main-box .legend .list:last-child text{
+    background: #c00;
+}
+.main-box .pie-chart{
+    height: 200px;
+    background-color: #fe504f;
+}
+.seven-total{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 15px;
+    line-height: 30px;
+    background-color: #fff;
+}
+.seven-total text{
+    float: right;
+}
+.tabs-hd{
+    background-color: #fff;
+   padding: 15px 0; 
+}
+.tabs-hd .inner{
+    width: 80%;
+    margin: auto;
+    border: 1px solid #1196DA;
+    line-height: 40px;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+}
+.tabs-hd .inner view{
+    flex: 1;
+    text-align: center;
+}
+.tabs-hd .inner .on{
+    background: #1196DA;
+    color: #fff;
+}
+.tabs-hd .inner view:first-child{
+    border-right: 1px solid #1196DA;
+}
+.text-list{
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+}
+.text-list .list{
+    line-height: 36px;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 15px;
+}
+.text-list .list navigator{
+    display: inline-block;
+}
+.text-list .list text{
+    float: right;
+}

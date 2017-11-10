@@ -1,7 +1,18 @@
 <!-- 数据统计 -->
 <view class='statistics-index'>
-
-
-
-
+    <view class='charts'></view>
+    <view class='public-list'>
+        <navigator hover-class='none' url=''>
+            <view class='item'>
+                <view class='lf'>经营周报</view>
+                <view class='iconfont icon-right'></view>
+            </view>
+        </navigator>
+        <navigator hover-class='none' url='../statisticsAnalysis/statisticsAnalysis'>
+            <view class='item'>
+                <view class='lf'>商品分析</view>
+                <view class='iconfont icon-right'></view>
+            </view>
+        </navigator>
+    </view>
 </view>
