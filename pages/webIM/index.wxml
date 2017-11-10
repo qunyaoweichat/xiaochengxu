@@ -7,39 +7,33 @@
             </view>
         </view>
     </view>
-    <scroll-view scroll-y="true" class="scroll_view" class="{{ view }}" bindtap="cancelEmoji" scroll-into-view="{{ toView }}">
-        <view class="message" wx:for="{{ chatMsg }}" wx:key="" id="{{ item.mid }}">
+    <scroll-view scroll-y="true" bindscrolltoupper='getHistory' class="scroll_view" class="{{ view }}" bindtap="cancelEmoji" scroll-into-view="{{ toView }}">
+        <view wx-if="{{chatMsgAll}}">已加载全部</view>
+        <view class="message" wx:for="{{ chatMsg }}" wx:key="" id="{{ item.msgId }}">
             <view class="time">
-                <text>{{item.time}}</text>
+                <text>{{item.sendTime}}</text>
             </view>
-            <view class="main" class="{{ item.style }}">
+            <view class="main" class="{{ item.fromUid==fromUid?'self':'' }}">
                 <view class="user">
-                    <text>{{ item.username }}</text>
+                    <text>{{ item.fromUser }}</text>
                 </view>
                 <image class="avatar" src="../../images/number.png" />
                 <view class="msg">
-                    <view wx:if="{{ item.msg.type == 'img' || item.msg.type == 'audio' || item.msg.type == 'video' || item.msg.type == 'audio'}}">
-                        <template is="{{ item.msg.type }}" data="{{ item, msgView }}" />
-                    </view>
-                    <view wx:elif="{{ item.msg.type == 'txt' || item.msg.type == 'emoji' }}">
-                        <view class="template" wx:for="{{ item.msg.data }}" wx:key="">
-                            <template is="{{ item.type }}" data="{{ item }}" />
-                        </view>
-                    </view>
+                    <template is="{{ item.type }}" data="{{ item }}" />
                 </view>
             </view>
         </view>
     </scroll-view>
 
     <template name="txt">
-        <text style="float: left;margin-top: 2px;">{{ item.data }}</text>
+        <text style="float: left;margin-top: 2px;">{{ item.content }}</text>
     </template>
 
     <template name="emoji">
         <image class="avatar" src="{{'../../images/faces/' + item.data }}" style="width: 25px;height: 25px;margin: 0 0 2px 0;float: left;" />
     </template>
     <template name="img">
-        <image class="avatar" src="{{ item.msg.data }}" style="width:90px;height: 120px;margin: 2px auto;" mode="aspectFit" bindtap="previewImage" data-url="{{ item.msg.data }}" />
+        <image class="avatar" src="{{ item.url }}" style="width:90px;height: 120px;margin: 2px auto;" mode="aspectFit" bindtap="previewImage" data-url="{{ item.url }}" />
     </template>
     <template name="video">
         <video src="{{ item.msg.data }}" controls autoplay/>
@@ -56,9 +50,8 @@
                 </view>
                 <button class="send_btn" bindtap="sendMessage" formType="reset">发送</button>
                 <input wx:if="{{!showRecordHandler}}" class="f news" type="text" value="{{ inputMessage }}" placeholder="输入新消息" placeholder-style="color:#CFCFCF;padding-left:5px;" bindinput="bindMessage" bindtap="focus" bindfocus="focus" />
-                <button wx:else class="f btn-recording" catchtouchstart="handleRecording" catchtouchend="handleRecordingCancel" catchtouchcancel="handleRecordingCancel">按住 说话
-                </button>
-                
+                <!-- <button wx:else class="f btn-recording" catchtouchstart="handleRecording" catchtouchend="handleRecordingCancel" catchtouchcancel="handleRecordingCancel">按住 说话
+                </button> -->
             </view>
         </form>
         <view class="other_func" style='display:none'>
