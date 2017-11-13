@@ -1,0 +1,46 @@
+.package-list .item{
+    margin-bottom: 10px;
+}
+.package-list .package-name{
+    height: 44px;
+    line-height: 44px;
+    padding: 0 15px;
+    border-bottom: 2px solid #60a031;
+}
+.package-list .hd{
+    padding: 10px 15px;
+    background: #fff;
+    line-height: 2;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+}
+.package-list .hd .iconfont{
+    float: right;
+    margin-top: 10px;
+}
+.package-list .bd{
+    padding: 10px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.package-list .bd .li{
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+}
+.package-list .bd .li image{
+    width: 60px;
+    height: 60px;
+}
+.package-list .bd .li .num{
+    line-height: 1;
+    margin-top: 10px;
+}
+.package-list .bd .last{
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 60px;
+    font-weight: bold;
+    margin-left: 20px;
+}

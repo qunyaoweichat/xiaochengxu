@@ -144,6 +144,75 @@
                 </view>
             </view>
         </view>
+    </view>
+
+    <!-- 客户分析 -->
+    <view class='main-box conversion'>
+        <view class="title">客户分析</view>
+        <view class="main-tabsBar">
+            <view class='ul'>
+                <view class="list on">昨日</view>
+                <view class='list'>7天</view>
+            </view>
+        </view>
+        <view class="legend">
+            <view class='list'>在售有销量商品<text></text></view>
+            <view class='list'>在售无销量商品<text></text></view>
+        </view>
+        <view class='pie-chart'></view>
+        <view class="statistics-list2">
+            <view class="dl">
+                <view class="dt">下单转化率</view>
+                <view class="dd">
+                    <view class="ul">
+                        <view class="li">本周 11.00%</view>
+                        <view class="li">上周 00.00%</view>
+                        <view class="li">较上周 <text class="up">+11%</text></view>
+                    </view>
+                </view>
+            </view>
+
+            <view class="dl">
+                <view class="dt">下单转化率</view>
+                <view class="dd">
+                    <view class="ul">
+                        <view class="li">本周 11.00%</view>
+                        <view class="li">上周 00.00%</view>
+                        <view class="li">较上周 <text class="up">+11%</text></view>
+                    </view>
+                </view>
+            </view> 
+        </view>
+    </view>
+
+    <!-- 售后维权 -->
+    <view class='main-box after-sale'>
+        <view class='title'>维权售后</view>
+        <view class="statistics-list1">
+            <view class="ul clearfix">
+                <view class="li">
+                    <view>总维权数（单）</view>
+                    <view>0<text class='small'>较上周<text class='up'>+2%</text></text></view>
+                </view>
+                <view class="li">
+                    <view>总退款金额（元）</view>
+                    <view>0</view>
+                </view>
+            </view>
+        </view>
+        <view class='tips'>本周所有维权订单已处理完毕</view>
+        <view class="statistics-list1">
+            <view class="ul clearfix">
+                <view class="li">
+                    <view>总维权数（单）</view>
+                    <view>0<text class='small'>较上周<text class='up'>+2%</text></text></view>
+                </view>
+                <view class="li">
+                    <view>总退款金额（元）</view>
+                    <view>0<text class='small'>较上周<text class='down'>-2%</text></text></view>
+                </view>
+            </view>
+        </view>
 
     </view>
 

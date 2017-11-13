@@ -1,0 +1,15 @@
+<!-- --------------选择快递公司 -------------->
+<view class='order-selectexpress'>
+    <view class="search-box">
+        <input type="text" placeholder="搜索"></input>
+        <text class="iconfont icon-search_light"></text>
+    </view>
+
+    <view class='express-list'>
+        <view >顺丰快递<text class='iconfont icon-check'></text>
+        </view>
+        <view >  申通E物流</view>
+        <view >  申通E物流</view>   
+    </view>
+
+</view>

@@ -1,0 +1,261 @@
+<!-- 我的订单 -->
+<view class='main-tabs'>
+    <view class='on'>全部</view>
+    <view>待付款</view>
+    <view>待发货</view>
+    <view>待收货</view>
+    <view>待评价</view>
+</view>
+
+<view class='order-manage-list'>
+    <view class="shop-item">
+        <view class="item-hd">
+            <view class="row">
+                <text>小牛牛</text>
+                <text class="status">待发货</text>
+            </view>
+            <view class="row">
+                <text>2016-08-01 12:40:18</text>
+                <text>E20160809234223423</text>
+            </view>
+        </view>
+        <view class="item-bd">
+            <view class="goods clearfix">
+                <view class="pic"> <image  src='/images/img_bb.png'></image></view>
+                <view class="detail">
+                    <view class="row">
+                        <view class="name"><navigator hover-class='none' url=''>纯棉水洗六件套</navigator></view>
+                        <text>￥200</text> 
+                    </view>
+                    <view class="row">
+                        <text class="color">颜色：红色</text>
+                        <text>x1</text>
+                    </view>
+                </view>
+            </view>
+            <view class="goods clearfix">
+                <view class="pic"> <image  src='/images/img_bb.png'></image></view>
+                <view class="detail">
+                    <view class="row">
+                        <view class="name"><navigator hover-class='none' url=''>纯棉水洗六件套</navigator></view>
+                        <text>￥200</text>
+                    </view>
+                    <view class="row">
+                        <text class="color">颜色：红色</text>
+                        <text>x1</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+         <view class="item-ft">
+            <view class="order-statistics">共3件，合计：￥600.00（免运费）</view>
+            <view class="order-ctrl">
+                <view class="ul">
+                    <view class="li"><navigator href="">改价</navigator></view>
+                    <view class="li"><navigator href="">关闭</navigator></view>
+                    <view class="li"><navigator href="">备注</navigator></view>
+                </view>
+            </view>
+        </view> 
+    </view>
+    <!--  shop-item end -->
+    <view class="shop-item">
+        <view class="item-hd">
+            <view class="row">
+                <text>小牛牛</text>
+                <text class="status">已发货</text>
+            </view>
+            <view class="row">
+                <text>2016-08-01 12:40:18</text>
+                <text>E20160809234223423</text>
+            </view>
+        </view>
+        <view class="item-bd">
+            <view class="goods clearfix">
+                <view class="pic"> <image  src='/images/img_bb.png'></image></view>
+                <view class="detail">
+                    <view class="row">
+                        <view class="name"><navigator hover-class='none' url=''>纯棉水洗六件套</navigator></view>
+                        <text>￥200</text> 
+                    </view>
+                    <view class="row">
+                        <text class="color">颜色：红色</text>
+                        <text>x1</text>
+                    </view>
+                </view>
+            </view>
+            <view class="goods clearfix">
+                <view class="pic"> <image  src='/images/img_bb.png'></image></view>
+                <view class="detail">
+                    <view class="row">
+                        <view class="name"><navigator hover-class='none' url=''>纯棉水洗六件套</navigator></view>
+                        <text>￥200</text>
+                    </view>
+                    <view class="row">
+                        <text class="color">颜色：红色</text>
+                        <text>x1</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+         <view class="item-ft">
+            <view class="order-statistics">共3件，合计：￥600.00（免运费）</view>
+            <view class="order-ctrl">
+                <view class="ul">
+                    <view class="li"><navigator href="">发货</navigator></view>
+                    <view class="li"><navigator href="">备注</navigator></view>
+                </view>
+            </view>
+        </view> 
+    </view>
+    <!--  shop-item end -->
+    <view class="shop-item">
+        <view class="item-hd">
+            <view class="row">
+                <text>小牛牛</text>
+                <text class="status">退款中</text>
+            </view>
+            <view class="row">
+                <text>2016-08-01 12:40:18</text>
+                <text>E20160809234223423</text>
+            </view>
+        </view>
+        <view class="item-bd">
+            <view class="goods clearfix">
+                <view class="pic"> <image  src='/images/img_bb.png'></image></view>
+                <view class="detail">
+                    <view class="row">
+                        <view class="name"><navigator hover-class='none' url=''>纯棉水洗六件套</navigator></view>
+                        <text>￥200</text> 
+                    </view>
+                    <view class="row">
+                        <text class="color">颜色：红色</text>
+                        <text>x1</text>
+                    </view>
+                </view>
+            </view>
+            <view class="goods clearfix">
+                <view class="pic"> <image  src='/images/img_bb.png'></image></view>
+                <view class="detail">
+                    <view class="row">
+                        <view class="name"><navigator hover-class='none' url=''>纯棉水洗六件套</navigator></view>
+                        <text>￥200</text>
+                    </view>
+                    <view class="row">
+                        <text class="color">颜色：红色</text>
+                        <text>x1</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+         <view class="item-ft">
+            <view class="order-statistics">共3件，合计：￥600.00（免运费）</view>
+            <view class="order-ctrl">
+                <view class="ul">
+                    <view class="li"><navigator href="">查看物流</navigator></view>
+                    <view class="li"><navigator href="">备注</navigator></view>
+                </view>
+            </view>
+        </view> 
+    </view>
+    <!--  shop-item end -->
+    <view class="shop-item">
+        <view class="item-hd">
+            <view class="row">
+                <text>小牛牛</text>
+                <text class="status">已完成</text>
+            </view>
+            <view class="row">
+                <text>2016-08-01 12:40:18</text>
+                <text>E20160809234223423</text>
+            </view>
+        </view>
+        <view class="item-bd">
+            <view class="goods clearfix">
+                <view class="pic"> <image  src='/images/img_bb.png'></image></view>
+                <view class="detail">
+                    <view class="row">
+                        <view class="name"><navigator hover-class='none' url=''>纯棉水洗六件套</navigator></view>
+                        <text>￥200</text> 
+                    </view>
+                    <view class="row">
+                        <text class="color">颜色：红色</text>
+                        <text>x1</text>
+                    </view>
+                </view>
+            </view>
+            <view class="goods clearfix">
+                <view class="pic"> <image  src='/images/img_bb.png'></image></view>
+                <view class="detail">
+                    <view class="row">
+                        <view class="name"><navigator hover-class='none' url=''>纯棉水洗六件套</navigator></view>
+                        <text>￥200</text>
+                    </view>
+                    <view class="row">
+                        <text class="color">颜色：红色</text>
+                        <text>x1</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+         <view class="item-ft">
+            <view class="order-statistics"><span class="refund-infor">有一笔退款</span>共3件，合计：￥600.00（免运费）</view>
+            <view class="order-ctrl">
+                <view class="ul">
+                    <view class="li"><navigator href="">发货</navigator></view>
+                    <view class="li"><navigator href="">备注</navigator></view>
+                </view>
+            </view>
+        </view> 
+    </view>
+    <!--  shop-item end -->
+    <view class="shop-item">
+        <view class="item-hd">
+            <view class="row">
+                <text>小牛牛</text>
+                <text class="status">待付款</text>
+            </view>
+            <view class="row">
+                <text>2016-08-01 12:40:18</text>
+                <text>E20160809234223423</text>
+            </view>
+        </view>
+        <view class="item-bd">
+            <view class="goods clearfix">
+                <view class="pic"> <image  src='/images/img_bb.png'></image></view>
+                <view class="detail">
+                    <view class="row">
+                        <view class="name"><navigator hover-class='none' url=''>纯棉水洗六件套</navigator></view>
+                        <text>￥200</text> 
+                    </view>
+                    <view class="row">
+                        <text class="color">颜色：红色</text>
+                        <text>x1</text>
+                    </view>
+                </view>
+            </view>
+            <view class="goods clearfix">
+                <view class="pic"> <image  src='/images/img_bb.png'></image></view>
+                <view class="detail">
+                    <view class="row">
+                        <view class="name"><navigator hover-class='none' url=''>纯棉水洗六件套</navigator></view>
+                        <text>￥200</text>
+                    </view>
+                    <view class="row">
+                        <text class="color">颜色：红色</text>
+                        <text>x1</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+         <view class="item-ft">
+            <view class="order-statistics">共3件，合计：￥600.00（免运费）</view>
+            <view class="order-ctrl">
+                <view class="ul">
+                    <view class="li"><navigator href="">备注</navigator></view>
+                </view>
+            </view>
+        </view> 
+    </view>
+
+</view>

@@ -1,0 +1,83 @@
+<!-- ----------发货-------- -->
+<view class='order-send'>
+    <!-- 地址信息 支付了的有-->
+    <view class="order-adress item-box">
+        <view class="row">
+            <text>收货人：何健</text>
+            <text class="phone">18109227900</text>
+        </view>
+        <view class="row address-detail">收货地址：北京市东城区东直门外东湖别墅J栋5层</view>
+    </view>
+
+    <view class="select-express item-box">
+        <view class="hd">
+            <view class="ul">
+                <view class="li on">物流发货</view>
+                <view class="li">无需物流</view>
+            </view>
+        </view>
+        <view class="bd">
+            <view class="ul">
+                <view class="li">
+                    <navigator hover-class='none' url="">
+                        <text class="iconfont icon-right"></text>
+                        <text>请选择物流公司</text>
+                    </navigator>
+                </view>
+                <view class="li">
+                    <input type="text" placeholder="请输入订单号"></input>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!-- 商品列表 -->
+    <view class='order-manage-list'>
+        <view class="shop-item">
+            <view class="item-hd">
+                <text class="num">2件</text>
+                <label><radio/>全选</label>
+            </view>
+            <view class="item-bd">
+                <view class="goods clearfix">
+                    <label><radio/></label>
+                    <view class="pic"> <image  src='/images/img_bb.png'></image></view>
+                    <view class="detail">
+                        <view class="row">
+                            <view class="name"><navigator hover-class='none' url=''>纯棉水洗六件套</navigator></view>
+                            <text>￥200</text> 
+                        </view>
+                        <view class="row">
+                            <text class="color">颜色：红色</text>
+                            <text>x1</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="goods clearfix">
+                    <label><radio/></label>
+                    <view class="pic"> <image  src='/images/img_bb.png'></image></view>
+                    <view class="detail">
+                        <view class="row">
+                            <view class="name"><navigator hover-class='none' url=''>纯棉水洗六件套</navigator></view>
+                            <text>￥200</text>
+                        </view>
+                        <view class="row">
+                            <text class="color">颜色：红色</text>
+                            <text>x1</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="item-ft">
+                <view class="order-statistics">订单号：2222222222</view>
+                <view class="order-statistics">支付时间：2222222222</view>
+                <view class="order-statistics">下单时间：2222222222</view>
+            </view> 
+        </view>
+    </view>
+
+    <view class='public-btn'>
+        <button type="primary" size="90%" bindtap='submit'>发货</button>
+    </view>
+
+</view>

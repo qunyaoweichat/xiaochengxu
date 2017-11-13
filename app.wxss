@@ -720,16 +720,13 @@ checkbox{
 	border-top: 1px solid #F3F5F7;
 	border-bottom: 1px solid #F3F5F7;
 }
-
 .form-detailed .title view {
 	margin-top: 5px;
 }
-
 .form-detailed .title .rg,
 .form-detailed .list .rg {
 	float: right;
 }
-
 .form-detailed {
 	border-bottom: 1px solid #F3F5F7;
 }
@@ -738,6 +735,120 @@ checkbox{
     padding: 5px 0;
 }
 .form-detailed .list {
-	padding: 8px 15px;
-    
+	padding: 8px 15px;   
 }
+.item-box{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-top: 15px;
+    padding: 10px 15px;
+    line-height: 2;
+    background: #fff;
+}
+/* ------------订单管理这块的按钮组--------------- */
+.order-btn-group .ul {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+.order-btn-group .li {
+    flex: 1;
+    text-align: center;
+    background: #fff;
+    border-right: 1px solid #ddd;
+}
+.order-btn-group .li input{
+    margin: 10px 0;
+    vertical-align: middle;
+}
+.order-btn-group .li:last-child {
+     border: none 
+}
+
+
+/* ---------订单管理-订单列表---------- */
+.order-manage-list{
+    margin-top: 60px;
+}
+.order-manage-list .shop-item {
+    background: #fff;
+    margin-bottom: 15px;
+    border-bottom: none;
+}
+.order-manage-list .shop-item .item-hd {
+    line-height: 20px;
+    padding: 10px 15px;
+}
+.order-manage-list .shop-item .item-hd .row {
+    display: flex;
+    font-size: 12px;
+}
+.order-manage-list .shop-item .item-hd .row text {
+    flex: 1;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap
+}
+.order-manage-list  .shop-item .item-hd .row text:last-child{
+    text-align: right;
+}
+.order-manage-list .shop-item .item-hd .status {
+    color: #60a031
+}
+.order-manage-list .shop-item .item-bd {
+    border-top: 1px solid #ddd;
+}
+.order-manage-list .shop-item .item-bd .goods {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 15px;
+}
+.order-manage-list .shop-item .item-bd .goods .pic {
+    float: left;
+    margin-right: 10px;
+}
+.order-manage-list .shop-item .item-bd .goods .pic image {
+    width: 60px;
+    height: 60px;
+}
+.order-manage-list .shop-item .item-bd .detail {
+    color: #666;
+}
+.order-manage-list .shop-item .item-bd .detail .row view{
+    display: inline-block;
+}
+.order-manage-list .shop-item .item-bd .row:last-child {
+    margin-top: 20px;
+}
+.order-manage-list .shop-item .item-bd .row text:last-child {
+    float: right
+}
+.order-manage-list .shop-item .item-bd .row  navigator {
+    display: inline-block;
+    font-weight: bold
+}
+.order-manage-list .shop-item .item-ft .order-statistics {
+    line-height: 40px;
+    padding: 0 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 13px;
+}
+.order-manage-list .shop-item .item-ft .refund-infor {
+    float: right;
+    color: #60a031
+}
+.order-manage-list .shop-item .item-ft .order-ctrl .ul {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+.order-manage-list .shop-item .item-ft .order-ctrl .li {
+    flex: 1;
+    text-align: center;
+    line-height: 40px;
+    border-right: 1px solid #ddd;
+}
+.order-manage-list .shop-item .item-ft .order-ctrl .li:last-child {
+    border: none
+}
+.order-manage-list .shop-item .item-ft .order-ctrl .li navigator {
+    display: block
+}
+/* ---------订单管理-订单详情---------- */

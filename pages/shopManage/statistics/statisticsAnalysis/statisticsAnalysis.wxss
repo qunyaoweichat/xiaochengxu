@@ -16,7 +16,8 @@
     border-right: 1px solid #ddd;
 }
 .main-tabsBar .ul .on{
-    color: #1196DA;
+    background: #1196DA;
+    color: #fff;
 }
 .analysis-total{
     border-top: 1px solid #ddd;

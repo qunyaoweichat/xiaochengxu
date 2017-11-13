@@ -1,0 +1,110 @@
+<!-- 物流包裹 -->
+<view class='package-list'>
+    <view class='item'>
+        <view class="package-name">包裹1</view>
+        <view class="hd">
+            <navigator hover-class='none' url=''>
+                <text class="iconfont icon-right"></text>
+                <view class="row">申通E物流，运单号：234234251</view>
+                <view class="row">暂无物流信息</view>
+            </navigator>
+        </view>
+        <view class="bd">
+            <view class="ul clearfix">
+                <view class="li">
+                    <view class="pic">
+                        <image src='/images/img_bb.png'></image>
+                    </view>
+                    <view class="num">x1</view>
+                </view>
+                <view class="li">
+                    <view class="pic">
+                        <image src='/images/img_bb.png'></image>
+                    </view>
+                    <view class="num">x1</view>
+                </view>
+                <view class="li">
+                    <view class="pic">
+                        <image src='/images/img_bb.png'></image>
+                    </view>
+                    <view class="num">x1</view>
+                </view>
+                <view class="last">
+                    等6件商品
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='item'>
+        <view class="package-name">包裹2</view>
+        <view class="hd">
+            <navigator hover-class='none' url=''>
+                <text class="iconfont icon-right"></text>
+                <view class="row">申通E物流，运单号：234234251</view>
+                <view class="row">暂无物流信息</view>
+            </navigator>
+        </view>
+        <view class="bd">
+            <view class="ul clearfix">
+                <view class="li">
+                    <view class="pic">
+                        <image src='/images/img_bb.png'></image>
+                    </view>
+                    <view class="num">x1</view>
+                </view>
+                <view class="li">
+                    <view class="pic">
+                        <image src='/images/img_bb.png'></image>
+                    </view>
+                    <view class="num">x1</view>
+                </view>
+                <view class="li">
+                    <view class="pic">
+                        <image src='/images/img_bb.png'></image>
+                    </view>
+                    <view class="num">x1</view>
+                </view>
+                <view class="last">
+                    等6件商品
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='item'>
+        <view class="package-name">包裹3</view>
+        <view class="hd">
+            <navigator hover-class='none' url=''>
+                <text class="iconfont icon-right"></text>
+                <view class="row">申通E物流，运单号：234234251</view>
+                <view class="row">暂无物流信息</view>
+            </navigator>
+        </view>
+        <view class="bd">
+            <view class="ul clearfix">
+                <view class="li">
+                    <view class="pic">
+                        <image src='/images/img_bb.png'></image>
+                    </view>
+                    <view class="num">x1</view>
+                </view>
+                <view class="li">
+                    <view class="pic">
+                        <image src='/images/img_bb.png'></image>
+                    </view>
+                    <view class="num">x1</view>
+                </view>
+                <view class="li">
+                    <view class="pic">
+                        <image src='/images/img_bb.png'></image>
+                    </view>
+                    <view class="num">x1</view>
+                </view>
+                <view class="last">
+                    等6件商品
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+</view>

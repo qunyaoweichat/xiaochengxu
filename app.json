@@ -1,5 +1,13 @@
 {
     "pages": [
+        "pages/shopManage/orderManage/orderPackge/orderPackge",
+        "pages/shopManage/orderManage/orderLogistics/orderLogistics",
+        "pages/shopManage/orderManage/orderSelecexpress/orderSelecexpress",
+        "pages/shopManage/orderManage/orderSend/orderSend",
+        "pages/shopManage/orderManage/orderClose/orderClose",
+        "pages/shopManage/orderManage/orderChangePrice/orderChangePrice",
+        "pages/shopManage/orderManage/orderDetail/orderDetail",
+        "pages/shopManage/orderManage/orderList/orderList",
         "pages/shopManage/statistics/statisticsReport/statisticsReport",
         "pages/shopManage/statistics/statisticsAnalysis/statisticsAnalysis",
         "pages/shopManage/statistics/statisticsIndex/statisticsIndex",
@@ -41,7 +49,6 @@
         "pages/buy/confirmOrder/confirmOrder",
         "pages/buy/coupon/coupon",
         "pages/buy/pay/pay",
-        "pages/order/allOrder/orderList",
         "pages/order/allOrder/orderDetails/orderDetails",
         "pages/order/allOrder/orderCancel/orderCancel",
         "pages/order/allOrder/comment/comment",
