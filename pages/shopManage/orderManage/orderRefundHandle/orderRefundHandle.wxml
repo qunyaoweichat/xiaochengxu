@@ -1,0 +1,23 @@
+<!-- 订单退款处理 -->
+<view class='order-refundhandle'>
+    <view class='refundhandl-status'>等待商家处理退款申请</view>
+    <view class='refundhandl-tips item-box'>
+        <view class='row'>如您同意：<text>申请将达成并退款给买家</text></view>
+        <view class='row'>如您拒绝：<text>买家需要重新修改退款申请或请求维权</text></view>
+    </view>
+    <view class='shop-infor item-box'>
+        <text>买家：硬碰硬<text class="phone">18611665521</text></text>
+    </view>
+    <view class='refundhandle-list'>
+        <view class='list'>退款金额<text class="price">￥2.00</text></view>
+        <view class='list'>处理方式<text>仅退款</text></view>
+        <view class='list'>申请时间<text>2016-10-08  12:08:08</text></view>
+        <view class='list'>退款原因<text>买/卖双方协商一致</text></view>
+        <view class='list'>退款编号<text>T124123124124124</text></view>
+    </view>
+    <view class="refundhandle-record">查看完整协商记录</view>
+    <view class='submit'>
+        <navigator class='btn  btn-white' hover-class='none' url=''>拒绝买家退款</navigator>
+        <navigator class='btn' hover-class='none'  url=''>同意买家退款</navigator>
+    </view>
+</view>

@@ -1,0 +1,107 @@
+.order-detail .order-refundtips{
+    background: #f5eb7d;
+    color: #f00;
+    margin: 0;
+    line-height: 1.2;
+    border-bottom: none;
+}
+.order-detail  .order-staus{
+    padding: 15px 20px;
+    font-size: 16px;
+    margin-top: 0;
+} 
+
+.order-detail .order-logistics{
+    font-size: 16px;
+}
+.order-detail .order-logistics .iconfont{
+    float: right;
+    margin-top: 10px;
+}
+.order-detail .order-logistics .num{
+    color: #60a031;
+}
+.order-detail .order-adress{
+    border-bottom: 2px solid #60a031;
+    margin-top: 0;
+    border-top: none;
+}
+.order-detail .order-adress .phone{
+    float: right;
+}
+.order-detail .order-adress .address-detail{
+    color: #666;
+}
+.order-detail .shop-infor .iconfont{
+    float: right;
+}
+.order-detail  .order-refund-title{
+    margin-top: 15px;
+    padding: 0 15px;
+    font-size: 16px;
+}
+.order-detail  .order-manage-list {
+    margin-top: 15px;
+}
+.order-detail .order-manage-list .shop-item .item-bd{
+    border-top: none;
+}
+.order-detail .refund-btn{
+    border: 1px solid #60a031;
+    border-radius: 5px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    margin: 10px;
+}
+.refund-btn navigator{
+    color: #60a031;
+}
+/* 物流信息 */
+.package-list .item{
+    margin-bottom: 10px;
+    background: #fff;
+    margin-top: 15px;
+}
+.package-list .hd{
+    height: 44px;
+    line-height: 44px;
+    padding: 0 15px;
+    border-bottom: 1px solid #ddd;
+}
+.package-list .bd{
+    padding: 10px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.package-list .bd .li{
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+}
+.package-list .bd .li image{
+    width: 60px;
+    height: 60px;
+}
+.package-list .bd .li .num{
+    line-height: 1;
+    margin-top: 10px;
+}
+.package-list .bd .last{
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 60px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.package-list .infor-list .list{
+    line-height: 40px;
+    padding: 0 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 13px;
+}
+.package-list .infor-list .list .price{
+    color: #60a031;
+}
+

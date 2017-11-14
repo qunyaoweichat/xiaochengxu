@@ -1,0 +1,105 @@
+<!-- 退货详情 -->
+<view class='order-detail'>
+    <view class='order-refundtips item-box'>买卖双方需要7天内处理，逾期将视为默认同意对方诉求，请尽快处理退款订单。</view>
+    <view class='order-staus item-box'>订单状态： 商家已发货</view>
+    <!-- 物流信息，发货了才有 -->
+    <view class="order-logistics  item-box">
+        <navigator hover-class='none'>
+            <text class="iconfont icon-right"></text>
+            <view class="row num">含有三个包裹</view>
+            <view class="row">查看详细信息</view>
+        </navigator>
+    </view>
+    <!-- 地址信息 支付了的有-->
+    <view class="order-adress item-box">
+        <view class="row">
+            <view class="phone">18109227900</view>
+            <view>收货人：何健</view>
+        </view>
+        <view class="row address-detail">收货地址：北京市东城区东直门外东湖别墅J栋5层</view>
+    </view>
+    <!-- 商家信息 -->
+    <view class="shop-infor item-box">
+        <text class="iconfont icon-right"></text>
+        <text>买家：硬碰硬</text>
+    </view>
+    <view class="order-refund-title ">退款商品</view>
+    <!-- 商品信息 -->
+    <view class='order-manage-list'>
+        <view class="shop-item">
+            <view class="item-bd">
+                <view class="goods clearfix">
+                    <view class="pic"> <image  src='/images/img_bb.png'></image></view>
+                    <view class="detail">
+                        <view class="row">
+                            <view class="name"><navigator hover-class='none' url=''>纯棉水洗六件套</navigator></view>
+                            <text>￥200</text> 
+                        </view>
+                        <view class="row">
+                            <text class="color">颜色：红色</text>
+                            <text>x1</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="goods clearfix">
+                    <view class="pic"> <image  src='/images/img_bb.png'></image></view>
+                    <view class="detail">
+                        <view class="row">
+                            <view class="name"><navigator hover-class='none' url=''>纯棉水洗六件套</navigator></view>
+                            <text>￥200</text>
+                        </view>
+                        <view class="row">
+                            <text class="color">颜色：红色</text>
+                            <text>x1</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="item-ft">
+                <view class="order-statistics">退款理由：不喜欢</view>
+                <view class="order-statistics">
+                    <view class="refund-btn"><navigator hover-class='none'>备注</navigator></view>
+                </view>
+            </view> 
+        </view>
+    </view>
+    <view class="order-refund-title ">订单原信息</view>
+    <view class='package-list'>
+        <view class='item'>
+            <view class='hd'>
+                <text>快递单号：234234251</text>
+            </view>
+            <view class="bd">
+                <view class="ul clearfix">
+                    <view class="li">
+                        <view class="pic">
+                            <image src='/images/img_bb.png'></image>
+                        </view>
+                        <view class="num">x1</view>
+                    </view>
+                    <view class="li">
+                        <view class="pic">
+                            <image src='/images/img_bb.png'></image>
+                        </view>
+                        <view class="num">x1</view>
+                    </view>
+                    <view class="li">
+                        <view class="pic">
+                            <image src='/images/img_bb.png'></image>
+                        </view>
+                        <view class="num">x1</view>
+                    </view>
+                    <view class="last">
+                        等6件商品
+                    </view>
+                </view>
+            </view>
+            <view class='infor-list'>
+                <view class='list'>由供应商 黑石旗舰店 单独配送</view>
+                <view class='list'>买家留言：无</view>
+                <view class='list'>已付款：<text class='price'>￥120.00</text></view>
+            </view>
+        </view>
+    
+    </view>
+</view>

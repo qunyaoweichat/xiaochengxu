@@ -1,0 +1,10 @@
+<view class='order-reMark'>
+    <view class='refundRefuse-con'>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </view>
+
+    <view class='public-btn'>
+        <button type='primary' form-type='submit'>确定修改</button>
+    </view>
+
+</view>

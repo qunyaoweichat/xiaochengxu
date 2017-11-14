@@ -29,7 +29,7 @@
 
     <view class="index-main">
         <view class="inner">
-            <navigator  hover-class='hove' href="">
+            <navigator  hover-class='hove' href="./shopSet/shopSet">
                 <view class='main'>
                     <image mode='widthFix' src='/images/icon_logistics.png'></image>
                     <view class='text'>店铺设置</view>
