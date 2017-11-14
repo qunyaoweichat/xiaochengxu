@@ -47,8 +47,6 @@ Page({
                         let data = JSON.parse(res.data);
                         console.log(data);
                         if (data.retCode =="00000"){
-                            userInfor.userIcon = avatar;
-                            wx.setStorageSync('userInfor', userInfor)
                             wx.redirectTo({
                                 url: '../setIndex',
                             })

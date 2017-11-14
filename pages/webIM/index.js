@@ -3,6 +3,7 @@ var strophe = require('../../utils/strophe.js')
 var WebIM = require('../../utils/WebIM.js')
 var WebIM = WebIM.default
 
+// 语音的配置暂时留着， 后面如果需要的话再开发
 var RecordStatus = {
     SHOW: 0,
     HIDE: 1,
@@ -16,10 +17,42 @@ var RecordDesc = {
     2: '向上滑动取消',
     3: '松开手取消',
 }
-
+// 接收三个参数：数据，类型，是否是自己发的
+var MsgDataFactory = function(data,type,isSelf){
+    var msgData = {
+        type: type,
+        style: false,
+        chatType: 'singleChat',
+        secret: "",
+        chatHistory: '',
+        content: '',
+        url: '',
+        fileName: '',
+        fromUid: data.fromUid,
+        toUid: data.toUid,
+        msgId: data.msgId,
+        sendTime: WebIM.time()
+        
+    }
+    if (isSelf){
+        msgData.style=true;
+    }
+    switch(type){
+        case "img":
+            msgData.fileName = data.filename;
+            msgData.url = data.url;
+            break;
+        case "txt":
+            msgData.content = data.content
+    }
+    return msgData
+}
 Page({
     data: {
         chatMsg: [],
+        chatMsgPage:1,
+        chatMsgFlag:true,
+        chatMsgAll:false,
         emojiStr: '',
         toUid: '',
         fromUid: '',
@@ -39,9 +72,16 @@ Page({
         RecordStatus: RecordStatus,
         RecordDesc: RecordDesc,
         recordStatus: RecordStatus.HIDE,
+        
     },
     onLoad: function (options) {
         let that = this;
+<<<<<<< HEAD
+        let shopId = options.shopId ? options.shopId:"4";
+        // 获取环信数据（用户相关，店铺相关，聊天记录）
+        this.getHxData(shopId)
+       
+=======
         let fromUid = "16000272";
         let toUid = "16000275";
         this.setData({
@@ -60,45 +100,81 @@ Page({
         })
         this.hxloign();
 
+>>>>>>> b0f593685192bb7986df23fdef9cdd242ccbaac2
     },
     onShow: function () {
         this.setData({
             inputMessage: ''
         })
     },
+    getHxData: function (shopId){
+        wx.showLoading()
+        ajaxPost("huanxin/toHuanxinChat?shopId=" + shopId,{},data=>{
+            wx.hideLoading()
+            // 环信登录
+            this.hxloign(data.userHuanXin);
+            // 设置标题
+            wx.setNavigationBarTitle({
+                title: data.shopHuanXin.nickname,
+            })
+            this.setData({
+                fromUid: (data.userHuanXin.userId).toString(),
+                toUid: (data.shopHuanXin.userId).toString(),
+                chatMsg: data.huanxinChatInfo.chatList
+            })
+            setTimeout(() => {
+                this.setData({
+                    toView: this.data.chatMsg[this.data.chatMsg.length - 1].msgId
+                })
+            }, 10)
+        })
+    },
 
-    hxloign: function () {
+    hxloign: function (userHuanXin) {
         var options = {
             apiUrl: WebIM.config.apiURL,
-            user: this.data.fromUid,
-            pwd: '767269cce4004b2fa9e290f3ae3ed13f7183d1ad',
+            user: (userHuanXin.userId).toString(),
+            pwd: userHuanXin.huanxinPwd,
             grant_type: 'password',
             appKey: WebIM.config.appkey //应用key
         }
         WebIM.conn.open(options)
     },
-    // 获取聊天记录
-    getHistory: function (fromUid, toUid){
-        ajaxPost("huanxin/getHuanxinChatInfo", { fromUid:fromUid,toUid:toUid},data=>{
-            console.log(data)
-        })
-    },
-    saveMsgToServe: function (option, frome) {
-
-    },
-    bindMessage: function (e) {
-        this.setData({
-            userMessage: e.detail.value
-        })
-    },
-    cleanInput: function () {
-        var that = this
-        var setUserMessage = {
-            sendInfo: that.data.userMessage
+        // 由于现在聊天记录是一次返回的 所以暂时不调用
+    getHistory:function(){
+        var chatMsgFlag = this.data.chatMsgFlag;
+        var chatMsg = this.data.chatMsg;
+        if (!chatMsgFlag || chatMsg.length<10){
+            return
         }
-        that.setData(setUserMessage)
+        chatMsgFlag=false;
+        this.data.chatMsgPage+=1;
+        ajaxPost("huanxin/getHuanxinChatInfo", { page: this.data.chatMsgPage},data=>{
+            console.log(data);
+            // 如果大于0有数据 将数组连起来，如果等于0说明已经加载完了 显示已加载全部
+            if (data.chatList.length>0){
+                chatMsg = data.chatList.concat(chatMsg)
+                this.setData({
+                    chatMsgFlag: true
+                })
+                setTimeout(()=>{
+                    this.setData({
+                        chatMsg: chatMsg,
+                    })
+                },200)
+            }else{
+                this.setData({
+                    chatMsgFlag:false,
+                    chatMsgAll:true
+                })
+            }
+            
+            console.log(chatMsg)
+            // this.setData({
+            //     chatMsg: data.chatList
+            // })
+        })
     },
-    
     // 发送消息
     sendMessage: function () {
         if (!this.data.userMessage.trim()) return;
@@ -115,31 +191,30 @@ Page({
             }
         });
         WebIM.conn.send(msg.body);
-        
-        // return;
-        // 下面代码可以不要，这个是将数据添加到页面和保存本地的，后面直接调用方法，然后提交提交接口
+        // 整理数据然后保存到数据库
         if (msg) {
             var value = WebIM.parseEmoji(msg.value.replace(/\n/mg, ''))
-            var time = WebIM.time()
-            var msgData = {
-                info: {
-                    to: msg.body.to
-                },
-                username: fromUid,
-                toUid: msg.body.to,
-                msg: {
-                    type: msg.type,
-                    data: value
-                },
-                style: 'self',
-                time: time,
-                mid: msg.id
+            var data = {
+                fromUid: fromUid,
+                toUid: toUid,
+                msgId: id,
+                content: value[0].data
             }
+            var msgData = new MsgDataFactory(data, 'txt', true);
+            // 数据添加到页面，
             this.data.chatMsg.push(msgData)
+            // 数据保存到数据库
+            this.saveMsgToServe(msgData)
             this.setData({
                 userMessage: '',
                 chatMsg: this.data.chatMsg
             })
+            setTimeout(() => {
+                this.setData({
+                    toView: this.data.chatMsg[this.data.chatMsg.length - 1].msgId
+                })
+            }, 10)
+            
         }
     },
     
@@ -148,47 +223,35 @@ Page({
         console.log(msg)
         var fromUid = this.data.fromUid;
         var toUid = this.data.toUid;
+        var id = WebIM.conn.getUniqueId();
         if (msg.from == toUid || msg.to == toUid) {
             if (type == 'txt') {
                 var value = WebIM.parseEmoji(msg.data.replace(/\n/mg, ''))
-                
             } else if (type == 'emoji') {
                 var value = msg.data
             }
-            //console.log(msg)
-            //console.log(value)
-            var time = WebIM.time()
-            var msgData = {
-                info: {
-                    from: msg.from,
-                    to: msg.to
-                },
-                username: '',
-                toUid: msg.from,
-                msg: {
-                    type: type,
-                    data: value,
-                    url: msg.url
-                },
-                style: '',
-                time: time,
-                mid: msg.type + msg.id
+            var data = {
+                fromUid: msg.from,
+                toUid: msg.to,
+                msgId: id,
+                content: value[0].data
             }
-            if (msg.from == toUid) {
-                msgData.style = ''
-                msgData.username = msg.from
-            } else {
-                msgData.style = 'self'
-                msgData.username = msg.to
-            }
-            //console.log(msgData, that.data.chatMsg, that.data)
+            var msgData = new MsgDataFactory(data, 'txt', false);
+            // 数据添加到页面，
             this.data.chatMsg.push(msgData)
+            // 数据保存到数据库
+            this.saveMsgToServe(msgData)
             this.setData({
-                toView: this.data.chatMsg[this.data.chatMsg.length - 1].mid,
-                chatMsg: this.data.chatMsg,
+                chatMsg: this.data.chatMsg
             })
+            setTimeout(() => {
+                this.setData({
+                    toView: this.data.chatMsg[this.data.chatMsg.length - 1].msgId
+                })
+            }, 10)
         }
     },
+    // 选择图片
     sendImage: function () {
         var that = this;
         wx.chooseImage({
@@ -207,31 +270,29 @@ Page({
         console.log(msg,type)
         var fromUid = this.data.fromUid;
         var toUid = this.data.toUid;
-        //console.log(msg)
+        var id = WebIM.conn.getUniqueId();
         if (msg) {
             //console.log(msg)
-            var time = WebIM.time()
-            var msgData = {
-                info: {
-                    from: msg.from,
-                    to: msg.to
-                },
-                username: msg.from,
-                toUid: msg.from,
-                msg: {
-                    type: 'img',
-                    data: msg.url
-                },
-                style: '',
-                time: time,
-                mid: 'img' + msg.id
+            var data = {
+                fromUid: msg.from,
+                toUid: msg.to,
+                msgId: id,
+                url: msg.url,
+                fileName: msg.filename
             }
-            //console.log(msgData)
+            var msgData = new MsgDataFactory(data, 'img', false);
+            // 数据添加到页面，
             this.data.chatMsg.push(msgData)
+            // 数据保存到数据库
+            this.saveMsgToServe(msgData)
             this.setData({
-                toView: this.data.chatMsg[this.data.chatMsg.length - 1].mid,
                 chatMsg: this.data.chatMsg
             })
+            setTimeout(() => {
+                this.setData({
+                    toView: this.data.chatMsg[this.data.chatMsg.length - 1].msgId
+                })
+            }, 10)
         }
     },
     upLoadImage: function (res) {
@@ -267,8 +328,7 @@ Page({
                         success: function (res) {
                             var data = res.data
                             var dataObj = JSON.parse(data)
-                            // console.log(dataObj)
-                            var id = WebIM.conn.getUniqueId();                   // 生成本地消息id
+                            var id = WebIM.conn.getUniqueId();// 生成本地消息id
                             var msg = new WebIM.message('img', id);
                             var file = {
                                 type: 'img',
@@ -284,48 +344,36 @@ Page({
                             var option = {
                                 apiUrl: WebIM.config.apiURL,
                                 body: file,
-                                to: toUid,                  // 接收消息对象
+                                to: toUid,
                                 roomType: false,
                                 chatType: 'singleChat'
                             }
                             msg.set(option)
                             WebIM.conn.send(msg.body)
+
+                            // 数据展示和保存到库
                             if (msg) {
-                                //console.log(msg,msg.body.body.url)
-                                var time = WebIM.time()
-                                var msgData = {
-                                    info: {
-                                        to: msg.body.to
-                                    },
-                                    username: fromUid,
-                                    toUid: msg.body.to,
-                                    msg: {
-                                        type: msg.type,
-                                        data: msg.body.body.url,
-                                        size: {
-                                            width: msg.body.body.size.width,
-                                            height: msg.body.body.size.height,
-                                        }
-                                    },
-                                    style: 'self',
-                                    time: time,
-                                    mid: msg.id
+                                var data = {
+                                    fromUid: fromUid,
+                                    toUid: toUid,
+                                    msgId:id,
+                                    url: file.url,
+                                    fileName: file.filename
                                 }
+                                var msgData = new MsgDataFactory(data, 'img', true);
+                                console.log(msgData)
+                                // 数据添加到页面，
                                 that.data.chatMsg.push(msgData)
-                                wx.setStorage({
-                                    key: toUid + fromUid,
-                                    data: that.data.chatMsg,
-                                    success: function () {
-                                        that.setData({
-                                            chatMsg: that.data.chatMsg
-                                        })
-                                        setTimeout(function () {
-                                            that.setData({
-                                                toView: that.data.chatMsg[that.data.chatMsg.length - 1].mid
-                                            })
-                                        }, 10)
-                                    }
+                                // 数据保存到数据库
+                                that.saveMsgToServe(msgData)
+                                that.setData({
+                                    chatMsg: that.data.chatMsg
                                 })
+                                setTimeout(() => {
+                                    that.setData({
+                                        toView: that.data.chatMsg[that.data.chatMsg.length - 1].msgId
+                                    })
+                                }, 10)
                             }
                         },
                         
@@ -336,6 +384,35 @@ Page({
                 console.log(res)
             }
         })
+    },
+    // 保存聊天记录到数据库
+    saveMsgToServe: function (params) {
+        params={
+            fromUid: (params.fromUid).toString(),
+            toUid: (params.toUid).toString(),
+            content: params
+        }
+        // 接口要时间戳，在这里转下
+        var sendTime = Date.parse(new Date(params.content.sendTime))
+        sendTime = sendTime / 1000
+        params.content.sendTime = sendTime;
+        
+        ajaxPost("huanxin/saveHuanxinChat", params, data => {
+            
+        },err=>{
+        })
+    },
+    bindMessage: function (e) {
+        this.setData({
+            userMessage: e.detail.value
+        })
+    },
+    cleanInput: function () {
+        var that = this
+        var setUserMessage = {
+            sendInfo: that.data.userMessage
+        }
+        that.setData(setUserMessage)
     },
     focus: function () {
         this.setData({

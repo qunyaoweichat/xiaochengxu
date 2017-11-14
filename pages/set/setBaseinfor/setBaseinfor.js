@@ -52,15 +52,6 @@ Page({
         this.setData({ errMsg: '' });
         wx.showLoading()
         ajaxPost('user/editUser', params, (res) => {
-            let userInfor = wx.getStorageSync("userInfor");
-            userInfor.userName = params.nickname;
-            userInfor.userSex = params.userSex;
-            userInfor.realName = params.realName;
-            userInfor.idCard = params.idCard;
-            wx.setStorage({
-                key: 'userInfor',
-                data: userInfor,
-            })
             wx.showToast({
                 title: '修改成功',
             })
