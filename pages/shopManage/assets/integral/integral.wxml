@@ -25,8 +25,7 @@
     </view>
     
     <view class="item">
-        <view><navigator hover-class='none' url=''>回收</navigator></view>
-        <view><navigator hover-class='none' url=''>增送</navigator></view>
+        <view><navigator hover-class='none' url='../integralRecord/integralRecord'>收支明细</navigator></view>
     </view>
 
 

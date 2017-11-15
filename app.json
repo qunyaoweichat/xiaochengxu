@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/shopManage/orderManage/orderList/orderList",
         "pages/shopManage/index",
         "pages/shopManage/shopChoice/shopChoice",
         "pages/shopManage/shopGrade/shopGrade",
@@ -25,7 +26,7 @@
         "pages/shopManage/orderManage/orderClose/orderClose",
         "pages/shopManage/orderManage/orderChangePrice/orderChangePrice",
         "pages/shopManage/orderManage/orderDetail/orderDetail",
-        "pages/shopManage/orderManage/orderList/orderList",
+        
         "pages/shopManage/statistics/statisticsReport/statisticsReport",
         "pages/shopManage/statistics/statisticsAnalysis/statisticsAnalysis",
         "pages/shopManage/statistics/statisticsIndex/statisticsIndex",
@@ -35,12 +36,12 @@
         "pages/shopManage/assets/withdrawalsDetailed/withdrawalsDetailed",
         "pages/shopManage/assets/withdrawalsRecord/withdrawalsRecord",
         "pages/shopManage/assets/withdrawals/withdrawals",
-        "pages/shopManage/assets/rechargeRecord/rechargeRecord",
-        "pages/shopManage/assets/rechargeDetailed/rechargeDetailed",
         "pages/shopManage/assets/recharge/recharge",
+        "pages/shopManage/assets/rechargeDetailed/rechargeDetailed",
+        "pages/shopManage/assets/rechargeRecord/rechargeRecord",
         "pages/shopManage/assets/shopRevenueRecord/shopRevenueRecord",
-        "pages/shopManage/assets/shopBalance/shopBalance",
         "pages/shopManage/assets/shopRevenue/shopRevenue",
+        "pages/shopManage/assets/shopBalance/shopBalance",
         "pages/webIM/index",
         "pages/shop/index",
         "pages/shop/shopFilter/shopFilter",

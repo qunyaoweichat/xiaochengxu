@@ -1,6 +1,6 @@
 <!-- 积分明细 -->
 <view class="form-record">
-    <navigator hover-class='none' url='../rechargeDetailed/rechargeDetailed'>
+    <navigator hover-class='none' url=''>
         <view class='list'>
             <view class="row">
                 <view class="c">订单入账</view>
@@ -12,7 +12,7 @@
             </view>
         </view>
     </navigator>
-    <navigator hover-class='none' url='../rechargeDetailed/rechargeDetailed'>
+    <navigator hover-class='none' url=''>
         <view class='list'>
             <view class="row">
                 <view class="c">积分券采购</view>
@@ -24,7 +24,7 @@
             </view>
         </view>
     </navigator>
-    <navigator hover-class='none' url='../rechargeDetailed/rechargeDetailed'>
+    <navigator hover-class='none' url=''>
         <view class='list'>
             <view class="row">
                 <view class="c ">赠送</view>

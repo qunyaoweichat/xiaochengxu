@@ -51,9 +51,9 @@
             <view class="order-statistics">共3件，合计：￥600.00（免运费）</view>
             <view class="order-ctrl">
                 <view class="ul">
-                    <view class="li"><navigator href="">改价</navigator></view>
-                    <view class="li"><navigator href="">关闭</navigator></view>
-                    <view class="li"><navigator href="">备注</navigator></view>
+                    <view class="li"><navigator hover-class='none' url="../orderChangePrice/orderChangePrice">改价</navigator></view>
+                    <view class="li"><navigator hover-class='none' url="../orderClose/orderClose">关闭</navigator></view>
+                    <view class="li"><navigator hover-class='none' url="../orderRemark/orderRemark">备注</navigator></view>
                 </view>
             </view>
         </view> 
@@ -102,8 +102,8 @@
             <view class="order-statistics">共3件，合计：￥600.00（免运费）</view>
             <view class="order-ctrl">
                 <view class="ul">
-                    <view class="li"><navigator href="">发货</navigator></view>
-                    <view class="li"><navigator href="">备注</navigator></view>
+                    <view class="li"><navigator hover-class='none' url="../orderSend/orderSend">发货</navigator></view>
+                    <view class="li"><navigator hover-class='none' url='../orderRemark/orderRemark'>备注</navigator></view>
                 </view>
             </view>
         </view> 
@@ -152,7 +152,7 @@
             <view class="order-statistics">共3件，合计：￥600.00（免运费）</view>
             <view class="order-ctrl">
                 <view class="ul">
-                    <view class="li"><navigator href="">查看物流</navigator></view>
+                    <view class="li"><navigator hover-class='none' url=''>查看物流</navigator></view>
                     <view class="li"><navigator href="">备注</navigator></view>
                 </view>
             </view>

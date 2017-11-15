@@ -51,4 +51,7 @@
         <button type="primary" formType="submit">提交申请</button>
     </view>
 
+    <view class='record'>
+        <navigator hover-class='none' url='../withdrawalsRecord/withdrawalsRecord'>提现记录</navigator>
+    </view>
 </view>

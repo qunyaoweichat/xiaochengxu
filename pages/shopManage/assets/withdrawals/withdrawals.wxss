@@ -88,3 +88,10 @@
     border: solid 1px #65ae51;
     border-radius: 5px;
 }
+.withdrawals .record{
+    text-align: center;
+    color:#3eb135; 
+}
+.withdrawals .record navigator{
+    display: inline-block;
+}

@@ -30,4 +30,8 @@
         <button class='yhk' type="primary" formType="submit">银行卡支付</button>
     </view>
 
+    <view class='record'>
+        <navigator hover-class='none' url='../rechargeRecord/rechargeRecord'>充值记录</navigator>
+    </view>
+
 </view>

@@ -54,7 +54,7 @@
     </view>
     <view class='title'>标签</view>
     <view class='tag'>
-        <navigator hover-class='none'>
+        <navigator hover-class='none' url='../memberTag/memberTag'>
             <text class='iconfont icon-right'></text>
             <view class='inner clearfix'>
                 <view>花痴</view>

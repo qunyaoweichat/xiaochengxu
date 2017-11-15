@@ -12,6 +12,7 @@
 .shop-balance .item{
     margin-top: 15px;
     background-color: #fff;
+    color:#3eb135;
     display: flex;
 }
 .shop-balance .item view{

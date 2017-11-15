@@ -30,6 +30,16 @@
 	color: #666666;
 	padding: 15px;
 }
+.recharge .record{
+    text-align: center;
+    color:#3eb135; 
+}
+.recharge .record navigator{
+    display: inline-block;
+}
+.public-btn{
+   padding:10px 8px ;
+}
 .public-btn .zfb{
     background-color: #29b6f6;
 }

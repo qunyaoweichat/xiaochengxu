@@ -2,7 +2,7 @@
 <view class='shop-revenue'>
     <view class='charts'></view>
     <view class='public-list'>
-        <navigator hover-class='none' url=''>
+        <navigator hover-class='none' url='../shopBalance/shopBalance'>
             <view class='item'>
                 <view class='lf'>账户可用余额</view>
                 <view class='iconfont icon-right'></view>
@@ -25,7 +25,7 @@
                 <view class='middle'>￥111.00</view>
             </view>
         </navigator>
-        <navigator hover-class='none' url=''>
+        <navigator hover-class='none' url='../integral/integral'>
             <view class='item'>
                 <view class='lf'>积分</view>
                 <view class='iconfont icon-right'></view>
@@ -35,7 +35,7 @@
     </view>
     
     <view class='public-list'>
-        <navigator hover-class='none' url=''>
+        <navigator hover-class='none' url='../transactionRecord/transactionRecord'>
             <view class='item'>
                 <view class='lf'>交易记录</view>
                 <view class='iconfont icon-right'></view>

@@ -9,8 +9,9 @@
     </view>
     
     <view class="item">
-        <view><navigator hover-class='none' url=''>提现</navigator></view>
-        <view><navigator hover-class='none' url=''>提现</navigator></view>
+        <view><navigator hover-class='none' url='../withdrawals/withdrawals'>提现</navigator></view>
+        <view><navigator hover-class='none' url='../recharge/recharge'>充值</navigator></view>
+        <view><navigator hover-class='none' url='../shopRevenueRecord/shopRevenueRecord'>收支明细</navigator></view>
     </view>
 
 

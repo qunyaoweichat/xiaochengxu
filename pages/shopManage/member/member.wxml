@@ -18,8 +18,8 @@
     </view>
 
     <view class="withdrawals">
-        <view class="bank">
-            <navigator hover-class='none'>
+        <view class="bank" wx:for="{{[1,2,3]}}">
+            <navigator hover-class='none' url='../memberData/memberData'>
                 <view class="pic">
                     <image src="/images/ka1.jpg"></image>
                 </view>
@@ -30,30 +30,8 @@
                 </view>
             </navigator>
         </view>
-        <view class="bank">
-            <navigator hover-class='none'>
-                <view class="pic">
-                    <image src="/images/ka1.jpg"></image>
-                </view>
-                <text class='iconfont icon-right'></text>
-                <view class="inner clearfix">
-                    <view class='c1'>花痴</view>
-                    <view class='c2'>最后一次登录2008.10.10</view>
-                </view>
-            </navigator>
-        </view>
-        <view class="bank">
-            <navigator hover-class='none'>
-                <view class="pic">
-                    <image src="/images/ka1.jpg"></image>
-                </view>
-                <text class='iconfont icon-right'></text>
-                <view class="inner clearfix">
-                    <view class='c1'>花痴</view>
-                    <view class='c2'>最后一次登录2008.10.10</view>
-                </view>
-            </navigator>
-        </view>
+
+
         
     </view>
 

@@ -1,3 +1,33 @@
+<view class="tabBar">
+    <view class='tabBar-item on' bindtap='goMineIndex'>
+        <navigator hover-class="none" open-type='navigateBack' url='../shop/index'>
+            <view>
+                <text class='iconfont icon-yanjing'></text>
+            </view>
+            <view class='text'>查看店铺</view>
+        </navigator>
+    </view>
+
+    <view class='tabBar-item {{collector?"collector":""}}' bindtap='collector'>
+        <navigator hover-class="none" url='../shopCode/shopCode'>
+            <view>
+                <text class='iconfont icon-erweima'></text>
+            </view>
+            <view class='text'>店铺二维码</view>
+        </navigator>
+    </view>
+
+    <view class='tabBar-item' bindtap='contactBuss'>
+        <navigator hover-class="none" url='../webIM/index'>
+            <view>
+                <text class='iconfont icon-tuiguang'></text>
+            </view>
+            <view class='text'>推广</view>
+        </navigator>
+    </view>
+
+</view>
+
 <view class='shop-set'>
     <view class='title'>基本资料</view>
     <form >
@@ -13,6 +43,7 @@
                 <view class='text'>店铺名称</view>
                 <input class='inputs' placeholder="请输入您的店铺名称" />
             </view>
+            
 
             <view class='item'>
                 <view class='text'>创建时间</view>
@@ -34,5 +65,4 @@
     <view class='public-btn'>
         <button type='primary' form-type='submit'>确定</button>
     </view>
-
 </view>
