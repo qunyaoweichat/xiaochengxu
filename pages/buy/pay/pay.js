@@ -44,6 +44,7 @@ Page({
             })
         }, (error) => {
             console.log(error)
+            
         })
     },
     radioChange: function (e) {

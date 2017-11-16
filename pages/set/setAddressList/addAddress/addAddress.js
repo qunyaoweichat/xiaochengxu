@@ -90,8 +90,6 @@ Page({
         this.setData({
             errMsg: ""
         })
-        console.log(params);
-        return;
         ajaxPost('mine/addAddress', params, (data) => {
             this.prevPage.setData({
                 address:{

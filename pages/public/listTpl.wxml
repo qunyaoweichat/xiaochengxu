@@ -2,7 +2,7 @@
 <template name='empty' >
     <view class='no-data'>
         <view class='pic'>
-            <image mode='widthFix' src='../../../../images/news-not.png'></image>
+            <image mode='widthFix' src='/images/news-not.png'></image>
         </view>
         <view wx:if='{{emptyText}}' class='no-data-text'>{{emptyText}}</view>
         <view wx:else class='no-data-text'>暂无数据</view>

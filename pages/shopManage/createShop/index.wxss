@@ -1,11 +1,13 @@
 /* 开店 */
-.create-shop .title{
+
+.create-shop .title {
     text-align: center;
     line-height: 40px;
     margin-top: 10px;
     color: #888;
 }
-.create-shop .tab{
+
+.create-shop .tab {
     display: flex;
     margin: 0 15px;
     line-height: 40px;
@@ -13,60 +15,77 @@
     background-color: #fff;
     border: solid 1px #ddd;
 }
-.create-shop .tab .step{
+
+.create-shop .tab .step {
     flex: 1;
     text-align: center;
 }
-.create-shop .tab .step{
+
+.create-shop .tab .step {
     border-right: solid 1px #ddd;
 }
-.create-shop .tab .step:last-child{
-    border-right:none;
+
+.create-shop .tab .step:last-child {
+    border-right: none;
 }
-.create-shop .tab  .selected{
+
+.create-shop .tab  .selected {
     background-color: #65ae51;
     color: #fff;
 }
 
+.create-shop .tips {
+    margin: 20px 20px 0;
+}
 
 /* 店铺资料 */
-.data .form-list .item{
-    padding:12px 10px;
 
+.data .form-list .item {
+    padding: 12px 10px;
 }
+
 .data .form-list .item .text {
-    line-height:none;
+    line-height: none;
 }
-.data .form-list textarea{
+
+.data .form-list textarea {
     height: 20px;
     margin-top: 5px;
 }
 
 /* 店铺模板 */
-.template{
-    padding: 0 15px;
-}
-.template .row{
-    display: flex;
-    margin-bottom: 15px;
-}
-.template .row .pic{
-   border: solid 1px #e5e5e5;
-   background: #f2f2f2;
-    flex: 1;
-    margin-right: 12px;
+
+.template {
+    padding: 0 2%;
 }
 
-.template .pic image{
-    width: 100%;
+.template .row {
+    display: flex;
+    flex-wrap:wrap;
     
 }
-.template .row .pic:last-child{
+
+.template .row .pic {
+    background: #f2f2f2;
+    width: 50%;
+    
+}
+
+.template .pic image {
+    width: 90%;
+    margin: 5%;
+    border: 1px solid transparent
+}
+.template .row .pic.selected image{
+    border: 1px solid #65ae51
+}
+.template .row .pic:last-child {
     margin-right: 0;
 }
 
 /* 店铺创建成功 */
-.success{
+
+.success {
     color: #888;
     padding: 12px;
     margin-top: 15px;
@@ -74,34 +93,42 @@
     border-top: solid 1px #e5e5e5;
     border-bottom: solid 1px #e5e5e5;
 }
-.success:first-child{
+.success.selected{
+    border-color: #65ae51
+}
+.success:first-child {
     margin-top: 0px;
 }
-.success .lf .nav{
+
+.success .lf .nav {
     margin-bottom: 5px;
     color: #000;
     font-size: 14px;
 }
 
-.success .lf view{
+.success .lf view {
     font-size: 12px;
     line-height: 20px;
 }
-.success .rg{
+
+.success .rg {
     float: right;
     width: 100px;
     text-align: right;
 }
-.success .rg .num{
-    color: #E51C23;
+
+.success .rg .num {
+    color: #e51c23;
     font-size: 22px;
     margin-top: 10px;
     margin-bottom: 5px;
 }
-.success .rg view{
+
+.success .rg view {
     line-height: 22px;
 }
-.success .rg .price{
+
+.success .rg .price {
     color: #000;
     text-decoration: line-through;
 }

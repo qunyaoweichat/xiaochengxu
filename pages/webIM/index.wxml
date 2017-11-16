@@ -8,7 +8,8 @@
         </view>
     </view>
     <scroll-view scroll-y="true" bindscrolltoupper='getHistory' class="scroll_view" class="{{ view }}" bindtap="cancelEmoji" scroll-into-view="{{ toView }}">
-        <view wx-if="{{chatMsgAll}}">已加载全部</view>
+        <view wx-if='{{chatMsgFlag}}' class='getmsg-tips'>加载中..</view>
+        <view wx-if="{{chatMsgAll}}" class='getmsg-tips'>已加载全部</view>
         <view class="message" wx:for="{{ chatMsg }}" wx:key="" id="{{ item.msgId }}">
             <view class="time">
                 <text>{{item.sendTime}}</text>

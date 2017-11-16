@@ -1,4 +1,5 @@
 <import src="../public/listTpl.wxml" />
+<block wx:if='{{cartList.length>0}}'>
 <view class='shop-item' wx:for="{{cartList}}" wx:index='index' wx:for-item='shop' wx:key='shop'>
     <view class='shop-infor clearfix'>
         <checkbox data-index='{{index}}' data-checked='{{shop.checked}}' checked='{{shop.checked}}' bindtap='checkShop'></checkbox>
@@ -49,6 +50,7 @@
         结算
     </view>
 </view>
-<view wx:if='{{cartList.length==0}}'>
+</block>
+<view wx:else>
     <template is="empty" data="{{emptyText}}"/>
 </view>

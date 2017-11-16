@@ -6,6 +6,8 @@ Page({
      */
     data: {
         page:0,
+        loadAll:false,
+        list:[]
     },
 
     /**
@@ -17,7 +19,7 @@ Page({
     },
     getData: function () {
         let loadAll = this.data.loadAll;
-        let list = this.data.list ? this.data.list : [];
+        let list = this.data.list;
         let page = this.data.page;
         // 如果全加载了 就不再请求
         if (loadAll){

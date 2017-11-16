@@ -121,21 +121,19 @@
         </view>
     </view>
 
-    <view class='info-list'>
+    <!-- <view class='info-list'>
         <view class='inner '>
             <navigator url='../buy/index' hover-class="none">
                 <text>购物车</text>
                 <text class='iconfont icon-right'></text>
             </navigator>
         </view>
-    </view>
+    </view> -->
 
     <view class='info-list'>
         <view class='inner '>
-            <navigator url='integral/integral' hover-class="none">
-                <text>积分商城</text>
-                <text class='iconfont icon-right'></text>
-            </navigator>
+            <text>积分商城</text>
+            <text class='iconfont icon-right'></text>
         </view>
     </view>
 
@@ -185,6 +183,7 @@
             </view>
             <view class='content'>
                 <image src='/images/icon_yqhy.png'></image>
+                <button open-type="share" class='share-btn'></button>
                 <view>邀请好友</view>
             </view>
             <view class='content'>

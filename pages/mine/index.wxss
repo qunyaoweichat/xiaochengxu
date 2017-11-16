@@ -107,6 +107,7 @@
     flex: 1;
     min-width: 0;
     text-align: center;
+    position: relative;
 }
 .info-list .content-out .content image{
     height: 40px;
@@ -123,8 +124,18 @@
 .info-list .content-out .content view text{
     color: red;
 }
-
-
+.info-list .share-btn{
+    background: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+.info-list .share-btn::after{
+    display: none;
+}
 .shopIndex-cover{
     position: fixed;
     width: 100%;

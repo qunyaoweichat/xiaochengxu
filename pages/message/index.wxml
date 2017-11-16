@@ -8,10 +8,10 @@
                 </view>
                 <view class='text'>
                     <view class='tt'>
-                        <text class='c1'>{{list[0].newsTitle}}</text>
-                        <text class='c2'>{{list[0].newsTime}}</text>
+                        <text class='c1'>{{newsList[0].newsTitle}}</text>
+                        <text class='c2'>{{newsList[0].newsTime}}</text>
                     </view>
-                    <text class='xx'>{{list[0].newsContent}}</text>
+                    <text class='xx'>{{newsList[0].newsContent}}</text>
                 </view>
             </view>
         </navigator>
@@ -22,10 +22,10 @@
                 </view>
                 <view class='text'>
                     <view class='tt'>
-                        <text class='c1'>{{list[1].newsTitle}}</text>
-                        <text class='c2'>{{list[1].newsTime}}</text>
+                        <text class='c1'>{{newsList[1].newsTitle}}</text>
+                        <text class='c2'>{{newsList[1].newsTime}}</text>
                     </view>
-                    <text class='xx'>{{list[1].newsContent}}</text>
+                    <text class='xx'>{{newsList[1].newsContent}}</text>
                 </view>
             </view>
         </navigator>
@@ -36,10 +36,10 @@
                 </view>
                 <view class='text'>
                     <view class='tt'>
-                        <text class='c1'>{{list[2].newsTitle}}</text>
-                        <text class='c2'>{{list[2].newsTime}}</text>
+                        <text class='c1'>{{newsList[2].newsTitle}}</text>
+                        <text class='c2'>{{newsList[2].newsTime}}</text>
                     </view>
-                    <text class='xx'>{{list[2].newsContent}}</text>
+                    <text class='xx'>{{newsList[2].newsContent}}</text>
                 </view>
             </view>
         </navigator>
@@ -50,33 +50,18 @@
     <view class='notice-index'>
         <view class='title'>
             最近联系人
-        </view>
-
-        <navigator hover-class='none'>
+        </view>        
+        <navigator hover-class='none' wx:for='{{list}}' url='../webIM/index?shopId={{item.userHuanxinChatBo.toUid}}'>
             <view class='list'>
                 <view class='pic'>
                     <image src='../../../images/order1.jpg'></image>
                 </view>
                 <view class='text'>
                     <view class='tt'>
-                        <text class='c1'>群邀头条</text>
-                        <text class='c2'>2017-9-9</text>
+                        <text class='c1'>{{item.nickname}}</text>
+                        <text class='c2'>{{item.userHuanxinChatBo.sendTime}}</text>
                     </view>
-                    <text class='xx'>好</text>
-                </view>
-            </view>
-        </navigator>
-        <navigator hover-class='none'>
-            <view class='list'>
-                <view class='pic'>
-                    <image src='../../../images/order1.jpg'></image>
-                </view>
-                <view class='text'>
-                    <view class='tt'>
-                        <text class='c1'>群邀头条</text>
-                        <text class='c2'>2017-9-9</text>
-                    </view>
-                    <text class='xx'>66666666</text>
+                    <text class='xx'>{{item.userHuanxinChatBo.content}}</text>
                 </view>
             </view>
         </navigator>

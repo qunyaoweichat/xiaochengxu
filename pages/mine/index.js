@@ -92,6 +92,16 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-
+        var shopId = wx.getStorageSync('shopId')
+        return {
+            title: "您的好友邀请您来群邀商城",
+            path: 'pages/shop/index?shopId='+shopId,
+            success: function (res) {
+                // 转发成功
+            },
+            fail: function (res) {
+                // 转发失败
+            }
+        }
     }
 })

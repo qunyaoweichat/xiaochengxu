@@ -1,26 +1,27 @@
 <!-- 开店 -->
+<view wx:if="{{errMsg}}" class='error-msg '>{{errMsg}}</view>
 <view class='create-shop'>
-    <view class='title'>开通店铺只需三步</view>
+    <view class='title'>开通店铺只需三步{{creatShopStep}}</view>
     <view class='tab'>
-        <view class='step selected'>1.店铺资料</view>
-        <view class='step'>2.选择模板</view>
-        <view class='step'>3.开通</view>
+        <view class='step {{creatShopStep==1?"selected":""}}'>1.店铺资料</view>
+        <view class='step {{creatShopStep==2?"selected":""}}'>2.选择模板</view>
+        <view class='step {{creatShopStep==3?"selected":""}}'>3.开通</view>
     </view>
 
     <!-- 第一步 店铺资料-->
-    <view class='data'  wx:if='{{false}}'>
-        <form>
+    <view class='data'  wx:if='{{creatShopStep==1}}'>
+        <form bindsubmit='submitShopInfor'>
             <view class='form-list'>
                 <view class='item'>
                     <view class='text'>店铺名称</view>
-                    <input class='inputs' name='name' placeholder="创建后只能修改一次" />
+                    <input class='inputs' name='shopName' placeholder="创建后只能修改一次" />
                 </view>
 
                 <view class='item clearfix'>
                     <view class='text'>主营类目</view>
-                    <picker bindchange="changeClass" value="{{index}}"  range="{{[1,2,3,4,5]}}">
+                    <picker bindchange="changeCategory" name='categoryId' range="{{categoryList}}" range-key="name">
                         <view class="picker">
-                            <text wx:if='{{classss}}'>{{classss}}</text>
+                            <text wx:if='{{categoryName}}'>{{categoryName}}</text>
                             <text wx:else>请选择类目</text>
                         </view>
                     </picker>
@@ -28,74 +29,54 @@
 
                 <view class='item clearfix'>
                     <view class='text'>店铺地址</view>
-                    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{[1,2,3,4,5]}}">
+                    <picker mode='region' bindchange="bindRegionChange" name="areaInfo" value="{{addressArea}}">
                         <view class="picker">
-                            当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+                            {{addressArea[0]}} {{addressArea[1]}} {{addressArea[2]}}
                         </view>
                     </picker>
                 </view>
-
-
                 <view class='item clearfix'>
                     <view class='text'>详细地址</view>
-                    <textarea class='inputs' placeholder="请输入详细地址"></textarea>
+                    <textarea class='inputs' name="address" placeholder="请输入详细地址"></textarea>
                 </view>
+            </view>
+            <view class='tips'>创建店铺代表您同意 《群邀代理销售服务和结算协议》 和 《担保交易服务协议》</view>
+            <view class='public-btn'>
+                <button type='primary' form-type='submit'>下一步</button>
             </view>
         </form>
     </view>
 
     <!-- 选择模板 -->
-    <view class='template' wx:if='{{false}}'>
+    <view class='template' wx:if='{{creatShopStep==2}}'>
         <view class='row'>
-            <view class='pic'>
-                <image mode='widthFix' src="/images/template1.jpg"></image>
-            </view>
-            <view class='pic'>
-                <image mode='widthFix' src="/images/template1.jpg"></image>
+            <view class='pic {{tplId==item.id?"selected":""}}' wx:for="{{tempList}}" wx:key='tpl' data-id='{{item.id}}' bindtap='selectTpl'>
+                <image mode='widthFix' src="{{item.img}}"></image>
             </view>
         </view>
-
-        <view class='row'>
-            <view class='pic'>
-                <image mode='widthFix' src="/images/template1.jpg"></image>
-            </view>
-            <view class='pic'>
-                <image mode='widthFix' src="/images/template1.jpg"></image>
-            </view>
+        <view class='public-btn'>
+            <button type='primary' bindtap='submitTpl'>下一步</button>
         </view>
     </view>
 
     <!-- 创建成功 -->
-    <view class='success-out'>
-        <view class='success'>
+    <view class='success-out' wx:if='{{creatShopStep==3}}'>
+        <view class='success clearfix {{goodsId==item.goodsId?"selected":""}}' data-id="{{item.goodsId}}" wx:for='{{goodsList}}' wx:key='price' bindtap='selectGoods'> 
             <view class='rg'>
-                <view class='num'>￥2999</view>
-                <view class='price'>原价：￥99999</view>
+                {{goodsId}}{{item.goodsId}}
+                <view class='num'>￥{{item.price}}</view>
+                <view class='price'>原价：￥{{item.marketPrice}}</view>
                 <view>可开发票</view>
             </view>
             <view class='lf'>
-                <view class='nav'>微商开通一年</view>
+                <view class='nav'>{{item.goodsName}}</view>
                 <view>完整的微商系统</view>
                 <view>7*12小时客服</view>
                 <view>丰富的微商工具及多彩的积分商城</view>
             </view>
         </view>
-        <view class='success'>
-            <view class='rg'>
-                <view class='num'>￥2999</view>
-                <view class='price'>原价：￥99999</view>
-                <view>可开发票</view>
-            </view>
-            <view class='lf'>
-                <view class='nav'>微商开通一年</view>
-                <view>完整的微商系统</view>
-                <view>7*12小时客服</view>
-                <view>丰富的微商工具及多彩的积分商城</view>
-            </view>
+        <view class='public-btn'>
+            <button type='primary' bindtap='payOrder'>立即支付即可开通</button>
         </view>
-        
     </view>
-
-
-
 </view>

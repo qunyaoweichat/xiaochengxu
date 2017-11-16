@@ -26,13 +26,12 @@ Page({
         // 筛选里面的以选中的数据
         condition:{},
         // 是否已经加载全部
-        loadAll:false,
-        // 已选中筛选条件列表
+        loadAll:false
     },
     
     onLoad: function (options) {
        
-        let shopId = options.shopId ? options.shopId : 4;
+        let shopId = options.shopId;
         let groupId = options.groupId ? options.groupId : "";
         let groupName = options.groupName ? options.groupName : "最新商品";
         // 初始化一个空的实例获取到参数
@@ -221,9 +220,9 @@ Page({
         let selectConditions = this.data.selectConditions;
         let conditionList = this.data.conditionList;
         conditionList.price[index].checked = !conditionList.price[index].checked;
-        // 当checked为true的时候加入数组，为false的时候从数组移除
+        // 当checked为true的时候加入数组，为false的时候从数组移除Array
         if (conditionList.price[index].checked) {
-            selectConditions.priceList.push({ minPrice: minPrice }, { maxPrice: maxPrice})
+            selectConditions.priceList.push({ minPrice: minPrice, maxPrice: maxPrice })
         } else {
             for (var i = 0; i < selectConditions.priceList.length; i++) {
                 if (selectConditions.priceList[i].minPrice == minPrice && selectConditions.priceList[i].maxPrice == maxPrice) {

@@ -10,3 +10,6 @@
 .get-code~.input{
     width: 50%;
 }
+.get-code[disabled]{
+    color: #ccc
+}

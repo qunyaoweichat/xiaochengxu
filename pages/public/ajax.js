@@ -10,7 +10,11 @@ function ajaxPost(url,params,callBack,errCallBack){
     if (!loginInfor){
         loginInfor= new Object();
     }
-    params.total=5;
+    
+    if (!params.total){
+        params.total = 10;
+    }
+    
     wx.request({
         url: apiHost+url,
         method: 'post',

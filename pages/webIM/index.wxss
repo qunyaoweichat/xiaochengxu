@@ -292,6 +292,9 @@
   justify-content: center;
   align-items: center;
 }
-
+.getmsg-tips{
+    text-align: center;
+    margin: 5px 0
+}
 
 

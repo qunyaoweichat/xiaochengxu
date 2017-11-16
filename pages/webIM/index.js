@@ -1,3 +1,4 @@
+
 import { ajaxPost} from '../public/ajax.js';
 var strophe = require('../../utils/strophe.js')
 var WebIM = require('../../utils/WebIM.js')
@@ -39,7 +40,7 @@ var MsgDataFactory = function(data,type,isSelf){
     }
     switch(type){
         case "img":
-            msgData.fileName = data.filename;
+            msgData.fileName = data.fileName;
             msgData.url = data.url;
             break;
         case "txt":
@@ -51,6 +52,7 @@ Page({
     data: {
         chatMsg: [],
         chatMsgPage:1,
+        chatMsgTotal:10,
         chatMsgFlag:true,
         chatMsgAll:false,
         emojiStr: '',
@@ -75,32 +77,9 @@ Page({
         
     },
     onLoad: function (options) {
-        let that = this;
-<<<<<<< HEAD
         let shopId = options.shopId ? options.shopId:"4";
         // 获取环信数据（用户相关，店铺相关，聊天记录）
         this.getHxData(shopId)
-       
-=======
-        let fromUid = "16000272";
-        let toUid = "16000275";
-        this.setData({
-            fromUid: fromUid,
-            toUid: toUid
-        })
-        // 获取聊天记录，暂时从本地取，后面会从接口获取
-        this.getHistory(fromUid, toUid)
-
-        var history = wx.getStorageSync(toUid + fromUid);
-        this.setData({
-            chatMsg: history ? history:[]
-        })
-        wx.setNavigationBarTitle({
-            title: toUid,
-        })
-        this.hxloign();
-
->>>>>>> b0f593685192bb7986df23fdef9cdd242ccbaac2
     },
     onShow: function () {
         this.setData({
@@ -140,39 +119,47 @@ Page({
         }
         WebIM.conn.open(options)
     },
-        // 由于现在聊天记录是一次返回的 所以暂时不调用
-    getHistory:function(){
+    getHistory: function () {
         var chatMsgFlag = this.data.chatMsgFlag;
         var chatMsg = this.data.chatMsg;
-        if (!chatMsgFlag || chatMsg.length<10){
+        var scrollItem = this.data.chatMsg[0].msgId;//加载成功后要滚动到的位置
+        if (!chatMsgFlag || chatMsg.length < 10) {
             return
         }
-        chatMsgFlag=false;
-        this.data.chatMsgPage+=1;
-        ajaxPost("huanxin/getHuanxinChatInfo", { page: this.data.chatMsgPage},data=>{
+        this.setData({
+            chatMsgFlag: false
+        })
+        this.data.chatMsgPage += 1;
+        ajaxPost("huanxin/getHuanxinChatInfo", { 
+            page: this.data.chatMsgPage, 
+            pageSize: this.data.chatMsgTotal, 
+            fromUid: this.data.fromUid, 
+            toUid: this.data.toUid
+        },data=>{
             console.log(data);
-            // 如果大于0有数据 将数组连起来，如果等于0说明已经加载完了 显示已加载全部
+            // 如果请求到的数据小于page 那么说明已经请求完了，下一页没数据了，显示已加载全部
             if (data.chatList.length>0){
-                chatMsg = data.chatList.concat(chatMsg)
+                this.setData({
+                    chatMsgFlag: false,
+                    chatMsgAll: true
+                })
+            }
+            chatMsg = data.chatList.concat(chatMsg)
+            this.setData({
+                chatMsg: chatMsg,
+            })
+            // 滚动到之前的第一条数据位置
+            setTimeout(() => {
+                this.setData({
+                    toView: scrollItem
+                })
+            }, 10)
+            // 过500ms后才可请求第二次，否则会一次请求N页的
+            setTimeout(() => {
                 this.setData({
                     chatMsgFlag: true
                 })
-                setTimeout(()=>{
-                    this.setData({
-                        chatMsg: chatMsg,
-                    })
-                },200)
-            }else{
-                this.setData({
-                    chatMsgFlag:false,
-                    chatMsgAll:true
-                })
-            }
-            
-            console.log(chatMsg)
-            // this.setData({
-            //     chatMsg: data.chatList
-            // })
+            }, 100)
         })
     },
     // 发送消息
@@ -203,12 +190,12 @@ Page({
             var msgData = new MsgDataFactory(data, 'txt', true);
             // 数据添加到页面，
             this.data.chatMsg.push(msgData)
-            // 数据保存到数据库
-            this.saveMsgToServe(msgData)
             this.setData({
                 userMessage: '',
                 chatMsg: this.data.chatMsg
             })
+            // 数据保存到数据库
+            this.saveMsgToServe(msgData)
             setTimeout(() => {
                 this.setData({
                     toView: this.data.chatMsg[this.data.chatMsg.length - 1].msgId
@@ -239,11 +226,11 @@ Page({
             var msgData = new MsgDataFactory(data, 'txt', false);
             // 数据添加到页面，
             this.data.chatMsg.push(msgData)
-            // 数据保存到数据库
-            this.saveMsgToServe(msgData)
             this.setData({
                 chatMsg: this.data.chatMsg
             })
+            // 数据保存到数据库
+            this.saveMsgToServe(msgData)
             setTimeout(() => {
                 this.setData({
                     toView: this.data.chatMsg[this.data.chatMsg.length - 1].msgId
@@ -283,11 +270,12 @@ Page({
             var msgData = new MsgDataFactory(data, 'img', false);
             // 数据添加到页面，
             this.data.chatMsg.push(msgData)
-            // 数据保存到数据库
-            this.saveMsgToServe(msgData)
             this.setData({
                 chatMsg: this.data.chatMsg
             })
+            // 数据保存到数据库
+            this.saveMsgToServe(msgData)
+            
             setTimeout(() => {
                 this.setData({
                     toView: this.data.chatMsg[this.data.chatMsg.length - 1].msgId
@@ -364,11 +352,12 @@ Page({
                                 console.log(msgData)
                                 // 数据添加到页面，
                                 that.data.chatMsg.push(msgData)
-                                // 数据保存到数据库
-                                that.saveMsgToServe(msgData)
                                 that.setData({
                                     chatMsg: that.data.chatMsg
                                 })
+                                // 数据保存到数据库
+                                that.saveMsgToServe(msgData)
+                                
                                 setTimeout(() => {
                                     that.setData({
                                         toView: that.data.chatMsg[that.data.chatMsg.length - 1].msgId
@@ -396,7 +385,6 @@ Page({
         var sendTime = Date.parse(new Date(params.content.sendTime))
         sendTime = sendTime / 1000
         params.content.sendTime = sendTime;
-        
         ajaxPost("huanxin/saveHuanxinChat", params, data => {
             
         },err=>{
@@ -426,6 +414,7 @@ Page({
             view: 'scroll_view'
         })
     },
+    // 预览图片
     previewImage: function (event) {
         var url = event.target.dataset.url
         wx.previewImage({
