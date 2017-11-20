@@ -77,9 +77,6 @@ Page({
         let params = e.detail.value
         ajaxPost('mine/bindMobile', params, (data) => {
             // 绑定成功后修改本地存储的数据
-            let userInfor = wx.getStorageSync('userInfor');
-            userInfor.mobile = params.mobile;
-            wx.setStorageSync('userInfor', userInfor)
             wx.showToast({
                 title: '绑定成功',
             });
@@ -88,6 +85,18 @@ Page({
 
                 })
             }, 2000)
+        }, err => {
+            console.log(err)
+            var errText = "";
+            switch (err.retCode) {
+                case "200039":
+                    errText = "手机号已绑定";
+                    break;
+            }
+            wx.showToast({
+                title: errText,
+                image: '/images/icon-error.png'
+            })
         })
     },
     /**

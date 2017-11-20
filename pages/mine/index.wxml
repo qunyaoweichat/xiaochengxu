@@ -97,12 +97,18 @@
         </view>
     </view>
 
-    <!-- 正文列 -->
+    <!-- 正文列表 -->
     <view class='info-list'>
 
         <view class='inner'>
             <navigator url='../order/allOrder/orderList?orderType=0' hover-class="none">
                 <text>全部订单</text>
+                <text class='iconfont icon-right'></text>
+            </navigator>
+        </view>
+        <view class='inner '>
+            <navigator url='../order/rightsOrder/rightsList/rightsList' hover-class="none">
+                <text>维权订单</text>
                 <text class='iconfont icon-right'></text>
             </navigator>
         </view>
@@ -113,12 +119,6 @@
                 <text class='iconfont icon-right'></text>
             </navigator>
         </view> -->
-        <view class='inner '>
-            <navigator url='../order/rightsOrder/rightsList/rightsList' hover-class="none">
-                <text>维权订单</text>
-                <text class='iconfont icon-right'></text>
-            </navigator>
-        </view>
     </view>
 
     <!-- <view class='info-list'>
@@ -128,14 +128,13 @@
                 <text class='iconfont icon-right'></text>
             </navigator>
         </view>
-    </view> -->
-
-    <view class='info-list'>
+    </view> 
+     <view class='info-list'>
         <view class='inner '>
             <text>积分商城</text>
             <text class='iconfont icon-right'></text>
         </view>
-    </view>
+    </view>  -->
 
 
     <view class='info-list'>
@@ -194,9 +193,5 @@
             </view>
             <view class='content'></view>
         </view>
-    </view>
-
-    <view class='public-btn'>
-        <button type="warn">我也要开店</button>
     </view>
 </view>

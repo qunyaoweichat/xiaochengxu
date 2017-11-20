@@ -18,16 +18,22 @@ Page({
         this.setData({
             userInfor: wx.getStorageSync('userInfor')
         })
+       
 
     },
     submitForm: function (e) {
         var params = e.detail.value;
         console.log(params)
-        if (params.oldPassword.length != 6) {
-            this.setData({
-                errMsg: '请输入正确的支付密码'
-            })
-            return;
+        // 如果没设置过，那么就没oldPassword，就不需要判断
+        if (params.oldPassword){
+            if (params.oldPassword.length != 6) {
+                this.setData({
+                    errMsg: '请输入正确的支付密码'
+                })
+                return;
+            }
+        }else{
+            params.oldPassword="";
         }
         if (params.payPwd.length != 6) {
             this.setData({

@@ -19,6 +19,7 @@ Page({
     },
     getData:function(){
         ajaxPost('mine', {}, (data) => {
+            console.log(data)
             let mobile = data.mine.mobile;
             var sortMobile = "";
             if (mobile) {
@@ -31,6 +32,7 @@ Page({
             this.setData({
                 userInfor: data.mine
             })
+            wx.setStorageSync('userInfor', data.mine)
 
         })
         // wx.getStorage({

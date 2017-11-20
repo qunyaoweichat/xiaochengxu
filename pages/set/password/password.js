@@ -52,6 +52,18 @@ Page({
             setTimeout(function(){
                 wx.navigateBack()
             },2000)
+        },err=>{
+            console.log(err)
+            var errText = "";
+            switch (err.retCode){
+                case "200020":
+                    errText="原始密码错误";
+                    break;
+            }
+            wx.showToast({
+                title: errText,
+                image:'/images/icon-error.png'
+            })
         })
     },
     /**

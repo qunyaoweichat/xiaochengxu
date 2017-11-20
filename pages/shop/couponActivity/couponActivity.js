@@ -14,7 +14,6 @@ Page({
     onLoad: function (options) {
         let couponActivityId = options.couponActivityId;
         ajaxPost('coupon/couponActivityInfo', { couponActivityId: couponActivityId},(data)=>{
-            console.log(data)
             this.setData({
                 couponActivityId: couponActivityId,
                 couponDetail: data.shopCouponActivity

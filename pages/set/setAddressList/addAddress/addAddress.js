@@ -91,15 +91,7 @@ Page({
             errMsg: ""
         })
         ajaxPost('mine/addAddress', params, (data) => {
-            this.prevPage.setData({
-                address:{
-                    addressArea:"",
-                    addressDetails:"",
-                    phone:"",
-                    postcode:"710222",
-
-                }
-            })
+            this.prevPage.getData()
             wx.showToast({
                 title: '添加成功',
             })

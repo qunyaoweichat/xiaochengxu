@@ -15,9 +15,8 @@ Page({
     onLoad: function (options) {
         wx.hideShareMenu()
         this.setData({
-            userInfor: wx.getStorageSync('userInfor')
+            email: wx.getStorageSync("userInfor").email
         })
-
     },
     edtEmail:function(e){
         var params = e.detail.value;
@@ -35,8 +34,6 @@ Page({
             wx.showToast({
                 title: '修改成功',
             })
-            this.data.userInfor.email = params.email;
-            wx.setStorageSync('userInfor', this.data.userInfor)
             setTimeout(function () {
                 wx.navigateBack()
             }, 2000)

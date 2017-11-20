@@ -53,9 +53,15 @@ Page({
             setTimeout(function(){
                 wx.navigateBack()
             },2000)
-        },(data)=>{
+        },err=>{
+            var errText = '';
+            switch (err.retCode){
+                case '99999':
+                    errText ="最小金额为2元"
+
+            }
             wx.showToast({
-                title: data.retInfo,
+                title: errText,
                 image: '/images/icon-error.png'
             })
         })
