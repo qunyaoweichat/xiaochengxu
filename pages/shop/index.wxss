@@ -312,25 +312,29 @@
     background-color: #fff;
 }
 .shop-tpl5 .recommend .title{
-    padding: 10px 0;
+    padding: 15px 0;
     font-size: 16px;
     text-align: center;
     color: #333333;
 }
 .shop-tpl5 .recommend .row{
-    display: flex;
-    padding: 0 2.13%;
-    margin-bottom: 2.13%;
+    margin: 0 1% 2%;
 }
 .shop-tpl5 .recommend .row .item{
-    flex: 1;
-    padding-bottom: 8px;
+    width: 50%;  
+    float: left;
+    padding-bottom: 10px;  
 }
-.shop-tpl5 .recommend .row .item:first-child{
-    margin-right: 2.13%;
+.shop-tpl5 .recommend .row .item navigator{
+    margin: 0 3%
 }
-.shop-tpl5 .recommend .row .item  image{
+.shop-tpl5 .recommend .row .item .cover{
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: relative;
     width: 100%;
+    padding-top: 100%;  
 }
 .shop-tpl5 .recommend .row .item .name{
     height: 38px;
